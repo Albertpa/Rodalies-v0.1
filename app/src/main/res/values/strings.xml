@@ -31,4 +31,5 @@
 	<string name="r16">R16</string>
 	<string name="guardar">Guardar</string>
     <string name="normalitat">Normalitat al servei</string>
+    <string name="carregant">Obtenint dades...</string>
 </resources>

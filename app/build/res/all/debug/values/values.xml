@@ -29,6 +29,7 @@
 
     <string name="action_settings">Configuració</string>
     <string name="app_name">Rodalies</string>
+    <string name="carregant">Obtenint dades...</string>
     <string name="guardar">Guardar</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_page1">Page1</string>

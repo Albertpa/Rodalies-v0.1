@@ -114,9 +114,9 @@
             <file
                 path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="selecLinea1" >Selecciona la línea principal:
-                </string>
                 <string name="action_settings" >Configuració
+                </string>
+                <string name="selecLinea1" >Selecciona la línea principal:
                 </string>
                 <string name="menu_page2" >Page2
                 </string>
@@ -144,6 +144,8 @@
                 </string>
                 <string name="r10" >R10
                 </string>
+                <string name="carregant" >Obtenint dades...
+                </string>
                 <string name="hello_world" >Hello world!
                 </string>
                 <string name="r13" >R13
@@ -166,9 +168,9 @@
                 </string>
                 <string name="r1" >R1
                 </string>
-                <string name="normalitat" >Normalitat al servei
-                </string>
                 <string name="app_name" >Rodalies
+                </string>
+                <string name="normalitat" >Normalitat al servei
                 </string>
                 <string name="r2s" >R2 Sud
                 </string>
@@ -227,6 +229,7 @@
             </file>
         </source>
         <source path="/Users/albert/Documents/PlantillaPager/app/build/res/rs/debug" />
+        <source path="/Users/albert/Documents/PlantillaPager/app/build/res/generated/debug" />
     </dataSet>
     <dataSet config="debug" >
         <source path="/Users/albert/Documents/PlantillaPager/app/src/debug/res" />

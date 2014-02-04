@@ -65,6 +65,12 @@ public class Page1Activity extends Fragment {
         Log.e("Rodalies", "ESTADO->"+l.getEstado());
         //textP.setText("Codi de la linea: " + getArguments().getInt(Constants.LINEA_PRINCIPAL));
 
+
+
+		return myFragmentView;
+	}
+
+    private void asignarEstado(Linea l) {
         if (l.getEstado() != null)
         {
                 /* Por defecto el estado de una linea es un string vacio.
@@ -72,23 +78,20 @@ public class Page1Activity extends Fragment {
                 * y se colorea de color verde.
                 * Si se existe una incidencia para una linea, se añade a la caja de texto y se
                 * colorea de color rojo */
-                if(l.getEstado() == ""){
-                    textP.setText(getString(R.string.normalitat));
-                    textP.setTextColor(Color.parseColor("#538900"));
+            if(l.getEstado() == ""){
+                textP.setText(getString(R.string.normalitat));
+                textP.setTextColor(Color.parseColor("#538900"));
 
-                }
-                else
-                {
+            }
+            else
+            {
 
-                    textP.setText(l.getEstado());
-                    textP.setTextColor(Color.parseColor("#BA0000"));
+                textP.setText(l.getEstado());
+                textP.setTextColor(Color.parseColor("#BA0000"));
 
-                }
+            }
         }
-
-
-		return myFragmentView;
-	}
+    }
 
     /* Esta funcion crea un objecto "Linea", le asigna el nombre y la url.
     * El estado inicialmente es un string vacio "", a continuación se hace una llamada
@@ -134,8 +137,12 @@ public class Page1Activity extends Fragment {
             }
             //listaDeLineas.add(this.linea);
             //adapter.notifyDataSetChanged();
+
+            //l= this.linea;
             Log.e("Rodalies", "estat->>"+response);
-            l= this.linea;
+
+            l = this.linea;
+            asignarEstado(l);
 
         }
     }

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/albert/Documents/PlantillaPager/app/src/main/res" >
+            <file
+                name="ic_launcher"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="activity_main"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_page1"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/layout/activity_page1.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_page2"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/layout/activity_page2.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="guardar_preferencias"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/layout/guardar_preferencias.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/menu/main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="page1"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/menu/page1.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="page2"
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/menu/page2.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values/arrays.xml"
+                qualifiers="" >
+                <string-array name="lineas" >
+                    <item>
+@string/r1
+                    </item>
+                    <item>
+@string/r2n
+                    </item>
+                    <item>
+@string/r2s
+                    </item>
+                    <item>
+@string/r3
+                    </item>
+                    <item>
+@string/r4
+                    </item>
+                    <item>
+@string/r7
+                    </item>
+                    <item>
+@string/r8
+                    </item>
+                    <item>
+@string/r11
+                    </item>
+                    <item>
+@string/r12
+                    </item>
+                    <item>
+@string/r13
+                    </item>
+                    <item>
+@string/r14
+                    </item>
+                    <item>
+@string/r15
+                    </item>
+                    <item>
+@string/r16
+                    </item>
+                </string-array>
+            </file>
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values/dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="selecLinea1" >Selecciona la línea principal:
+                </string>
+                <string name="action_settings" >Configuració
+                </string>
+                <string name="menu_page2" >Page2
+                </string>
+                <string name="menu_page1" >Page1
+                </string>
+                <string name="r8" >R8
+                </string>
+                <string name="r9" >R9
+                </string>
+                <string name="r4" >R4
+                </string>
+                <string name="r5" >R5
+                </string>
+                <string name="r6" >R6
+                </string>
+                <string name="r7" >R7
+                </string>
+                <string name="selecLineaS" >Selecciona les línies secundaries:
+                </string>
+                <string name="r15" >R15
+                </string>
+                <string name="guardar" >Guardar
+                </string>
+                <string name="r16" >R16
+                </string>
+                <string name="r10" >R10
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="r13" >R13
+                </string>
+                <string name="r14" >R14
+                </string>
+                <string name="title_activity_guardar_preferencias" >GuardarPreferencias
+                </string>
+                <string name="r11" >R11
+                </string>
+                <string name="r12" >R12
+                </string>
+                <string name="title_activity_page2" >Page2Activity
+                </string>
+                <string name="title_activity_page1" >Page1Activity
+                </string>
+                <string name="r3" >R3
+                </string>
+                <string name="r2" >R2
+                </string>
+                <string name="r1" >R1
+                </string>
+                <string name="normalitat" >Normalitat al servei
+                </string>
+                <string name="app_name" >Rodalies
+                </string>
+                <string name="r2s" >R2 Sud
+                </string>
+                <string name="r2n" >R2 Nord
+                </string>
+            </file>
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values-sw720dp-land/dimens.xml"
+                qualifiers="sw720dp-land" >
+                <dimen name="activity_horizontal_margin" >128dp
+                </dimen>
+            </file>
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values-v14/styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+        </source>
+        <source path="/Users/albert/Documents/PlantillaPager/app/build/res/rs/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/albert/Documents/PlantillaPager/app/src/debug/res" />
+    </dataSet>
+
+</merger>

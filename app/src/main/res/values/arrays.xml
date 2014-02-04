@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lineas">
+        <item >@string/r1</item>
+        <item >@string/r2n</item>
+        <item >@string/r2s</item>
+    	<item >@string/r3</item>
+    	<item >@string/r4</item>
+    	<item >@string/r7</item>
+    	<item >@string/r8</item>
+    	<item >@string/r11</item>
+    	<item >@string/r12</item>
+    	<item >@string/r13</item>
+    	<item >@string/r14</item>
+    	<item >@string/r15</item>
+        <item >@string/r16</item>
+    </string-array>
+    
+</resources>

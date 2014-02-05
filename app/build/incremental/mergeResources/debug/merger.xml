@@ -114,9 +114,9 @@
             <file
                 path="/Users/albert/Documents/PlantillaPager/app/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="action_settings" >Configuració
-                </string>
                 <string name="selecLinea1" >Selecciona la línea principal:
+                </string>
+                <string name="action_settings" >Configuració
                 </string>
                 <string name="menu_page2" >Page2
                 </string>
@@ -168,9 +168,9 @@
                 </string>
                 <string name="r1" >R1
                 </string>
-                <string name="app_name" >Rodalies
-                </string>
                 <string name="normalitat" >Normalitat al servei
+                </string>
+                <string name="app_name" >Rodalies
                 </string>
                 <string name="r2s" >R2 Sud
                 </string>

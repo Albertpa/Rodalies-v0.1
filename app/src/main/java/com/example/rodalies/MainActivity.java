@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ScrollView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
@@ -180,8 +181,8 @@ public class MainActivity extends FragmentActivity {
 		     mTabHost.setup();
 	
 		     mViewPager = (ViewPager)findViewById(R.id.pager);
-	
-		     mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);	 
+
+		     mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
 		     
 
 
@@ -196,7 +197,10 @@ public class MainActivity extends FragmentActivity {
                 args.putInt(Constants.LINEA_PRINCIPAL, codeRod.get(i) );
                 mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[i]).setIndicator(items_menu[i]),
                         Page1Activity.class, args);
+
             }
+
+
             //mTabsAdapter.mTabHost.getTabWidget().getChildAt(0).getLayoutParams().height = 35;
             /*
 		     mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[0]).setIndicator(items_menu[0]),
@@ -318,6 +322,7 @@ public class MainActivity extends FragmentActivity {
         return ret;
 
     }
+
 	
 	 /**
      * This is a helper class that implements the management of tabs and all
@@ -337,8 +342,9 @@ public class MainActivity extends FragmentActivity {
         private final TabHost mTabHost;
         private final ViewPager mViewPager;
         private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
+        private int positionActual = 0;
 
-        static final class TabInfo { //esta peque�a clase guarda info de cada tab
+        static final class TabInfo { //esta pequenya clase guarda info de cada tab
             private final String tag;
             private final Class<?> clss;
             private final Bundle args;
@@ -409,8 +415,31 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public void onTabChanged(String tabId) {
+
             int position = mTabHost.getCurrentTab();
             mViewPager.setCurrentItem(position);
+
+            //position es la nueva position
+
+            Log.e("Rodalies", "tab1:"+positionActual);
+            Log.e("Rodalies", "tab2:"+position);
+
+
+            View rootView = ((Activity)mContext).getWindow().getDecorView().findViewById(android.R.id.tabhost);
+            View v = rootView.findViewById(R.id.scrollTabs);
+           // ScrollView sv = (ScrollView) rootView.findViewById(R.id.scrollTabs);
+
+            if(positionActual > position){
+                Log.e("Rodalies", "el primero es mayor, scroll hacia izq");
+            }
+            else if(positionActual < position){
+                Log.e("Rodalies", "el segundo es mayor, scroll hacia der");
+                //sv.scrollBy(0, 10);
+            }
+
+
+
+            positionActual = position;
         }
 
         @Override

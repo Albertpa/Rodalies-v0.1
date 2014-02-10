@@ -3,28 +3,31 @@ package com.example.rodalies;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Page1Activity extends Fragment {
-	private View myFragmentView;
-	private TextView textP;
+import twitter4j.Query;
+import twitter4j.QueryResult;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
 
-    private int codeLinea;
+public class Page1Activity extends Fragment{
+    private View myFragmentView;
+    private TextView textoPrincipal;
 
-    public Linea l;
+    private int codigoLinea;
+
+    public Linea linea;
     /* Array con las URL de las lineas */
     private String[] lineasURL = new String[]{
             "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r1_ca_ES.xml",
@@ -46,76 +49,68 @@ public class Page1Activity extends Fragment {
     private String[] nombreLineas = new String[]{
             "R1", "R2 Nord", "R2 Sud", "R3", "R4", "R7", "R8", "R11", "R12", "R13", "R14", "R15", "R16"
     };
+    /* Array cuentas twitter */
+    private String[] usuarioTwitterLineas = new String[]{
+            "rodalia1","rodalia2", "rodalia2", "rodalia3","rodalia4","rodalia7","rodalia8","#rod11","#rod12","#rod13",
+            "#rod14","#rod15","#rod16"
+    };
+
+    private TuitsAdapter adapter;
+    private ListView listaTuits;
+    List<Tuit> lista_Tuits = new ArrayList<Tuit>();
 
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        myFragmentView = inflater.inflate(R.layout.activity_page1, container, false);
 
+        listaTuits = (ListView) myFragmentView.findViewById(R.id.lista_tuits);
+        adapter = new TuitsAdapter(getActivity(), android.R.layout.simple_list_item_1, lista_Tuits);
+        listaTuits.setAdapter(adapter);
 
-	
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    	myFragmentView = inflater.inflate(R.layout.activity_page1, container, false);
+        textoPrincipal = (TextView) myFragmentView.findViewById(R.id.textP);
 
-    	//Log.e("Rodalies", getArguments().getString(Constants.LINEA_PRINCIPAL));
-    	
-       	textP = (TextView) myFragmentView.findViewById(R.id.textP);
+        codigoLinea = getArguments().getInt(Constants.LINEA_PRINCIPAL);
+        crearObjetosLinea(codigoLinea);
 
-        codeLinea = getArguments().getInt(Constants.LINEA_PRINCIPAL);
-        crearObjetosLinea(codeLinea);
-
-        Log.e("Rodalies", "ESTADO->"+l.getEstado());
-        //textP.setText("Codi de la linea: " + getArguments().getInt(Constants.LINEA_PRINCIPAL));
-
-
-
-		return myFragmentView;
-	}
-
-    private void asignarEstado(Linea l) {
-        if (l.getEstado() != null)
-        {
-                /* Por defecto el estado de una linea es un string vacio.
-                * Si no existe incidencia para una linea, se añade el texto de "normalidad en la linea
-                * y se colorea de color verde.
-                * Si se existe una incidencia para una linea, se añade a la caja de texto y se
-                * colorea de color rojo */
-            if(l.getEstado() == ""){
-                textP.setText(getString(R.string.normalitat));
-                textP.setTextColor(Color.parseColor("#538900"));
-
-            }
-            else
-            {
-
-                textP.setText(l.getEstado());
-                textP.setTextColor(Color.parseColor("#BA0000"));
-
-            }
-        }
+        return myFragmentView;
     }
 
     /* Esta funcion crea un objecto "Linea", le asigna el nombre y la url.
     * El estado inicialmente es un string vacio "", a continuación se hace una llamada
     * al AsyncTask que descargará el estado y se le asignará al objeto */
     private void crearObjetosLinea(int codeLinea) {
-        /*
-        listaDeLineas = new ArrayList<Linea>();
-        for(int i=0; i < nombreLineas.length; i++)
-        {
-            Linea L = new Linea(nombreLineas[i], "", lineasURL[i]);
-            new LineasAsyncTask(L).execute();
-        }
-        adapter = new LineasAdapter(this, android.R.layout.simple_list_item_1, listaDeLineas);
-        this.getListView().setAdapter(adapter);
-        */
 
-        l = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea]);
-        new LineasAsyncTask(l).execute();
+        linea = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea], usuarioTwitterLineas[codeLinea]);
+        new EstadoAsyncTask(linea).execute();
+        new TuitsAsyncTask(linea).execute();
     }
 
-    private class LineasAsyncTask extends AsyncTask<String, Void, String> {
+    private void asignarEstado(Linea l) {
+        if (l.getEstado() != null)
+        {
+            /* Por defecto el estado de una linea es un string vacio.
+            * Si no existe incidencia para una linea, se añade el texto de "normalidad en la linea
+            * y se colorea de color verde.
+            * Si se existe una incidencia para una linea, se añade a la caja de texto y se
+            * colorea de color rojo */
+            if(l.getEstado() == "")
+            {
+                textoPrincipal.setText(getString(R.string.normalitat));
+                textoPrincipal.setTextColor(Color.parseColor("#538900"));
+            }
+            else
+            {
+                textoPrincipal.setText(l.getEstado());
+                textoPrincipal.setTextColor(Color.parseColor("#BA0000"));
+            }
+        }
+    }
+
+    private class EstadoAsyncTask extends AsyncTask<String, Void, String> {
         private Linea linea;
 
-        public LineasAsyncTask(Linea l) {
+        public EstadoAsyncTask(Linea l) {
             this.linea = l;
         }
 
@@ -135,17 +130,56 @@ public class Page1Activity extends Fragment {
             {
                 this.linea.setEstado(response);
             }
-            //listaDeLineas.add(this.linea);
-            //adapter.notifyDataSetChanged();
+            Log.i("Rodalies", "estat->>"+response);
 
-            //l= this.linea;
-            Log.e("Rodalies", "estat->>"+response);
-
-            l = this.linea;
-            asignarEstado(l);
-
+            Page1Activity.this.linea = this.linea;  // ??????????
+            asignarEstado(Page1Activity.this.linea);
         }
     }
 
-	
+    private class TuitsAsyncTask extends AsyncTask<String, Void, Void> {
+        private Linea linea;
+
+        public TuitsAsyncTask(Linea l) {
+            this.linea = l;
+        }
+
+        @Override
+        protected Void doInBackground(String... params) {
+
+            ConfiguradorTwitter config = ConfiguradorTwitter.getInstance();
+            final Twitter twitter = config.getTwitter();
+
+            final Query query = new Query(linea.getUsuarioTwitter()); //Establecer nombre de usuario (sin @) o hashtag
+            query.count(15); //Numero maximo de tuits maximo
+
+            try {
+                QueryResult result = twitter.search(query);
+                for (twitter4j.Status status : result.getTweets()) {
+                    Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText());
+
+                    SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+                    SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
+
+                    String dateAsString = dateFormatter.format(status.getCreatedAt());
+                    String timeAsString = timeFormatter.format(status.getCreatedAt());
+
+                    String fecha = timeAsString + " - " + dateAsString;
+
+                    Tuit tuit = new Tuit("@" + status.getUser().getScreenName(), status.getText(), fecha);
+                    lista_Tuits.add(tuit);
+                }
+            } catch (TwitterException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        @Override
+        protected void onPostExecute(Void listaTuits)
+        {
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+
 }

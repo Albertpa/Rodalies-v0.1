@@ -858,6 +858,7 @@ containing a value of this type.
     }
     public static final class id {
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int Spinner_Lineas1=0x7f080043;
         public static final int action_bar=0x7f08001c;
         public static final int action_bar_activity_content=0x7f080014;
@@ -936,6 +937,8 @@ containing a value of this type.
     public static final class integer {
         public static final int abc_max_action_buttons=0x7f0a0000;
 =======
+=======
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
         public static final int Spinner_Lineas1=0x7f090005;
         public static final int action_settings=0x7f090009;
         public static final int guardar=0x7f090008;
@@ -946,6 +949,9 @@ containing a value of this type.
         public static final int selecLineaS=0x7f090006;
         public static final int textP=0x7f090002;
         public static final int textS=0x7f090003;
+<<<<<<< HEAD
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+=======
 >>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
     }
     public static final class layout {
@@ -1064,6 +1070,9 @@ containing a value of this type.
         public static final int title_activity_guardar_preferencias=0x7f06001c;
         public static final int title_activity_page1=0x7f06001d;
         public static final int title_activity_page2=0x7f06001e;
+<<<<<<< HEAD
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+=======
 >>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
     }
     public static final class style {

@@ -7693,6 +7693,9 @@ false
 =======
         <source path="/Users/albert/Documents/PlantillaPager/app/build/res/rs/debug" />
         <source path="/Users/albert/Documents/PlantillaPager/app/build/res/generated/debug" />
+<<<<<<< HEAD
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+=======
 >>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
     </dataSet>
     <dataSet config="debug" >

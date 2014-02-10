@@ -32,9 +32,13 @@
     <string name="guardar">Guardar</string>
     <string name="normalitat">Normalitat al servei</string>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <string name="obtenint_dades">Obtenint dades...</string>
     <string name="info_oficial">Informació oficial</string>
     <string name="info_twitter">Informació via Twitter</string>
+=======
+    <string name="carregant">Obtenint dades...</string>
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
 =======
     <string name="carregant">Obtenint dades...</string>
 >>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a

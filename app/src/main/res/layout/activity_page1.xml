@@ -24,6 +24,7 @@
         android:id="@+id/textP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="@string/obtenint_dades"/>
 
 
@@ -42,5 +43,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/lista_tuits"
         android:layout_gravity="center_horizontal" />
+=======
+        android:text="@string/carregant" />
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
 
 </LinearLayout>

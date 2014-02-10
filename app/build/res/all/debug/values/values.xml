@@ -535,6 +535,7 @@
 
     <string name="action_settings">Configuració</string>
     <string name="app_name">Rodalies</string>
+    <string name="carregant">Obtenint dades...</string>
     <string name="guardar">Guardar</string>
     <string name="hello_world">Hello world!</string>
     <string name="info_oficial">Informació oficial</string>

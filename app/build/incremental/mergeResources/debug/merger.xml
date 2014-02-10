@@ -7599,6 +7599,8 @@ false
                 </string>
                 <string name="r10" >R10
                 </string>
+                <string name="carregant" >Obtenint dades...
+                </string>
                 <string name="hello_world" >Hello world!
                 </string>
                 <string name="r13" >R13
@@ -7685,8 +7687,13 @@ false
                 </style>
             </file>
         </source>
+<<<<<<< HEAD
         <source path="/Users/jesus/Dropbox/Proyectos apps/Rodalies-v0.1/app/build/res/rs/debug" />
         <source path="/Users/jesus/Dropbox/Proyectos apps/Rodalies-v0.1/app/build/res/generated/debug" />
+=======
+        <source path="/Users/albert/Documents/PlantillaPager/app/build/res/rs/debug" />
+        <source path="/Users/albert/Documents/PlantillaPager/app/build/res/generated/debug" />
+>>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
     </dataSet>
     <dataSet config="debug" >
         <source path="/Users/jesus/Dropbox/Proyectos apps/Rodalies-v0.1/app/src/debug/res" />

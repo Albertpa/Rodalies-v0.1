@@ -21,4 +21,4 @@
         android:layout_below="@+id/textP"
         android:text="Page1" />
 
-</RelativeLayout><!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/layout/activity_page2.xml -->
+</RelativeLayout><!-- From: file:/Users/albert/Documents/PlantillaPager/app/src/main/res/layout/activity_page2.xml -->

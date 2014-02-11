@@ -10,11 +10,8 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3056f57c-5918-4d5b-8857-7c948a1c3409" name="Default" comment="" />
+    <list default="true" id="653aaf31-28d1-4436-b752-9cbd61ffb827" name="Default" comment="" />
     <ignored path="PlantillaPager.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +28,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -67,39 +64,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java" line="431" class="com.example.rodalies.MainActivity.TabsAdapter" package="com.example.rodalies">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java" line="419" class="com.example.rodalies.MainActivity.TabsAdapter" package="com.example.rodalies">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -109,31 +73,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Page1Activity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state line="52" column="32" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.8638743" vertical-offset="0" max-vertical-offset="2580">
-              <folding>
-                <element signature="e#2517#2523#0" expanded="true" />
-                <element signature="e#4200#4230#0" expanded="true" />
-              </folding>
-=======
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-            <state line="79" column="28" selection-start="3162" selection-end="3163" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2115">
+            <state line="248" column="4" selection-start="10716" selection-end="10716" vertical-scroll-proportion="0.0" vertical-offset="3236" max-vertical-offset="6825">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
+      <file leaf-file-name="guardar_preferencias.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guardar_preferencias.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="427" column="32" selection-start="16326" selection-end="16326" vertical-scroll-proportion="0.23699422" vertical-offset="6023" max-vertical-offset="6825">
+            <state line="16" column="4" selection-start="685" selection-end="685" vertical-scroll-proportion="-0.3761468" vertical-offset="404" max-vertical-offset="840">
               <folding />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
             </state>
           </provider>
         </entry>
@@ -149,7 +105,6 @@
     <option name="tasksExpandState">
       <map>
         <entry key="" value="true" />
-        <entry key="Rodalies-v0.1/" value="false" />
       </map>
     </option>
     <option name="availableProjects">
@@ -157,7 +112,7 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="Rodalies-v0.1" />
+              <option name="name" value="PlantillaPager" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
@@ -551,62 +506,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page2Activity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java" />
-        <option value="$USER_HOME$/Desktop/Rodalies-v0.1-master/app/src/main/java/com/example/rodalies/Page1Activity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Linea.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-=======
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Linea.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java" />
-=======
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Linea.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java" />
-<<<<<<< HEAD
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <option name="x" value="60" />
-    <option name="y" value="22" />
-    <option name="width" value="1698" />
-    <option name="height" value="963" />
-=======
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
     <option name="x" value="49" />
-    <option name="y" value="77" />
+    <option name="y" value="22" />
     <option name="width" value="1349" />
-    <option name="height" value="815" />
-<<<<<<< HEAD
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -634,18 +543,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="PlantillaPager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -654,7 +557,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Rodalies-v0.1" />
+              <option name="myItemId" value="PlantillaPager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -664,7 +567,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Rodalies-v0.1" />
+              <option name="myItemId" value="PlantillaPager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -678,7 +581,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Rodalies-v0.1" />
+              <option name="myItemId" value="PlantillaPager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -700,7 +603,93 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Rodalies-v0.1" />
+              <option name="myItemId" value="PlantillaPager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlantillaPager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlantillaPager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlantillaPager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlantillaPager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlantillaPager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlantillaPager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -726,14 +715,8 @@
           </PATH>
         </subPane>
       </pane>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -744,89 +727,16 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5556" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_4_2" />
-=======
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Tablet" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Tablet" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-    <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="appearance" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <property name="SearchEverywhereHistory" value="getResources" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/example/rodalies" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
-    </key>
-=======
-    <property name="SearchEverywhereHistory" value="&#10;getResources" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <property name="SearchEverywhereHistory" value="&#10;getResources" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus4" />
   </component>
   <component name="RunManager" selected="Android Application.app">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -854,6 +764,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -942,118 +865,40 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3056f57c-5918-4d5b-8857-7c948a1c3409" name="Default" comment="" />
-      <created>1391177506924</created>
-      <updated>1391177506924</updated>
+      <changelist id="653aaf31-28d1-4436-b752-9cbd61ffb827" name="Default" comment="" />
+      <created>1392112843890</created>
+      <updated>1392112843890</updated>
     </task>
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <frame x="60" y="22" width="1698" height="963" extended-state="0" />
-=======
-    <frame x="49" y="77" width="1349" height="815" extended-state="0" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <frame x="49" y="77" width="1349" height="815" extended-state="0" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+    <frame x="49" y="22" width="1349" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20471014" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.687231" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31895426" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28875738" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971016" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-=======
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44476327" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23007247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29150727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29150727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32950193" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3302682" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1073,426 +918,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/ConfiguradorTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="6480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Linea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="585">
+        <state line="26" column="51" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="39" selection-start="4193" selection-end="4210" vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="1920">
-          <folding>
-            <element signature="e#2517#2523#0" expanded="true" />
-            <element signature="e#4200#4230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="3655" selection-end="3655" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="1725">
+        <state line="23" column="13" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="2117" max-vertical-offset="2580">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="6480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Linea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="25" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="1290" max-vertical-offset="5190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="25" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1688" selection-end="1688" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="12" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="5115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1688" selection-end="1688" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="50" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="5115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="40" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="82" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="4" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="5280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guardar_preferencias.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page2Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1350" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="40" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="82" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="4" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="5280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guardar_preferencias.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page2Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1350" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/import-summary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.40618557" vertical-offset="328" max-vertical-offset="1065" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="547" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="150" selection-end="150" vertical-scroll-proportion="0.12371134" vertical-offset="0" max-vertical-offset="485" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page2Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="10" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.41237113" vertical-offset="730" max-vertical-offset="1290" />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-=======
-    <entry file="file://$USER_HOME$/Desktop/RssRodalies/rssrodalies/src/main/java/com/example/rssrodalies/MainActivity.java">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="47" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.6148936" vertical-offset="146" max-vertical-offset="750">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="28" selection-start="7235" selection-end="7235" vertical-scroll-proportion="0.73741794" vertical-offset="2333" max-vertical-offset="5190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-=======
-    <entry file="file://$USER_HOME$/Desktop/RssRodalies/rssrodalies/src/main/java/com/example/rssrodalies/MainActivity.java">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="191" selection-end="191" vertical-scroll-proportion="0.21489362" vertical-offset="4" max-vertical-offset="555">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="28" selection-start="7235" selection-end="7235" vertical-scroll-proportion="0.73741794" vertical-offset="2333" max-vertical-offset="5190">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="6" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.32822758" vertical-offset="855" max-vertical-offset="1725">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="191" selection-end="191" vertical-scroll-proportion="0.21489362" vertical-offset="4" max-vertical-offset="555">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="92" selection-start="9475" selection-end="9475" vertical-scroll-proportion="0.0" vertical-offset="2460" max-vertical-offset="6405">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="28" selection-start="7235" selection-end="7235" vertical-scroll-proportion="0.73741794" vertical-offset="2333" max-vertical-offset="5190">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="6" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.32822758" vertical-offset="855" max-vertical-offset="1725">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="573">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="191" selection-end="191" vertical-scroll-proportion="0.21489362" vertical-offset="4" max-vertical-offset="555">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <entry file="file://$USER_HOME$/Desktop/RssRodalies/rssrodalies/src/main/java/com/example/rssrodalies/LineasAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="442" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/RssHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="6" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.32822758" vertical-offset="855" max-vertical-offset="1725">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <entry file="file://$USER_HOME$/Downloads/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="0" selection-start="6180" selection-end="6237" vertical-scroll-proportion="0.70042795" vertical-offset="1624" max-vertical-offset="2325">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$USER_HOME$/Desktop/Rodalies-v0.1-master/app/src/main/res/layout/activity_page1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-=======
-    <entry file="file://$USER_HOME$/Desktop/RssRodalies/rssrodalies/src/main/java/com/example/rssrodalies/LineasAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="442" selection-end="497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$USER_HOME$/Desktop/Rodalies-v0.1-master/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="52" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-=======
-    <entry file="file://$USER_HOME$/Downloads/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="0" selection-start="6180" selection-end="6237" vertical-scroll-proportion="0.70042795" vertical-offset="1624" max-vertical-offset="2325">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="63" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="477" selection-end="477" vertical-scroll-proportion="0.027472528" vertical-offset="105" max-vertical-offset="765">
-          <folding>
-            <element signature="e#231#264#0" expanded="true" />
-            <element signature="e#289#324#0" expanded="true" />
-            <element signature="e#350#385#0" expanded="true" />
-            <element signature="e#409#442#0" expanded="true" />
-            <element signature="e#681#703#0" expanded="true" />
-            <element signature="e#974#998#0" expanded="true" />
-            <element signature="e#1166#1188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Rodalies-v0.1-master/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.2356021" vertical-offset="0" max-vertical-offset="2580">
-=======
-=======
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guardar_preferencias.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-<<<<<<< HEAD
-=======
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.6787234" vertical-offset="191" max-vertical-offset="810">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.6787234" vertical-offset="191" max-vertical-offset="810">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
@@ -1502,137 +951,73 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-=======
-        <state line="13" column="29" selection-start="367" selection-end="367" vertical-scroll-proportion="0.3939394" vertical-offset="0" max-vertical-offset="495">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$USER_HOME$/Desktop/Rodalies-v0.1-master/app/src/main/java/com/example/rodalies/Linea.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page2.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="108" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.047486033" vertical-offset="17" max-vertical-offset="375">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Linea.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="37" column="5" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="12" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.74860334" vertical-offset="242" max-vertical-offset="600">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-        <state line="13" column="29" selection-start="367" selection-end="367" vertical-scroll-proportion="0.3939394" vertical-offset="0" max-vertical-offset="495">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$USER_HOME$/Desktop/Rodalies-v0.1-master/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="0" selection-end="724" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-=======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="514" selection-end="537" vertical-scroll-proportion="0.5220126" vertical-offset="14" max-vertical-offset="345">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.047486033" vertical-offset="17" max-vertical-offset="375">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="21" column="16" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-=======
-        <state line="79" column="28" selection-start="3162" selection-end="3163" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2115">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="12" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.74860334" vertical-offset="242" max-vertical-offset="600">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="14" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="1.4" vertical-offset="0" max-vertical-offset="750">
-=======
-        <state line="12" column="8" selection-start="514" selection-end="537" vertical-scroll-proportion="0.5220126" vertical-offset="14" max-vertical-offset="345">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="427" column="32" selection-start="16326" selection-end="16326" vertical-scroll-proportion="0.23699422" vertical-offset="6023" max-vertical-offset="6825">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-=======
-        <state line="79" column="28" selection-start="3162" selection-end="3163" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2115">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="1.4" vertical-offset="0" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="427" column="32" selection-start="16326" selection-end="16326" vertical-scroll-proportion="0.23699422" vertical-offset="6023" max-vertical-offset="6825">
->>>>>>> 501a04d7e8fc892e04c01d347b410ed63bf6a22a
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="32" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.8638743" vertical-offset="0" max-vertical-offset="2580">
+        <state line="27" column="0" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.10550459" vertical-offset="359" max-vertical-offset="795">
           <folding>
-            <element signature="e#2517#2523#0" expanded="true" />
-            <element signature="e#4200#4230#0" expanded="true" />
+            <element signature="e#681#703#0" expanded="true" />
+            <element signature="e#974#998#0" expanded="true" />
+            <element signature="e#1166#1188#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="59" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.62184876" vertical-offset="184" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="4" selection-start="10716" selection-end="10716" vertical-scroll-proportion="0.0" vertical-offset="3236" max-vertical-offset="6825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guardar_preferencias.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="4" selection-start="685" selection-end="685" vertical-scroll-proportion="-0.3761468" vertical-offset="404" max-vertical-offset="840">
+          <folding />
         </state>
       </provider>
     </entry>

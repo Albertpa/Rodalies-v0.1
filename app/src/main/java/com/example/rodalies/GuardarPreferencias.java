@@ -57,9 +57,9 @@ public class GuardarPreferencias extends Activity {
 
         	 //per cada element de la llista hem de buscar si existeix a les shared preferences y marcarlo com yes
         	 Boolean esun = esUnDells(i);
-        	     	Log.e("Rodalies", "es un dells:"+i);
+        	     	//Log.e("Rodalies", "es un dells:"+i);
             if (esun) {
-                Log.e("Rodalies", "YES");
+               // Log.e("Rodalies", "YES");
             	myList.setItemChecked(i, true);
             }
             
@@ -107,7 +107,7 @@ public class GuardarPreferencias extends Activity {
          editor.clear();
          editor.commit();
          
-         Log.e("Rodalies", "seleccionat Principal->"+principalSelectedInt);
+        // Log.e("Rodalies", "seleccionat Principal->"+principalSelectedInt);
          editor.putInt(Constants.LINEA_PRINCIPAL, principalSelectedInt);
          
          SparseBooleanArray sparseBooleanArray = myList.getCheckedItemPositions();
@@ -208,14 +208,15 @@ public class GuardarPreferencias extends Activity {
              }
              
          }
-       Log.e("Rodalies", "seleccionat Secundari->"+secundarioSelected);
+       //Log.e("Rodalies", "seleccionat Secundari->"+secundarioSelected);
        editor.putInt(Constants.LINEAS_TOTAL, contador); 
        editor.commit();
        
         
         
         //tornar a la activity principal
-       startActivity(new Intent(GuardarPreferencias.this, MainActivity.class));
+       //startActivity(new Intent(GuardarPreferencias.this, MainActivity.class));
+        finish();
 	}
 	
 	private Boolean esUnDells(int i){

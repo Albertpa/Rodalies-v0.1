@@ -11,41 +11,44 @@
     <TextView
         android:id="@+id/selecLinea1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25dip"
+        android:textSize="18dip"
+        android:textStyle="bold"
         android:text="@string/selecLinea1" />
-    
+
     <Spinner
-         android:id="@+id/Spinner_Lineas1"
-         android:layout_marginTop="5dp"
-         android:layout_below="@+id/selecLinea1"
-         android:layout_height="wrap_content"
-         android:layout_width="match_parent"
-         android:background="@android:color/white"
-         android:entries="@array/lineas"></Spinner>
-    
+        android:id="@+id/Spinner_Lineas1"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/selecLinea1"
+        android:layout_height="30dip"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:entries="@array/lineas"></Spinner>
+
     <!-- hueco para la lista de lineas secundarias -->
     <TextView
         android:id="@+id/selecLineaS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Spinner_Lineas1"
-        android:text="@string/selecLineaS" 
+        android:text="@string/selecLineaS"
         android:layout_marginTop="20dp"/>
- 
-	<ListView 
-    	android:id="@+id/list"
-    	android:layout_width="fill_parent"
-    	android:layout_height="200dp"
- 		android:layout_below="@+id/selecLineaS"
- 		
-    />
-      
-     <Button
-         android:id="@+id/guardar"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:onClick="guardar"
-         android:text="@string/guardar" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/guardar"
+        android:layout_below="@+id/selecLineaS"
+
+        />
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="guardar"
+        android:text="@string/guardar" />
 
 </RelativeLayout><!-- From: file:/Users/albert/Documents/PlantillaPager/app/src/main/res/layout/guardar_preferencias.xml -->

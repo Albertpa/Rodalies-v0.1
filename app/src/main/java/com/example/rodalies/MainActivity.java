@@ -30,29 +30,33 @@ public class MainActivity extends FragmentActivity {
 
     TabHost mTabHost;
     ViewPager  mViewPager;
-    
+
+
     //clase que mezcla tabhost con pageview
-    TabsAdapter mTabsAdapter;	
+    TabsAdapter mTabsAdapter;
     
     private SharedPreferences sharedSettings;
     private boolean existPreferences = true;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 		sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 		
 		
 		if (!(sharedSettings.contains(Constants.LINEA_PRINCIPAL))) {
-			Log.e("Rodalies", "no te shared preferences");
-			//no tiene preferencias, llamamos a la configuraci�n de la linea principal
+			//Log.e("Rodalies", "no te shared preferences");
+			//no tiene preferencias, llamamos a la configuración de la linea principal
 			existPreferences=false;
-			startActivity(new Intent(MainActivity.this, GuardarPreferencias.class));  
+			//startActivity(new Intent(MainActivity.this, GuardarPreferencias.class));
+            startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
 			
 		}else{
 
-            //falta generar pantallas dinamicamente
+
+
             ArrayList<Integer> codeRod = new ArrayList<Integer>();
             int codePrincipal;
             //Bundle args = new Bundle();
@@ -70,7 +74,7 @@ public class MainActivity extends FragmentActivity {
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA2) ){
                 //args.putInt(Constants.LINEA_SECUNDARIA2, sharedSettings.getInt(Constants.LINEA_SECUNDARIA2,-1) );
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA2,-1))
-                     codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA2,-1));
+                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA2,-1));
             }
 
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA3) ){
@@ -118,7 +122,7 @@ public class MainActivity extends FragmentActivity {
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA10) ){
                 //args.putInt(Constants.LINEA_SECUNDARIA10, sharedSettings.getInt(Constants.LINEA_SECUNDARIA10,-1) );
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA10,-1))
-                     codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA10,-1));
+                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA10,-1));
             }
 
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA11) ){
@@ -130,13 +134,13 @@ public class MainActivity extends FragmentActivity {
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA12) ){
                 //args.putInt(Constants.LINEA_SECUNDARIA12, sharedSettings.getInt(Constants.LINEA_SECUNDARIA12,-1) );
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA12,-1))
-                     codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA12,-1));
+                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA12,-1));
             }
 
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA13) ){
                 //args.putInt(Constants.LINEA_SECUNDARIA13, sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1) );
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1))
-                     codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1));
+                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1));
             }
 		    /*
 		    if( sharedSettings.contains(Constants.LINEA_SECUNDARIA14) )
@@ -152,7 +156,7 @@ public class MainActivity extends FragmentActivity {
 
             //montamos el array para los nombres de los fragments y nombres de los tabs
 
-			//String[] fragmentTags = { "Page1", "Page2" };
+            //String[] fragmentTags = { "Page1", "Page2" };
             final int size = codeRod.size();
             String[] fragmentTags = new String[size];
             for (int i = 0; i < size; i++)
@@ -160,10 +164,10 @@ public class MainActivity extends FragmentActivity {
                 fragmentTags[i] = this.nombreLinea(codeRod.get(i));
                 //Log.e("Rodalies", this.nombreLinea(codeRod.get(i)));
             }
-			Log.e("Rodalies", "te sharedpreferences");
-			existPreferences=true;
-	
-			//nombres de los tabs
+            //Log.e("Rodalies", "te sharedpreferences");
+            existPreferences=true;
+
+            //nombres de los tabs
 			/*String[] items_menu = {
 				 	    getResources().getString(R.string.menu_page1),
 		                getResources().getString(R.string.menu_page2)
@@ -176,21 +180,28 @@ public class MainActivity extends FragmentActivity {
                 items_menu[i] = this.nombreLinea(codeRod.get(i));
                 //Log.e("Rodalies", this.nombreLinea(codeRod.get(i)));
             }
-		 
-		     mTabHost = (TabHost)findViewById(android.R.id.tabhost);
-		     mTabHost.setup();
-	
-		     mViewPager = (ViewPager)findViewById(R.id.pager);
 
-		     mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
-		     
+
+            mTabHost = (TabHost)findViewById(android.R.id.tabhost);
+
+
+            mTabHost.setup();
 
 
 
-		     //Se le indica la clase en cada posicion del array, es decir para cada posicion tiene un texto ya
-		     //pero necesita indicar la clase correspondiente
-		     
-		    //bucle for de la pagina
+            mViewPager = (ViewPager)findViewById(R.id.pager);
+            // mViewPager.setOffscreenPageLimit(1);
+            // mViewPager.getAdapter().notifyDataSetChanged();
+            // mViewPager.setAdapter(null);
+
+            mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
+
+
+
+            //Se le indica la clase en cada posicion del array, es decir para cada posicion tiene un texto ya
+            //pero necesita indicar la clase correspondiente
+
+            //bucle for de la pagina
             for (int i = 0; i < size; i++)
             {
                 Bundle args = new Bundle();
@@ -201,30 +212,34 @@ public class MainActivity extends FragmentActivity {
             }
 
 
+
+
             //mTabsAdapter.mTabHost.getTabWidget().getChildAt(0).getLayoutParams().height = 35;
             /*
 		     mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[0]).setIndicator(items_menu[0]),
 		     		Page1Activity.class, args);
-		     
+
 		     mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[1]).setIndicator(items_menu[1]),
-		     		Page2Activity.class, args);
+		     		PageXActivity.class, args);
 		    */
-		    
-	
-		     //para que si gira, mantenga el tab activo
+
+
+            //para que si gira, mantenga el tab activo
 		     /*
 		     if (savedInstanceState != null) {
 		         mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
 		         Log.e("Rodalies","saved tag1"+savedInstanceState.getString("tab"));
 		     }
 		     */
-		     
 		
 		}
-		
-		
+
+
 
 	}
+
+
+
 	 /*
 	 @Override
 	 protected void onSaveInstanceState(Bundle outState) {
@@ -239,7 +254,22 @@ public class MainActivity extends FragmentActivity {
 		 //}
 	 }
     */
-    
+
+     @Override
+     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+         super.onActivityResult(requestCode, resultCode, intent);
+
+                //100 es el codigo que se usa para llamar a la activity settings
+                 if (requestCode == 100) {
+
+                     //montarVista(); // your "refresh" code
+                     finish();
+                     startActivity(getIntent());
+                 }
+
+     }
+
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -256,7 +286,7 @@ public class MainActivity extends FragmentActivity {
 		    	Log.e("Rodalies", "entra a settings");
 				//no tiene preferencias, llamamos a la configuracion de la linea principal
 				existPreferences=false;
-				startActivity(new Intent(MainActivity.this, GuardarPreferencias.class));  
+                startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
 		     break;
 		    
 		 }
@@ -381,6 +411,7 @@ public class MainActivity extends FragmentActivity {
             mViewPager.setAdapter(this);
             mViewPager.setOnPageChangeListener(this);
         }
+
 
         public void addTab(TabHost.TabSpec tabSpec, Class<?> clss, Bundle args) {
             tabSpec.setContent(new DummyTabFactory(mContext));

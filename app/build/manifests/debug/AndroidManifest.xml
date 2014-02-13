@@ -15,8 +15,6 @@
         </activity>
         <activity android:label="@string/title_activity_page1" android:name="com.example.rodalies.Page1Activity" android:screenOrientation="portrait">
         </activity>
-        <activity android:label="@string/title_activity_page2" android:name="com.example.rodalies.Page2Activity" android:screenOrientation="portrait">
-        </activity>
         <activity android:label="@string/title_activity_guardar_preferencias" android:name="com.example.rodalies.GuardarPreferencias" android:screenOrientation="portrait">
         </activity>
     </application>

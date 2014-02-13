@@ -81,11 +81,11 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="267" column="18" selection-start="11028" selection-end="11215" vertical-scroll-proportion="0.37815127" vertical-offset="3825" max-vertical-offset="7590">
+            <state line="454" column="0" selection-start="17072" selection-end="17072" vertical-scroll-proportion="0.05462185" vertical-offset="6784" max-vertical-offset="7815">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1829#1838#0" expanded="true" />
-                <element signature="e#14273#14282#0" expanded="true" />
+                <element signature="e#1873#1882#0" expanded="true" />
+                <element signature="e#14312#14321#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,33 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Page1Activity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="45" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2580">
-              <folding>
-                <element signature="e#4255#4285#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_page1.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="16" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="795">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="50" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="750">
+            <state line="14" column="39" selection-start="405" selection-end="415" vertical-scroll-proportion="-7.7777777" vertical-offset="0" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -944,15 +921,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="22" width="1349" height="870" extended-state="0" />
+    <frame x="49" y="22" width="1349" height="870" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28045976" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6130319" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2379495" sideWeight="0.14880952" order="0" side_tool="true" content_ui="tabs" />
@@ -960,7 +938,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -969,7 +947,6 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2379495" sideWeight="0.85119045" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28045976" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -994,8 +971,8 @@
         <state line="374" column="37" selection-start="13912" selection-end="13912" vertical-scroll-proportion="0.0" vertical-offset="5449" max-vertical-offset="7545">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1829#1838#0" expanded="true" />
-            <element signature="e#14273#14282#0" expanded="true" />
+            <element signature="e#1873#1882#0" expanded="true" />
+            <element signature="e#14312#14321#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1034,8 +1011,8 @@
         <state line="248" column="4" selection-start="10716" selection-end="10716" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7125">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1829#1838#0" expanded="true" />
-            <element signature="e#14273#14282#0" expanded="true" />
+            <element signature="e#1873#1882#0" expanded="true" />
+            <element signature="e#14312#14321#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1121,26 +1098,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="50" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/GuardarPreferencias.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="17" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5205">
@@ -1150,11 +1107,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="45" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2580">
+        <state line="80" column="45" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.6617647" vertical-offset="600" max-vertical-offset="2580">
           <folding>
             <element signature="e#4255#4285#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="16" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.8663697" vertical-offset="151" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -1164,13 +1131,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="39" selection-start="405" selection-end="415" vertical-scroll-proportion="-7.7777777" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="18" selection-start="11028" selection-end="11215" vertical-scroll-proportion="0.37815127" vertical-offset="3825" max-vertical-offset="7590">
+        <state line="454" column="0" selection-start="17072" selection-end="17072" vertical-scroll-proportion="0.05462185" vertical-offset="6784" max-vertical-offset="7815">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1829#1838#0" expanded="true" />
-            <element signature="e#14273#14282#0" expanded="true" />
+            <element signature="e#1873#1882#0" expanded="true" />
+            <element signature="e#14312#14321#0" expanded="true" />
           </folding>
         </state>
       </provider>

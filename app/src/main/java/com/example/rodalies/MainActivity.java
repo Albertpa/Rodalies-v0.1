@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
@@ -211,9 +212,6 @@ public class MainActivity extends FragmentActivity {
 
             }
 
-
-
-
             //mTabsAdapter.mTabHost.getTabWidget().getChildAt(0).getLayoutParams().height = 35;
             /*
 		     mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[0]).setIndicator(items_menu[0]),
@@ -231,7 +229,7 @@ public class MainActivity extends FragmentActivity {
 		         Log.e("Rodalies","saved tag1"+savedInstanceState.getString("tab"));
 		     }
 		     */
-		
+
 		}
 
 
@@ -452,25 +450,42 @@ public class MainActivity extends FragmentActivity {
 
             //position es la nueva position
 
-            Log.e("Rodalies", "tab1:"+positionActual);
-            Log.e("Rodalies", "tab2:"+position);
+            //Log.e("Rodalies", "tab1:"+positionActual);
+            //Log.e("Rodalies", "tab2:"+position);
 
-
+            final HorizontalScrollView strip;
+            final int positionTab = position * 110;
             View rootView = ((Activity)mContext).getWindow().getDecorView().findViewById(android.R.id.tabhost);
-            View v = rootView.findViewById(R.id.scrollTabs);
-           // ScrollView sv = (ScrollView) rootView.findViewById(R.id.scrollTabs);
 
+            //View v = rootView.findViewById(R.id.scrollTabs);
+
+            strip = (HorizontalScrollView) rootView.findViewById(R.id.scrollTabs);
+
+           // ScrollView sv = (ScrollView) rootView.findViewById(R.id.scrollTabs);
+            /*
             if(positionActual > position){
                 Log.e("Rodalies", "el primero es mayor, scroll hacia izq");
             }
             else if(positionActual < position){
                 Log.e("Rodalies", "el segundo es mayor, scroll hacia der");
-                //sv.scrollBy(0, 10);
-            }
+*/
+
+            strip.scrollTo(positionTab, 0);
+            /*
+            strip.postDelayed(new Runnable() {
+
+                public void run() {
+                    //strip.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+                    strip.scrollTo(positionTab, 0);
+                }
+            }, 1000L);
+*/
+
+            //}
 
 
 
-            positionActual = position;
+            //positionActual = position;
         }
 
         @Override

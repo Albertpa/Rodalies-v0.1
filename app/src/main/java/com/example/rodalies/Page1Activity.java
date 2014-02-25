@@ -11,9 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import twitter4j.Query;
@@ -107,6 +108,47 @@ public class Page1Activity extends Fragment{
         }
     }
 
+    private String obtenerFechaTuit(Date fecha)
+    {
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
+
+        String dateAsString = dateFormatter.format(fecha);
+        String timeAsString = timeFormatter.format(fecha);
+
+        String fechaTuit = timeAsString;
+
+        Date hoy = new Date();
+        Calendar calHoy = Calendar.getInstance();
+        calHoy.setTime(hoy);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(fecha);
+
+        Calendar ayer = Calendar.getInstance();
+        ayer.add(Calendar.DATE, -1);
+
+
+        if(cal.get(Calendar.DAY_OF_MONTH) == calHoy.get(Calendar.DAY_OF_MONTH) &&   //Hoy
+                cal.get(Calendar.MONTH) == calHoy.get(Calendar.MONTH) &&
+                cal.get(Calendar.YEAR) == calHoy.get(Calendar.YEAR))
+        {
+            fechaTuit += " - " + getString(R.string.avui);
+        }
+        else if(cal.get(Calendar.DAY_OF_MONTH) == ayer.get(Calendar.DAY_OF_MONTH) &&  //Ayer
+                cal.get(Calendar.MONTH) == ayer.get(Calendar.MONTH) &&
+                cal.get(Calendar.YEAR) == ayer.get(Calendar.YEAR))
+        {
+            fechaTuit += " - " + getString(R.string.ahir);
+        }
+        else
+        {
+            fechaTuit += " - " + dateAsString;
+        }
+
+        return fechaTuit;
+    }
+
     private class EstadoAsyncTask extends AsyncTask<String, Void, String> {
         private Linea linea;
 
@@ -156,15 +198,9 @@ public class Page1Activity extends Fragment{
             try {
                 QueryResult result = twitter.search(query);
                 for (twitter4j.Status status : result.getTweets()) {
-                    Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText());
+                    Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText() + " " + status.getCreatedAt());
 
-                    SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
-                    SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
-
-                    String dateAsString = dateFormatter.format(status.getCreatedAt());
-                    String timeAsString = timeFormatter.format(status.getCreatedAt());
-
-                    String fecha = timeAsString + " - " + dateAsString;
+                    String fecha = obtenerFechaTuit(status.getCreatedAt());
 
                     Tuit tuit = new Tuit("@" + status.getUser().getScreenName(), status.getText(), fecha);
                     lista_Tuits.add(tuit);

@@ -81,7 +81,6 @@ public class Page1Activity extends Fragment{
     * El estado inicialmente es un string vacio "", a continuación se hace una llamada
     * al AsyncTask que descargará el estado y se le asignará al objeto */
     private void crearObjetosLinea(int codeLinea) {
-
         linea = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea], usuarioTwitterLineas[codeLinea]);
         new EstadoAsyncTask(linea).execute();
         new TuitsAsyncTask(linea).execute();
@@ -113,12 +112,12 @@ public class Page1Activity extends Fragment{
         SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
 
-        String dateAsString = dateFormatter.format(fecha);
-        String timeAsString = timeFormatter.format(fecha);
+        String dateAsString = dateFormatter.format(fecha); //convierte la fecha del tuit en una fecha de formato dd/MM/yyyy
+        String timeAsString = timeFormatter.format(fecha); //extrae la hora del tuit
 
         String fechaTuit = timeAsString;
 
-        Date hoy = new Date();
+        Date hoy = new Date(); //fecha de hoy
         Calendar calHoy = Calendar.getInstance();
         calHoy.setTime(hoy);
 
@@ -141,7 +140,7 @@ public class Page1Activity extends Fragment{
         {
             fechaTuit += " - " + getString(R.string.ahir);
         }
-        else
+        else //otro dia
         {
             fechaTuit += " - " + dateAsString;
         }

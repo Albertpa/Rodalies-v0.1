@@ -1,7 +1,12 @@
 package com.example.rodalies;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -38,6 +43,8 @@ public class MainActivity extends FragmentActivity {
     
     private SharedPreferences sharedSettings;
     private boolean existPreferences = true;
+
+    private Map<String, String> nombre_cuentaTwitter;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -185,7 +192,6 @@ public class MainActivity extends FragmentActivity {
 
             mTabHost = (TabHost)findViewById(android.R.id.tabhost);
 
-
             mTabHost.setup();
 
 
@@ -230,6 +236,20 @@ public class MainActivity extends FragmentActivity {
 		     }
 		     */
 
+            nombre_cuentaTwitter = new HashMap<String, String>();
+            nombre_cuentaTwitter.put("R1", "@rodalia1");
+            nombre_cuentaTwitter.put("R2 Nord", "@rodalia2");
+            nombre_cuentaTwitter.put("R2 Sud", "@rodalia2");
+            nombre_cuentaTwitter.put("R3", "@rodalia3");
+            nombre_cuentaTwitter.put("R4", "@rodalia4");
+            nombre_cuentaTwitter.put("R7", "@rodalia7");
+            nombre_cuentaTwitter.put("R8", "@rodalia8");
+            nombre_cuentaTwitter.put("R11", "rod11");
+            nombre_cuentaTwitter.put("R12", "rod12");
+            nombre_cuentaTwitter.put("R13", "rod13");
+            nombre_cuentaTwitter.put("R14", "rod14");
+            nombre_cuentaTwitter.put("R15", "rod15");
+            nombre_cuentaTwitter.put("R16", "rod16");
 		}
 
 
@@ -274,22 +294,52 @@ public class MainActivity extends FragmentActivity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
-	
 
+
+    @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch(item.getItemId())
 	    {
 		    case R.id.action_settings:
-		    	Log.e("Rodalies", "entra a settings");
+		    	Log.i("Rodalies", "entra a settings");
 				//no tiene preferencias, llamamos a la configuracion de la linea principal
 				existPreferences=false;
                 startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
-		     break;
-		    
+                return true;
+            case R.id.nuevo_tuit:
+                escribirTuit();
+                Log.i("Rodalies", "Escribir tuit");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
 		 }
-	     return true;
 	}
+
+    private void escribirTuit() {
+        String originalMessage = obtenerTwitterLinea(mTabHost.getCurrentTabTag());
+
+        String originalMessageEscaped = null;
+        try {
+            originalMessageEscaped = String.format(
+                    "https://twitter.com/intent/tweet?source=webclient&text=%s",
+                    URLEncoder.encode(originalMessage, "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        if(originalMessageEscaped != null) {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(originalMessageEscaped));
+            startActivity(i);
+        }
+        else {
+            // Some Error
+        }
+    }
+
+    private String obtenerTwitterLinea(String currentTabTag) {
+        return nombre_cuentaTwitter.get(currentTabTag);
+    }
 	
 	/*
     public void onListItemSelected(int index, String fragmentTag) {

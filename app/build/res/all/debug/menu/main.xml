@@ -1,10 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
+        android:id="@+id/nuevo_tuit"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/bird_gray_48"
+        android:title="@string/twittear"/>
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/action_settings"/>
+
+
 
 </menu><!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/menu/main.xml -->

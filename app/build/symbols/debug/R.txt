@@ -227,7 +227,9 @@ int drawable abc_textfield_searchview_holo_dark 0x7f020053
 int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
-int drawable ic_launcher 0x7f020057
+int drawable bird_blue_48 0x7f020057
+int drawable bird_gray_48 0x7f020058
+int drawable ic_launcher 0x7f020059
 int id Spinner_Lineas1 0x7f080043
 int id action_bar 0x7f08001c
 int id action_bar_activity_content 0x7f080014
@@ -240,7 +242,7 @@ int id action_context_bar 0x7f08001d
 int id action_menu_divider 0x7f080015
 int id action_menu_presenter 0x7f080016
 int id action_mode_close_button 0x7f080024
-int id action_settings 0x7f080049
+int id action_settings 0x7f08004a
 int id activity_chooser_view_content 0x7f080025
 int id always 0x7f08000f
 int id beginning 0x7f08000a
@@ -271,6 +273,7 @@ int id never 0x7f08000d
 int id nombre_usuario 0x7f080047
 int id none 0x7f080009
 int id normal 0x7f080000
+int id nuevo_tuit 0x7f080049
 int id pager 0x7f08003d
 int id progress_circular 0x7f080018
 int id progress_horizontal 0x7f080019
@@ -383,6 +386,7 @@ int string selecLineaS 0x7f0b002d
 int string title_activity_guardar_preferencias 0x7f0b002e
 int string title_activity_page1 0x7f0b002f
 int string title_activity_page2 0x7f0b0030
+int string twittear 0x7f0b0031
 int style AppBaseTheme 0x7f0c0000
 int style AppTheme 0x7f0c0001
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0c0002

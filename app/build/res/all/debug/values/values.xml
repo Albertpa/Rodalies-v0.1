@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/src/main/res/values/arrays.xml -->
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/values/arrays.xml -->
     <eat-comment />
 
     <string-array name="lineas">
@@ -19,7 +19,7 @@
         <item>@string/r15</item>
         <item>@string/r16</item>
     </string-array>
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
     <eat-comment />
 
     <attr name="actionBarDivider" format="reference" />
@@ -500,12 +500,12 @@
     <dimen name="abc_panel_menu_list_width">296dp</dimen>
     <dimen name="abc_search_view_preferred_width">320dip</dimen>
     <dimen name="abc_search_view_text_min_width">160dip</dimen>
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
     <eat-comment />
 
     <item name="action_bar_activity_content" type="id"/>
@@ -530,11 +530,13 @@
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="action_settings">Configuració</string>
+    <string name="ahir">Ahir</string>
     <string name="app_name">Rodalies</string>
+    <string name="avui">Avui</string>
     <string name="carregant">Obtenint dades...</string>
     <string name="guardar">Guardar</string>
     <string name="hello_world">Hello world!</string>
@@ -567,7 +569,8 @@
     <string name="title_activity_guardar_preferencias">GuardarPreferencias</string>
     <string name="title_activity_page1">Page1Activity</string>
     <string name="title_activity_page2">Page2Activity</string>
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/src/main/res/values/styles.xml -->
+    <string name="twittear">Piular</string>
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
@@ -581,7 +584,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/Users/albert/Documents/PlantillaPager/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
+    <!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/build/exploded-bundles/ComAndroidSupportAppcompatV71901.aar/res/values/values.xml -->
     <eat-comment />
 
     <style name="TextAppearance.AppCompat.Base.CompactMenu.Dialog" parent="android:TextAppearance.Medium">

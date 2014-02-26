@@ -11,9 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import twitter4j.Query;
@@ -80,7 +81,6 @@ public class Page1Activity extends Fragment{
     * El estado inicialmente es un string vacio "", a continuación se hace una llamada
     * al AsyncTask que descargará el estado y se le asignará al objeto */
     private void crearObjetosLinea(int codeLinea) {
-
         linea = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea], usuarioTwitterLineas[codeLinea]);
         new EstadoAsyncTask(linea).execute();
         new TuitsAsyncTask(linea).execute();
@@ -105,6 +105,47 @@ public class Page1Activity extends Fragment{
                 textoPrincipal.setTextColor(Color.parseColor("#BA0000"));
             }
         }
+    }
+
+    private String obtenerFechaTuit(Date fecha)
+    {
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
+
+        String dateAsString = dateFormatter.format(fecha); //convierte la fecha del tuit en una fecha de formato dd/MM/yyyy
+        String timeAsString = timeFormatter.format(fecha); //extrae la hora del tuit
+
+        String fechaTuit = timeAsString;
+
+        Date hoy = new Date(); //fecha de hoy
+        Calendar calHoy = Calendar.getInstance();
+        calHoy.setTime(hoy);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(fecha);
+
+        Calendar ayer = Calendar.getInstance();
+        ayer.add(Calendar.DATE, -1);
+
+
+        if(cal.get(Calendar.DAY_OF_MONTH) == calHoy.get(Calendar.DAY_OF_MONTH) &&   //Hoy
+                cal.get(Calendar.MONTH) == calHoy.get(Calendar.MONTH) &&
+                cal.get(Calendar.YEAR) == calHoy.get(Calendar.YEAR))
+        {
+            fechaTuit += " - " + getString(R.string.avui);
+        }
+        else if(cal.get(Calendar.DAY_OF_MONTH) == ayer.get(Calendar.DAY_OF_MONTH) &&  //Ayer
+                cal.get(Calendar.MONTH) == ayer.get(Calendar.MONTH) &&
+                cal.get(Calendar.YEAR) == ayer.get(Calendar.YEAR))
+        {
+            fechaTuit += " - " + getString(R.string.ahir);
+        }
+        else //otro dia
+        {
+            fechaTuit += " - " + dateAsString;
+        }
+
+        return fechaTuit;
     }
 
     private class EstadoAsyncTask extends AsyncTask<String, Void, String> {
@@ -156,15 +197,9 @@ public class Page1Activity extends Fragment{
             try {
                 QueryResult result = twitter.search(query);
                 for (twitter4j.Status status : result.getTweets()) {
-                    Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText());
+                    Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText() + " " + status.getCreatedAt());
 
-                    SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
-                    SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
-
-                    String dateAsString = dateFormatter.format(status.getCreatedAt());
-                    String timeAsString = timeFormatter.format(status.getCreatedAt());
-
-                    String fecha = timeAsString + " - " + dateAsString;
+                    String fecha = obtenerFechaTuit(status.getCreatedAt());
 
                     Tuit tuit = new Tuit("@" + status.getUser().getScreenName(), status.getText(), fecha);
                     lista_Tuits.add(tuit);

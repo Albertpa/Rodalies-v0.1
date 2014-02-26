@@ -35,5 +35,8 @@
     <string name="info_oficial">Informació oficial</string>
     <string name="info_twitter">Informació via Twitter</string>
     <string name="carregant">Obtenint dades...</string>
+    <string name="avui">Avui</string>
+    <string name="ahir">Ahir</string>
+    <string name="twittear">Piular</string>
 
 </resources>

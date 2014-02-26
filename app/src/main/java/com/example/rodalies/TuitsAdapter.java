@@ -2,6 +2,7 @@ package com.example.rodalies;
 
 import android.app.Activity;
 import android.content.Context;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,6 +61,7 @@ public class TuitsAdapter extends ArrayAdapter<Tuit>{
             {
                 holder.nombre_usuario.setText(tuit.getUsuario() + " " + tuit.getFecha()); //Asigna el nombre de la linea REVISAR (FECHA)
                 holder.texto_tuit.setText(detectarUrls(tuit.getTexto()));
+                holder.texto_tuit.setMovementMethod(LinkMovementMethod.getInstance());
             }
         }
         return view;

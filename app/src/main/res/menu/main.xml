@@ -3,17 +3,29 @@
     <item
         android:id="@+id/nuevo_tuit"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:icon="@drawable/bird_gray_48"
         android:title="@string/twittear"/>
 
     <item
+        android:id="@+id/actualizar"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/actualizar"/>
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom"
+        android:showAsAction="never"
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/action_settings"/>
 
-
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/acerca_de"/>
 
 </menu>

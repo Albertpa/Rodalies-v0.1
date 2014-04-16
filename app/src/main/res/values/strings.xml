@@ -3,7 +3,6 @@
 
     <string name="app_name">Rodalies</string>
     <string name="action_settings">Configuració</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_page1">Page1Activity</string>
     <string name="title_activity_page2">Page2Activity</string>
     <string name="menu_page1">Page1</string>
@@ -38,5 +37,13 @@
     <string name="avui">Avui</string>
     <string name="ahir">Ahir</string>
     <string name="twittear">Piular</string>
+    <string name="actualizar">Actualitzar</string>
+    <string name="acerca_de">Quant a</string>
+    <string name="autores">Aplicació desenvolupada per Albert Pagés i Jesús Escribano</string>
+    <string name="fuente">Font de les dades: http://dadesobertes.gencat.cat</string>
+    <string name="contacto">Contacte: Running Dogs Studio runningdogsstudio@gmail.com</string>
+    <string name="title_activity_about">About</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="generalitat">Generalitat de Catalunya</string>
 
 </resources>

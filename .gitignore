@@ -41,6 +41,19 @@ proguard/
 # Mac OS X clutter
 *.DS_Store
 
+# Android Studio
+.idea/
+.gradle
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+
 .gradle/1.10/taskArtifacts/cache.properties.lock
 
 .gradle/1.10/taskArtifacts/cache.properties.lock

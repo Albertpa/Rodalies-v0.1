@@ -51,4 +51,4 @@
         android:onClick="guardar"
         android:text="@string/guardar" />
 
-</RelativeLayout><!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/layout/guardar_preferencias.xml -->
+</RelativeLayout><!-- From: file:/Users/jesus/Documents/workspace/Rodalies-v0.1/app/src/main/res/layout/guardar_preferencias.xml -->

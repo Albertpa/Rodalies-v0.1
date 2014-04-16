@@ -60,7 +60,6 @@ public class Page1Activity extends Fragment{
     private ListView listaTuits;
     List<Tuit> lista_Tuits = new ArrayList<Tuit>();
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myFragmentView = inflater.inflate(R.layout.activity_page1, container, false);
@@ -80,10 +79,27 @@ public class Page1Activity extends Fragment{
     /* Esta funcion crea un objecto "Linea", le asigna el nombre y la url.
     * El estado inicialmente es un string vacio "", a continuación se hace una llamada
     * al AsyncTask que descargará el estado y se le asignará al objeto */
-    private void crearObjetosLinea(int codeLinea) {
+     public void crearObjetosLinea(int codeLinea) {
         linea = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea], usuarioTwitterLineas[codeLinea]);
         new EstadoAsyncTask(linea).execute();
+
+         /* se limipia el adapter de los posibles tuits que ya contenga con tal de que no
+         aparezcan repetidos cuando se recarge el tab */
+         adapter.clear();
+         adapter.notifyDataSetChanged();
+
         new TuitsAsyncTask(linea).execute();
+    }
+
+    public void actualizar(Integer idLinea){
+        Log.i("ACTUALIZAR", "ACTUALIZAR");
+
+        listaTuits = (ListView) myFragmentView.findViewById(R.id.lista_tuits);
+        adapter = new TuitsAdapter(getActivity(), android.R.layout.simple_list_item_1, lista_Tuits);
+        listaTuits.setAdapter(adapter);
+
+        textoPrincipal = (TextView) myFragmentView.findViewById(R.id.textP);
+        crearObjetosLinea(idLinea);
     }
 
     private void asignarEstado(Linea l) {

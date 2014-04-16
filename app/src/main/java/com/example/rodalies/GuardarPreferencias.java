@@ -41,7 +41,6 @@ public class GuardarPreferencias extends Activity {
 			
 			principal.setSelection(lineaPrincipalInt);
 		}
-		
         
         //lista secundaria
         String[] arrayLineas = getResources().getStringArray(R.array.lineas);
@@ -62,36 +61,7 @@ public class GuardarPreferencias extends Activity {
                // Log.e("Rodalies", "YES");
             	myList.setItemChecked(i, true);
             }
-            
         }
-
-        
-		/*
-		//lista de elementos secundarios
-		//le decimos que sea list_fragment
-		listFrag = new SupportListFragment();
-		Bundle parametros = new Bundle();
-		parametros.putInt("listLayoutId", R.layout.list_fragment);
-		
-		FragmentManager fm = getSupportFragmentManager();
-		FragmentTransaction ft = fm.beginTransaction();
-		
-		//Parametros: primero se indica donde se quiere poner el fragment, el fragment a colocar, identificador informativo
-		ft.add(R.id.listPlace, listFrag, "list");
-		ft.commit();
-		
-		ArrayList<String> listaLineas = new ArrayList<String>();
-		String[] arrayLineas = getResources().getStringArray(R.array.lineas);
-		
-		for(int i = 0; i<arrayLineas.length; i++){
-			listaLineas.add(arrayLineas[i]);
-		}
-		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, listaLineas);
-		
-		listFrag.setListAdapter(adapter);
-		*/
-	
 	}
 	
 	public void guardar(View v){
@@ -177,45 +147,16 @@ public class GuardarPreferencias extends Activity {
             	 		//editor.putString(Constants.LINEA_SECUNDARIA13, myList.getItemAtPosition(i).toString());
             	 		editor.putInt(Constants.LINEA_SECUNDARIA13, i);
             	 		break;
-            	 	/*
-             		case 14:
-             			//editor.putString(Constants.LINEA_SECUNDARIA14, myList.getItemAtPosition(i).toString());
-             			editor.putInt(Constants.LINEA_SECUNDARIA14, i);
-             			break;
-        	 	
-			        case 15:
-			    		//editor.putString(Constants.LINEA_SECUNDARIA15, myList.getItemAtPosition(i).toString());
-			        	editor.putInt(Constants.LINEA_SECUNDARIA15, i);
-			    		 break;
-			        case 16:
-            	 		//editor.putString(Constants.LINEA_SECUNDARIA16, myList.getItemAtPosition(i).toString());
-            	 		editor.putInt(Constants.LINEA_SECUNDARIA16, i);
-            	 		break;
-            	 	
-             		case 17:
-             			//editor.putString(Constants.LINEA_SECUNDARIA17, myList.getItemAtPosition(i).toString());
-             			editor.putInt(Constants.LINEA_SECUNDARIA17, i);
-             			break;
-        	 	
-			        case 18:
-			    		//editor.putString(Constants.LINEA_SECUNDARIA18, myList.getItemAtPosition(i).toString());
-			        	editor.putInt(Constants.LINEA_SECUNDARIA17, i); 
-			        	break;
-			        	*/
             	 }
             	 
             	 contador++;
              }
              
          }
-       //Log.e("Rodalies", "seleccionat Secundari->"+secundarioSelected);
-       editor.putInt(Constants.LINEAS_TOTAL, contador); 
+       editor.putInt(Constants.LINEAS_TOTAL, contador);
        editor.commit();
-       
-        
-        
+
         //tornar a la activity principal
-       //startActivity(new Intent(GuardarPreferencias.this, MainActivity.class));
         finish();
 	}
 	
@@ -276,77 +217,8 @@ public class GuardarPreferencias extends Activity {
 			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA13, -1) == i)
 				 trobat=true;
 		}
-        /*
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA14)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA14, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA15)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA15, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA16)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA16, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA17)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA17, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA18)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA18, -1) == i)
-				 trobat=true;
-		}
-        */
-        
-        
+
 		return trobat;
 	}
-	/*
-	private int posicioR(String nom){
-		
-		int retornar= -1;
-		
-		if(nom.equals("R1")){
-			retornar=0;
-		}else if(nom.equals("R2")){
-			retornar=1;
-		}else if(nom .equals("R2 Nord")){
-			retornar=2;
-		}else if(nom.equals("R2 Sud")){
-			retornar=3;
-		}else if(nom.equals("R3")){
-			retornar=4;
-		}else if(nom.equals("R4")){
-			retornar=5;
-		}else if(nom.equals("R5")){
-			retornar=6;
-		}else if(nom.equals("R6")){
-			retornar=7;
-		}else if(nom.equals("R7")){
-			retornar=8;
-		}else if(nom.equals("R8")){
-			retornar=9;
-		}else if(nom.equals("R9")){
-			retornar=10;
-		}else if(nom.equals("R10")){
-			retornar=11;
-		}else if(nom.equals("R11")){
-			retornar=12;
-		}else if(nom.equals("R12")){
-			retornar=13;
-		}else if(nom.equals("R13")){
-			retornar=14;
-		}else if(nom.equals("R14")){
-			retornar=15;
-		}else if(nom.equals("R15")){
-			retornar=16;
-		}else if(nom.equals("R16")){
-			retornar=17;
-		}
-			
-		return retornar;
-	}
-	*/
 
 }

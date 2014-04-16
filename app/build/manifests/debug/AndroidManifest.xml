@@ -1,4 +1,4 @@
-<!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/AndroidManifest.xml -->
+<!-- From: file:/Users/jesus/Documents/workspace/Rodalies-v0.1/app/src/main/AndroidManifest.xml -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.example.rodalies">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
@@ -16,6 +16,8 @@
         <activity android:label="@string/title_activity_page1" android:name="com.example.rodalies.Page1Activity" android:screenOrientation="portrait">
         </activity>
         <activity android:label="@string/title_activity_guardar_preferencias" android:name="com.example.rodalies.GuardarPreferencias" android:screenOrientation="portrait">
+        </activity>
+        <activity android:label="@string/acerca_de" android:name="com.example.rodalies.About">
         </activity>
     </application>
 

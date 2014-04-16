@@ -24,6 +24,7 @@
         android:id="@+id/textP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16dp"
         android:text="@string/obtenint_dades"/>
 
 
@@ -45,4 +46,4 @@
 
 
 </LinearLayout>
-<!-- From: file:/Users/jesus/Dropbox/Proyectos%20apps/Rodalies-v0.1/app/src/main/res/layout/activity_page1.xml -->
+<!-- From: file:/Users/jesus/Documents/workspace/Rodalies-v0.1/app/src/main/res/layout/activity_page1.xml -->

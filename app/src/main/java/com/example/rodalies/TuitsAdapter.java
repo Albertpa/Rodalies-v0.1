@@ -73,7 +73,7 @@ public class TuitsAdapter extends ArrayAdapter<Tuit>{
         String textoConURLS = texto;
 
         // Attempt to convert each item into an URL.
-        for( String item : parts )
+        for(String item : parts)
         {
             try
             {

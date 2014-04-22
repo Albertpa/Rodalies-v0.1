@@ -54,7 +54,8 @@ public class MainActivity extends FragmentActivity {
 		sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 		
 		
-		if (!(sharedSettings.contains(Constants.LINEA_PRINCIPAL))) {
+		//if (!(sharedSettings.contains(Constants.LINEA_PRINCIPAL))) {
+        if (!(sharedSettings.contains(Constants.LINEA_SECUNDARIA1))) {
 			//Log.e("Rodalies", "no te shared preferences");
 			//no tiene preferencias, llamamos a la configuración de la linea principal
 			existPreferences=false;
@@ -66,12 +67,12 @@ public class MainActivity extends FragmentActivity {
 
 
             ArrayList<Integer> codeRod = new ArrayList<Integer>();
-            int codePrincipal;
+            int codePrincipal = -1;
             //Bundle args = new Bundle();
 
             //args.putInt(Constants.LINEA_PRINCIPAL, sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1) );
-            codeRod.add(sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1));
-            codePrincipal = sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1);
+            //codeRod.add(sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1));
+            //codePrincipal = sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1);
 
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA1) ){
                 //args.putInt(Constants.LINEA_SECUNDARIA1, sharedSettings.getInt(Constants.LINEA_SECUNDARIA1,-1) );
@@ -212,7 +213,7 @@ public class MainActivity extends FragmentActivity {
             for (int i = 0; i < size; i++)
             {
                 Bundle args = new Bundle();
-                args.putInt(Constants.LINEA_PRINCIPAL, codeRod.get(i) );
+                args.putInt(Constants.LINEA_PARAMETRO, codeRod.get(i) );
                 mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[i]).setIndicator(items_menu[i]),
                         Page1Activity.class, args);
 

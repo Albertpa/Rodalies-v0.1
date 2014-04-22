@@ -71,7 +71,7 @@ public class Page1Activity extends Fragment{
 
         textoPrincipal = (TextView) myFragmentView.findViewById(R.id.textP);
 
-        codigoLinea = getArguments().getInt(Constants.LINEA_PRINCIPAL);
+        codigoLinea = getArguments().getInt(Constants.LINEA_PARAMETRO);
         crearObjetosLinea(codigoLinea);
            Log.e("Rodalies", "Entra al "+ codigoLinea);
         return myFragmentView;

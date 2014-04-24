@@ -4,16 +4,48 @@
         <item >@string/r1</item>
         <item >@string/r2n</item>
         <item >@string/r2s</item>
-    	<item >@string/r3</item>
-    	<item >@string/r4</item>
-    	<item >@string/r7</item>
-    	<item >@string/r8</item>
-    	<item >@string/r11</item>
-    	<item >@string/r12</item>
-    	<item >@string/r13</item>
-    	<item >@string/r14</item>
-    	<item >@string/r15</item>
+        <item >@string/r3</item>
+        <item >@string/r4</item>
+        <item >@string/r7</item>
+        <item >@string/r8</item>
+        <item >@string/r11</item>
+        <item >@string/r12</item>
+        <item >@string/r13</item>
+        <item >@string/r14</item>
+        <item >@string/r15</item>
         <item >@string/r16</item>
     </string-array>
-    
+
+    <string-array name="paradas">
+        <item >@string/r1_p</item>
+        <item >@string/r2n_p</item>
+        <item >@string/r2s_p</item>
+        <item >@string/r3_p</item>
+        <item >@string/r4_p</item>
+        <item >@string/r7_p</item>
+        <item >@string/r8_p</item>
+        <item >@string/r11_p</item>
+        <item >@string/r12_p</item>
+        <item >@string/r13_p</item>
+        <item >@string/r14_p</item>
+        <item >@string/r15_p</item>
+        <item >@string/r16_p</item>
+    </string-array>
+
+    <string-array name="iconos">
+        <item >r1_</item>
+        <item >r2n</item>
+        <item >r2s</item>
+        <item >r3</item>
+        <item >r4</item>
+        <item >r7</item>
+        <item >r8</item>
+        <item >r11</item>
+        <item >r12</item>
+        <item >r13</item>
+        <item >r14</item>
+        <item >r15</item>
+        <item >r16</item>
+    </string-array>
+
 </resources>

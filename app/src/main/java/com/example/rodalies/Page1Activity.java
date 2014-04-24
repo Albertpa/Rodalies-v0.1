@@ -70,7 +70,7 @@ public class Page1Activity extends Fragment{
 
         textoPrincipal = (TextView) myFragmentView.findViewById(R.id.textP);
 
-        codigoLinea = getArguments().getInt(Constants.LINEA_PRINCIPAL);
+        codigoLinea = getArguments().getInt(Constants.LINEA_PARAMETRO);
         crearObjetosLinea(codigoLinea);
            Log.e("Rodalies", "Entra al "+ codigoLinea);
         return myFragmentView;
@@ -183,14 +183,15 @@ public class Page1Activity extends Fragment{
         @Override
         protected void onPostExecute(String response)
         {
-            if(response != null)
-            {
-                this.linea.setEstado(response);
-            }
-            Log.i("Rodalies", "estat->>"+response);
+            if(isAdded()) {
+                if (response != null) {
+                    this.linea.setEstado(response);
+                }
+                Log.i("Rodalies", "estat->>" + response);
 
-            Page1Activity.this.linea = this.linea;  // ??????????
-            asignarEstado(Page1Activity.this.linea);
+                Page1Activity.this.linea = this.linea;  // ??????????
+                asignarEstado(Page1Activity.this.linea);
+            }
         }
     }
 
@@ -228,7 +229,9 @@ public class Page1Activity extends Fragment{
         @Override
         protected void onPostExecute(Void listaTuits)
         {
-            adapter.notifyDataSetChanged();
+            if(isAdded()) {
+                adapter.notifyDataSetChanged();
+            }
         }
     }
 

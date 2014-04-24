@@ -17,7 +17,9 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040005;
     }
     public static final class array {
-        public static final int lineas=0x7f050000;
+        public static final int iconos=0x7f050000;
+        public static final int lineas=0x7f050001;
+        public static final int paradas=0x7f050002;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -935,10 +937,23 @@ containing a value of this type.
         public static final int ic_action_refresh=0x7f020059;
         public static final int ic_launcher=0x7f02005a;
         public static final int logo=0x7f02005b;
+        public static final int r11=0x7f02005c;
+        public static final int r12=0x7f02005d;
+        public static final int r13=0x7f02005e;
+        public static final int r14=0x7f02005f;
+        public static final int r15=0x7f020060;
+        public static final int r16=0x7f020061;
+        public static final int r1_=0x7f020062;
+        public static final int r2=0x7f020063;
+        public static final int r2n=0x7f020064;
+        public static final int r2s=0x7f020065;
+        public static final int r3=0x7f020066;
+        public static final int r4=0x7f020067;
+        public static final int r7=0x7f020068;
+        public static final int r8=0x7f020069;
     }
     public static final class id {
-        public static final int Spinner_Lineas1=0x7f08004a;
-        public static final int about=0x7f080053;
+        public static final int about=0x7f080054;
         public static final int action_bar=0x7f08001c;
         public static final int action_bar_activity_content=0x7f080014;
         public static final int action_bar_container=0x7f08001b;
@@ -950,9 +965,9 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f080015;
         public static final int action_menu_presenter=0x7f080016;
         public static final int action_mode_close_button=0x7f080024;
-        public static final int action_settings=0x7f080050;
+        public static final int action_settings=0x7f080051;
         public static final int activity_chooser_view_content=0x7f080025;
-        public static final int actualizar=0x7f080052;
+        public static final int actualizar=0x7f080053;
         public static final int always=0x7f08000f;
         public static final int autores=0x7f08003e;
         public static final int beginning=0x7f08000a;
@@ -970,26 +985,29 @@ containing a value of this type.
         public static final int expanded_menu=0x7f08002c;
         public static final int fuente=0x7f080040;
         public static final int generalitat=0x7f080041;
-        public static final int guardar=0x7f08004d;
+        public static final int guardar=0x7f08004b;
         public static final int home=0x7f080017;
         public static final int homeAsUp=0x7f080005;
         public static final int icon=0x7f08002a;
         public static final int icono=0x7f08003c;
+        public static final int iconoLinea=0x7f08004c;
         public static final int ifRoom=0x7f08000e;
         public static final int image=0x7f080027;
         public static final int info_principal=0x7f080045;
         public static final int info_twitter=0x7f080047;
-        public static final int list=0x7f08004c;
+        public static final int list=0x7f08004a;
         public static final int listMode=0x7f080001;
         public static final int list_item=0x7f080029;
         public static final int lista_tuits=0x7f080048;
         public static final int middle=0x7f08000b;
         public static final int never=0x7f08000d;
-        public static final int nombre_usuario=0x7f08004e;
+        public static final int nombreLineaPreferencias=0x7f08004d;
+        public static final int nombre_usuario=0x7f08004f;
         public static final int none=0x7f080009;
         public static final int normal=0x7f080000;
-        public static final int nuevo_tuit=0x7f080051;
+        public static final int nuevo_tuit=0x7f080052;
         public static final int pager=0x7f080044;
+        public static final int paradas=0x7f08004e;
         public static final int progress_circular=0x7f080018;
         public static final int progress_horizontal=0x7f080019;
         public static final int radio=0x7f08002f;
@@ -1004,8 +1022,7 @@ containing a value of this type.
         public static final int search_plate=0x7f080036;
         public static final int search_src_text=0x7f080037;
         public static final int search_voice_btn=0x7f08003b;
-        public static final int selecLinea1=0x7f080049;
-        public static final int selecLineaS=0x7f08004b;
+        public static final int selecLineaS=0x7f080049;
         public static final int shortcut=0x7f08002e;
         public static final int showCustom=0x7f080007;
         public static final int showHome=0x7f080004;
@@ -1014,7 +1031,7 @@ containing a value of this type.
         public static final int submit_area=0x7f080039;
         public static final int tabMode=0x7f080002;
         public static final int textP=0x7f080046;
-        public static final int texto_tuit=0x7f08004f;
+        public static final int texto_tuit=0x7f080050;
         public static final int title=0x7f08002b;
         public static final int titulo_app=0x7f08003d;
         public static final int top_action_bar=0x7f080020;
@@ -1055,8 +1072,9 @@ containing a value of this type.
         public static final int activity_main=0x7f03001a;
         public static final int activity_page1=0x7f03001b;
         public static final int guardar_preferencias=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
-        public static final int tuit_adapter=0x7f03001e;
+        public static final int lineas_preferencias_adapter=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int tuit_adapter=0x7f03001f;
     }
     public static final class menu {
         public static final int about=0x7f0d0000;
@@ -1100,28 +1118,43 @@ containing a value of this type.
         public static final int r1=0x7f0b0020;
         public static final int r10=0x7f0b0021;
         public static final int r11=0x7f0b0022;
-        public static final int r12=0x7f0b0023;
-        public static final int r13=0x7f0b0024;
-        public static final int r14=0x7f0b0025;
-        public static final int r15=0x7f0b0026;
-        public static final int r16=0x7f0b0027;
-        public static final int r2=0x7f0b0028;
-        public static final int r2n=0x7f0b0029;
-        public static final int r2s=0x7f0b002a;
-        public static final int r3=0x7f0b002b;
-        public static final int r4=0x7f0b002c;
-        public static final int r5=0x7f0b002d;
-        public static final int r6=0x7f0b002e;
-        public static final int r7=0x7f0b002f;
-        public static final int r8=0x7f0b0030;
-        public static final int r9=0x7f0b0031;
-        public static final int selecLinea1=0x7f0b0032;
-        public static final int selecLineaS=0x7f0b0033;
-        public static final int title_activity_about=0x7f0b0034;
-        public static final int title_activity_guardar_preferencias=0x7f0b0035;
-        public static final int title_activity_page1=0x7f0b0036;
-        public static final int title_activity_page2=0x7f0b0037;
-        public static final int twittear=0x7f0b0038;
+        public static final int r11_p=0x7f0b0023;
+        public static final int r12=0x7f0b0024;
+        public static final int r12_p=0x7f0b0025;
+        public static final int r13=0x7f0b0026;
+        public static final int r13_p=0x7f0b0027;
+        public static final int r14=0x7f0b0028;
+        public static final int r14_p=0x7f0b0029;
+        public static final int r15=0x7f0b002a;
+        public static final int r15_p=0x7f0b002b;
+        public static final int r16=0x7f0b002c;
+        public static final int r16_p=0x7f0b002d;
+        public static final int r1_p=0x7f0b002e;
+        public static final int r2=0x7f0b002f;
+        public static final int r2_p=0x7f0b0030;
+        public static final int r2n=0x7f0b0031;
+        public static final int r2n_p=0x7f0b0032;
+        public static final int r2s=0x7f0b0033;
+        public static final int r2s_p=0x7f0b0034;
+        public static final int r3=0x7f0b0035;
+        public static final int r3_p=0x7f0b0036;
+        public static final int r4=0x7f0b0037;
+        public static final int r4_p=0x7f0b0038;
+        public static final int r5=0x7f0b0039;
+        public static final int r6=0x7f0b003a;
+        public static final int r7=0x7f0b003b;
+        public static final int r7_p=0x7f0b003c;
+        public static final int r8=0x7f0b003d;
+        public static final int r8_p=0x7f0b003e;
+        public static final int r9=0x7f0b003f;
+        public static final int selecLinea1=0x7f0b0040;
+        public static final int selecLineaS=0x7f0b0041;
+        public static final int selecLineaS2=0x7f0b0042;
+        public static final int title_activity_about=0x7f0b0043;
+        public static final int title_activity_guardar_preferencias=0x7f0b0044;
+        public static final int title_activity_page1=0x7f0b0045;
+        public static final int title_activity_page2=0x7f0b0046;
+        public static final int twittear=0x7f0b0047;
     }
     public static final class style {
         /** 

@@ -7,6 +7,7 @@ public class Constants {
 
     //Se guarda desde Settings
     public static final String LINEA_PRINCIPAL = "LINEA_PRINCIPAL"; // String
+    public static final String LINEA_PARAMETRO = "LINEA_PARAMETRO"; // String
     public static final String LINEA_SECUNDARIA1 = "LINEA_SECUNDARIA1"; // String
     public static final String LINEA_SECUNDARIA2 = "LINEA_SECUNDARIA2"; // String
     public static final String LINEA_SECUNDARIA3 = "LINEA_SECUNDARIA3"; // String

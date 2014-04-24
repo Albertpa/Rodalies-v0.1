@@ -1,7 +1,6 @@
 package com.example.rodalies;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -60,7 +58,7 @@ public class MainActivity extends FragmentActivity {
     private void crearTabs(){
         sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
-        if (!(sharedSettings.contains(Constants.LINEA_PRINCIPAL))) {
+        if (!(sharedSettings.contains(Constants.LINEA_SECUNDARIA1))) {
             //no tiene preferencias, llamamos a la configuración de la linea principal
             existPreferences=false;
             //startActivity(new Intent(MainActivity.this, GuardarPreferencias.class));
@@ -69,10 +67,7 @@ public class MainActivity extends FragmentActivity {
         }
         else{
             ArrayList<Integer> codeRod = new ArrayList<Integer>(); //Codigo linea
-            int codePrincipal;
-
-            codeRod.add(sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1));
-            codePrincipal = sharedSettings.getInt(Constants.LINEA_PRINCIPAL,-1);
+            int codePrincipal = -1;
 
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA1) ){
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA1,-1))
@@ -153,21 +148,6 @@ public class MainActivity extends FragmentActivity {
             //Log.e("Rodalies", "te sharedpreferences");
             existPreferences=true;
 
-            //nombres de los tabs
-			/*String[] items_menu = {
-				 	    getResources().getString(R.string.menu_page1),
-		                getResources().getString(R.string.menu_page2)
-		                };
-            */
-
-//            String[] items_menu = new String[size];
-//            for (int i = 0; i < size; i++)
-//            {
-//                items_menu[i] = this.nombreLinea(codeRod.get(i));
-//                //Log.e("Rodalies", this.nombreLinea(codeRod.get(i)));
-//            }
-
-
             mTabHost = (TabHost)findViewById(android.R.id.tabhost);
 
             mTabHost.setup();
@@ -182,7 +162,7 @@ public class MainActivity extends FragmentActivity {
             for (int i = 0; i < size; i++)
             {
                 Bundle args = new Bundle();
-                args.putInt(Constants.LINEA_PRINCIPAL, codeRod.get(i) );
+                args.putInt(Constants.LINEA_PARAMETRO, codeRod.get(i) );
                 mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[i]).setIndicator(items_menu[i]), Page1Activity.class, args);
             }
 

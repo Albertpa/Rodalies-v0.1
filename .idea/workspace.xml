@@ -182,11 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47800586" vertical-offset="3362" max-vertical-offset="7860">
-              <caret line="235" column="58" selection-start="9524" selection-end="9524" />
+            <state vertical-scroll-proportion="-6.6538463" vertical-offset="3277" max-vertical-offset="7860">
+              <caret line="230" column="56" selection-start="9423" selection-end="9423" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2115#2124#0" expanded="true" />
@@ -200,12 +200,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Page1Activity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Page1Activity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="3315">
-              <caret line="90" column="0" selection-start="3920" selection-end="3920" />
-              <folding />
+            <state vertical-scroll-proportion="0.37570623" vertical-offset="3452" max-vertical-offset="4005">
+              <caret line="261" column="0" selection-start="10055" selection-end="10055" />
+              <folding>
+                <element signature="e#3303#3327#0" expanded="true" />
+                <element signature="e#3350#3374#0" expanded="true" />
+                <element signature="e#5076#5106#0" expanded="true" />
+                <element signature="e#8157#8158#0" expanded="true" />
+                <element signature="e#8195#8196#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -895,8 +901,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lineas_preferencias_adapter.xml" />
         <option value="$PROJECT_DIR$/app/build/source/r/debug/com/example/rodalies/R.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java" />
       </list>
     </option>
   </component>
@@ -1358,7 +1364,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2130" max-vertical-offset="3240">
           <caret line="142" column="0" selection-start="0" selection-end="0" />
-          <folding />
+          <folding>
+            <element signature="e#3303#3327#0" expanded="true" />
+            <element signature="e#3350#3374#0" expanded="true" />
+            <element signature="e#5076#5106#0" expanded="true" />
+            <element signature="e#8157#8158#0" expanded="true" />
+            <element signature="e#8195#8196#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1728,18 +1740,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="3315">
-          <caret line="90" column="0" selection-start="3920" selection-end="3920" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47800586" vertical-offset="3362" max-vertical-offset="7860">
-          <caret line="235" column="58" selection-start="9524" selection-end="9524" />
+        <state vertical-scroll-proportion="-6.6538463" vertical-offset="3277" max-vertical-offset="7860">
+          <caret line="230" column="56" selection-start="9423" selection-end="9423" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2115#2124#0" expanded="true" />
@@ -1748,6 +1752,20 @@
             <element signature="e#14895#14896#0" expanded="true" />
             <element signature="e#15959#15960#0" expanded="true" />
             <element signature="e#16002#16003#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37570623" vertical-offset="3452" max-vertical-offset="4005">
+          <caret line="261" column="0" selection-start="10055" selection-end="10055" />
+          <folding>
+            <element signature="e#3303#3327#0" expanded="true" />
+            <element signature="e#3350#3374#0" expanded="true" />
+            <element signature="e#5076#5106#0" expanded="true" />
+            <element signature="e#8157#8158#0" expanded="true" />
+            <element signature="e#8195#8196#0" expanded="true" />
           </folding>
         </state>
       </provider>

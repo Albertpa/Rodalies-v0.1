@@ -29,6 +29,8 @@ public class Page1Activity extends Fragment{
     private int codigoLinea;
 
     public Linea linea;
+    public String avuiString;
+    public String ahirString;
     /* Array con las URL de las lineas */
     private String[] lineasURL = new String[]{
             "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r1_ca_ES.xml",
@@ -73,6 +75,10 @@ public class Page1Activity extends Fragment{
         codigoLinea = getArguments().getInt(Constants.LINEA_PARAMETRO);
         crearObjetosLinea(codigoLinea);
            Log.e("Rodalies", "Entra al "+ codigoLinea);
+
+        avuiString = getString(R.string.avui);
+        ahirString = getString(R.string.ahir);
+
         return myFragmentView;
     }
 
@@ -148,16 +154,52 @@ public class Page1Activity extends Fragment{
                 cal.get(Calendar.MONTH) == calHoy.get(Calendar.MONTH) &&
                 cal.get(Calendar.YEAR) == calHoy.get(Calendar.YEAR))
         {
-            fechaTuit += " - " + getString(R.string.avui);
+            fechaTuit += " - " + avuiString;
         }
         else if(cal.get(Calendar.DAY_OF_MONTH) == ayer.get(Calendar.DAY_OF_MONTH) &&  //Ayer
                 cal.get(Calendar.MONTH) == ayer.get(Calendar.MONTH) &&
                 cal.get(Calendar.YEAR) == ayer.get(Calendar.YEAR))
         {
-            fechaTuit += " - " + getString(R.string.ahir);
+            fechaTuit += " - " + ahirString;
         }
         else //otro dia
         {
+            fechaTuit += " - " + dateAsString;
+        }
+
+        return fechaTuit;
+    }
+
+    private String obtenerFechaTuit2(Date fecha)
+    {
+
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
+
+        String dateAsString = dateFormatter.format(fecha); //convierte la fecha del tuit en una fecha de formato dd/MM/yyyy
+        String timeAsString = timeFormatter.format(fecha); //extrae la hora del tuit
+
+        String fechaTuit = timeAsString;
+
+        Date hoy = new Date(); //fecha de hoy
+        Calendar calHoy = Calendar.getInstance();
+        calHoy.setTime(hoy);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(fecha);
+
+        Calendar ayer = Calendar.getInstance();
+        ayer.add(Calendar.DATE, -1);
+
+        if(cal.get(Calendar.DAY_OF_MONTH) == calHoy.get(Calendar.DAY_OF_MONTH) &&   //Hoy
+                cal.get(Calendar.MONTH) == calHoy.get(Calendar.MONTH) &&
+                cal.get(Calendar.YEAR) == calHoy.get(Calendar.YEAR))
+        {
+            fechaTuit += " - Avui";
+        }
+        else //otro dia
+        {
+
             fechaTuit += " - " + dateAsString;
         }
 
@@ -217,6 +259,8 @@ public class Page1Activity extends Fragment{
                     Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText() + " " + status.getCreatedAt());
 
                     String fecha = obtenerFechaTuit(status.getCreatedAt());
+
+
 
                     Tuit tuit = new Tuit("@" + status.getUser().getScreenName(), status.getText(), fecha);
                     lista_Tuits.add(tuit);

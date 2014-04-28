@@ -235,10 +235,19 @@ public class MainActivity extends FragmentActivity {
     private void actualizar() {
         TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
         Bundle info = tabI.args;
-        Integer idLinea = info.getInt(Constants.LINEA_PRINCIPAL); //Codigo de la linea actual
+
+        // Integer idLinea = info.getInt(Constants.LINEA_PRINCIPAL); //Codigo de la linea actual
+
+
+        //Log.e("TAG", "->"+tabI.tag);
+
+        //pienso que, con el tag, deberiamos saber cual es el codigo de la linea:
+        //p.e.-> R3 es 2
+        Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
 
         List<Fragment> listPage = getSupportFragmentManager().getFragments(); //Lista de fragments
         Page1Activity act = (Page1Activity) listPage.get(mTabHost.getCurrentTab()); //Obtiene el fragment que se está visualizando
+
 
         act.actualizar(idLinea); //Se llama al metodo actualizar del fragment que se está viendo.
     }
@@ -315,6 +324,56 @@ public class MainActivity extends FragmentActivity {
             default:
                 ret="NO DEFINED";
             break;
+        }
+        return ret;
+
+    }
+
+    public int codigoLinea(String i){
+
+        int ret;
+        if (i.equals("R1")) {
+            ret = 0;
+
+        } else if (i.equals("R2 Nord")) {
+            ret = 1;
+
+        } else if (i.equals("R2 Sud")) {
+            ret = 2;
+
+        } else if (i.equals("R3")) {
+            ret = 3;
+
+        } else if (i.equals("R4")) {
+            ret = 4;
+
+        } else if (i.equals("R7")) {
+            ret = 5;
+
+        } else if (i.equals("R8")) {
+            ret = 6;
+
+        } else if (i.equals("R11")) {
+            ret = 7;
+
+        } else if (i.equals("R12")) {
+            ret = 8;
+
+        } else if (i.equals("R13")) {
+            ret = 9;
+
+        } else if (i.equals("R14")) {
+            ret = 10;
+
+        } else if (i.equals("R15")) {
+            ret = 11;
+
+        } else if (i.equals("R16")) {
+            ret = 12;
+
+        } else {
+            ret = -1;
+
         }
         return ret;
 

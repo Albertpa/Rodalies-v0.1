@@ -28,6 +28,9 @@ public class Page1Activity extends Fragment{
 
     private int codigoLinea;
 
+    private Boolean estaActualizandoEstado = false;
+    private Boolean estaActualizandoTuis = false;
+
     public Linea linea;
     public String avuiString;
     public String ahirString;
@@ -87,22 +90,32 @@ public class Page1Activity extends Fragment{
     * al AsyncTask que descargará el estado y se le asignará al objeto */
      public void crearObjetosLinea(int codeLinea) {
         linea = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea], usuarioTwitterLineas[codeLinea]);
-        new EstadoAsyncTask(linea).execute();
-
+         if(!estaActualizandoEstado) {
+             estaActualizandoEstado = true;
+             new EstadoAsyncTask(linea).execute();
+         }
          /* se limipia el adapter de los posibles tuits que ya contenga con tal de que no
          aparezcan repetidos cuando se recarge el tab */
          adapter.clear();
          adapter.notifyDataSetChanged();
 
-        new TuitsAsyncTask(linea).execute();
+         if(!estaActualizandoTuis){
+             estaActualizandoTuis = true;
+             new TuitsAsyncTask(linea).execute();
+         }
+
+    }
+    public int getCodigoLinea(){
+        return codigoLinea;
     }
 
     public void actualizar(Integer idLinea){
         Log.i("ACTUALIZAR", "ACTUALIZAR");
 
-        listaTuits = (ListView) myFragmentView.findViewById(R.id.lista_tuits);
+/*        listaTuits = (ListView) myFragmentView.findViewById(R.id.lista_tuits);
         adapter = new TuitsAdapter(getActivity(), android.R.layout.simple_list_item_1, lista_Tuits);
-        listaTuits.setAdapter(adapter);
+        listaTuits.setAdapter(adapter);*/
+        adapter.notifyDataSetChanged();
 
         textoPrincipal = (TextView) myFragmentView.findViewById(R.id.textP);
         crearObjetosLinea(idLinea);
@@ -170,41 +183,6 @@ public class Page1Activity extends Fragment{
         return fechaTuit;
     }
 
-    private String obtenerFechaTuit2(Date fecha)
-    {
-
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
-
-        String dateAsString = dateFormatter.format(fecha); //convierte la fecha del tuit en una fecha de formato dd/MM/yyyy
-        String timeAsString = timeFormatter.format(fecha); //extrae la hora del tuit
-
-        String fechaTuit = timeAsString;
-
-        Date hoy = new Date(); //fecha de hoy
-        Calendar calHoy = Calendar.getInstance();
-        calHoy.setTime(hoy);
-
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(fecha);
-
-        Calendar ayer = Calendar.getInstance();
-        ayer.add(Calendar.DATE, -1);
-
-        if(cal.get(Calendar.DAY_OF_MONTH) == calHoy.get(Calendar.DAY_OF_MONTH) &&   //Hoy
-                cal.get(Calendar.MONTH) == calHoy.get(Calendar.MONTH) &&
-                cal.get(Calendar.YEAR) == calHoy.get(Calendar.YEAR))
-        {
-            fechaTuit += " - Avui";
-        }
-        else //otro dia
-        {
-
-            fechaTuit += " - " + dateAsString;
-        }
-
-        return fechaTuit;
-    }
 
     private class EstadoAsyncTask extends AsyncTask<String, Void, String> {
         private Linea linea;
@@ -232,6 +210,7 @@ public class Page1Activity extends Fragment{
                 Log.i("Rodalies", "estat->>" + response);
 
                 Page1Activity.this.linea = this.linea;  // ??????????
+                estaActualizandoEstado = false;
                 asignarEstado(Page1Activity.this.linea);
             }
         }
@@ -274,6 +253,7 @@ public class Page1Activity extends Fragment{
         protected void onPostExecute(Void listaTuits)
         {
             if(isAdded()) {
+                estaActualizandoTuis = false;
                 adapter.notifyDataSetChanged();
             }
         }

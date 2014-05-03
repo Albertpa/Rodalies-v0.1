@@ -232,24 +232,54 @@ public class MainActivity extends FragmentActivity {
 		 }
 	}
 
+    /*
+    private void actualizar_bueno() {
+        TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
+
+
+        //Fragment f1 = (Fragment) getSupportFragmentManager().findFragmentByTag(tabI.tag);
+
+        if(tabI != null) {
+            Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
+
+            List<Fragment> listPage = getSupportFragmentManager().getFragments(); //Lista de fragments
+
+            Integer posicionActualTab = mTabHost.getCurrentTab();
+
+            Log.e("PosicionTab", "position "+posicionActualTab);
+
+            if (posicionActualTab < listPage.size()) {
+                Page1Activity act = (Page1Activity) listPage.get(mTabHost.getCurrentTab()); //Obtiene el fragment que se está visualizando
+                if(act != null){
+                    act.actualizar(idLinea); //Se llama al metodo actualizar del fragment que se está viendo.
+                }
+            } else {
+                Log.e("PosicionTab", "Error al actualizar el tab con positicion " + posicionActualTab.toString() + " donde el size es " + listPage.size());
+            }
+        }
+    }
+    */
+
     private void actualizar() {
         TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
-        Bundle info = tabI.args;
 
-        // Integer idLinea = info.getInt(Constants.LINEA_PRINCIPAL); //Codigo de la linea actual
+        if(tabI != null) {
+            Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
 
+            List<Fragment> listPage = getSupportFragmentManager().getFragments(); //Lista de fragments
 
-        //Log.e("TAG", "->"+tabI.tag);
+            Fragment aux = null;
+            Page1Activity act = null;
 
-        //pienso que, con el tag, deberiamos saber cual es el codigo de la linea:
-        //p.e.-> R3 es 2
-        Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
-
-        List<Fragment> listPage = getSupportFragmentManager().getFragments(); //Lista de fragments
-        Page1Activity act = (Page1Activity) listPage.get(mTabHost.getCurrentTab()); //Obtiene el fragment que se está visualizando
-
-
-        act.actualizar(idLinea); //Se llama al metodo actualizar del fragment que se está viendo.
+            for( Fragment f : listPage ){
+                if(f != null) {
+                    if (((Page1Activity) f).getCodigoLinea() == idLinea) {
+                        act = (Page1Activity) f;
+                    }
+                }
+            }
+            act.actualizar(idLinea);
+        }
     }
 
     private void escribirTuit() {
@@ -461,6 +491,7 @@ public class MainActivity extends FragmentActivity {
         
         public Fragment findFragment(int position) {
             String name = "android:switcher:" + mViewPager.getId() + ":" + position; // curiosos tags
+            Log.e("ERRORRRRR", "ERRORRR"+name);
             FragmentManager fm = ((FragmentActivity) mContext).getSupportFragmentManager();
             Fragment fragment = fm.findFragmentByTag(name);
             if (fragment == null) {

@@ -52,7 +52,6 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         crearTabs();
-
 	}
 
     private void crearTabs(){

@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,7 @@ import twitter4j.QueryResult;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 
-public class Page1Activity extends Fragment{
+public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private View myFragmentView;
     private TextView textoPrincipal;
 
@@ -65,6 +66,8 @@ public class Page1Activity extends Fragment{
     private ListView listaTuits;
     List<Tuit> lista_Tuits = new ArrayList<Tuit>();
 
+    private SwipeRefreshLayout refreshLayout; //Control de la view para poder detectar pull to refresh
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myFragmentView = inflater.inflate(R.layout.activity_page1, container, false);
@@ -77,13 +80,25 @@ public class Page1Activity extends Fragment{
 
         codigoLinea = getArguments().getInt(Constants.LINEA_PARAMETRO);
         crearObjetosLinea(codigoLinea);
-           Log.e("Rodalies", "Entra al "+ codigoLinea);
+        Log.e("Rodalies", "Entra al "+ codigoLinea);
 
         avuiString = getString(R.string.avui);
         ahirString = getString(R.string.ahir);
 
-        listaTuits
+        /* Configuración swipe para pull to refresh*/
+        refreshLayout = (SwipeRefreshLayout) myFragmentView.findViewById(R.id.swipe_container);
+        refreshLayout.setOnRefreshListener(this);
+        refreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
         return myFragmentView;
+    }
+
+    @Override public void onRefresh() {
+        refreshLayout.setRefreshing(true); //Empieza animación de refresco.
+        actualizar(codigoLinea);
     }
 
     /* Esta funcion crea un objecto "Linea", le asigna el nombre y la url.
@@ -212,6 +227,9 @@ public class Page1Activity extends Fragment{
 
                 Page1Activity.this.linea = this.linea;  // ??????????
                 estaActualizandoEstado = false;
+                if(estaActualizandoTuis == false){
+                    refreshLayout.setRefreshing(false); //Detener animación de refresco.
+                }
                 asignarEstado(Page1Activity.this.linea);
             }
         }
@@ -255,6 +273,9 @@ public class Page1Activity extends Fragment{
         {
             if(isAdded()) {
                 estaActualizandoTuis = false;
+                if(estaActualizandoEstado == false){
+                    refreshLayout.setRefreshing(false); //Detener animación de refresco.
+                }
                 adapter.notifyDataSetChanged();
             }
         }

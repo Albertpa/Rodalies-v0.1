@@ -1817,10 +1817,6 @@ normal
                     name="TextAppearance.AppCompat.Widget.PopupMenu.Large"
                     parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Large" />
 
-                <attr
-                    name="listPreferredItemHeightSmall"
-                    format="dimension" />
-
                 <declare-styleable name="MenuItem" >
 
                     <!-- The ID of the item. -->
@@ -1958,6 +1954,10 @@ normal
                         name="actionProviderClass"
                         format="string" />
                 </declare-styleable>
+
+                <attr
+                    name="listPreferredItemHeightSmall"
+                    format="dimension" />
 
                 <style
                     name="TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse"
@@ -7831,7 +7831,11 @@ r16
                 </string>
                 <string name="r7" >Línea R7
                 </string>
+                <string name="fuente1" >Font de les dades oficials:
+                </string>
                 <string name="guardar" >Guardar
+                </string>
+                <string name="fuente2" >http://dadesobertes.gencat.cat
                 </string>
                 <string name="obtenint_dades" >Obtenint dades...
                 </string>
@@ -7871,8 +7875,6 @@ r16
                 </string>
                 <string name="action_settings" >Configuració
                 </string>
-                <string name="contacto" >Contacte: Running Dogs Studio runningdogsstudio@gmail.com
-                </string>
                 <string name="r2s_p" >Sant Vicenç de C. - Vilanova - BCN Est. França 
                 </string>
                 <string name="selecLineaS" >Selecciona les línies secundaries:
@@ -7881,7 +7883,9 @@ r16
                 </string>
                 <string name="r16" >Línea R16
                 </string>
-                <string name="fuente" >Font de les dades: http://dadesobertes.gencat.cat
+                <string name="contacto2" >Running Dogs Studio runningdogsstudio@gmail.com
+                </string>
+                <string name="contacto1" >Contacta amb nosaltres:
                 </string>
                 <string name="twittear" >Piular
                 </string>
@@ -7901,13 +7905,11 @@ r16
                 </string>
                 <string name="generalitat" >Generalitat de Catalunya
                 </string>
-                <string name="autores" >Aplicació desenvolupada per Albert Pagés i Jesús Escribano
-                </string>
                 <string name="selecLineaS2" >Seleccioni la línia o les línies que vol consultar:
                 </string>
                 <string name="info_twitter" >Informació via Twitter
                 </string>
-                <string name="info_oficial" >Informació oficial
+                <string name="info_oficial" >Informació oficial via GENCAT
                 </string>
                 <string name="r7_p" >BCN Sant Andreu Arenal - Cerdanyola Uni.
                 </string>
@@ -7924,6 +7926,10 @@ r16
                 <string name="app_name" >Rodalies
                 </string>
                 <string name="r15_p" >BCN Est. França - Riba-roja Ebre - Tarragona y Reus
+                </string>
+                <string name="autores2" >Albert Pagès i Jesús Escribano
+                </string>
+                <string name="autores1" >Aplicació desenvolupada per:
                 </string>
                 <string name="r16_p" >BCN Est. França - Tortosa/Ulldecona - Tarragona
                 </string>

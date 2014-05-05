@@ -82,6 +82,7 @@ public class Page1Activity extends Fragment{
         avuiString = getString(R.string.avui);
         ahirString = getString(R.string.ahir);
 
+        listaTuits
         return myFragmentView;
     }
 

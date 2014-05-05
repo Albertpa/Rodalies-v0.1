@@ -2,7 +2,8 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#eceee0">
 
 
     <ImageView
@@ -27,9 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/autores"
-        android:id="@+id/autores"
-        android:textSize="17dp"
+        android:text="@string/autores1"
+        android:id="@+id/autores1"
+        android:textStyle="bold"
+        android:textSize="19dp"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="5dp"/>
 
@@ -37,10 +39,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/contacto"
-        android:id="@+id/contacto"
-        android:textSize="17dp"
-        android:layout_marginTop="10dp"
+        android:text="@string/autores2"
+        android:id="@+id/autores2"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contacto1"
+        android:id="@+id/contacto1"
+        android:textStyle="bold"
+        android:textSize="19dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="5dp"
         android:autoLink="email"/>
 
@@ -48,9 +61,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/fuente"
-        android:id="@+id/fuente"
-        android:textSize="12dp"
+        android:text="@string/contacto2"
+        android:id="@+id/contacto2"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:autoLink="email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/fuente1"
+        android:id="@+id/fuente1"
+        android:textStyle="bold"
+        android:textSize="17dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="5dp"
         android:autoLink="web"/>
@@ -58,9 +83,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/fuente2"
+        android:id="@+id/fuente2"
+        android:textSize="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:autoLink="web"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/generalitat"
         android:id="@+id/generalitat"
-        android:textSize="13dp"
+        android:textStyle="italic"
+        android:textSize="16dp"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="25dp"/>
 </LinearLayout><!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/src/main/res/layout/about.xml -->

@@ -100,7 +100,6 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             public void onScrollStateChanged(AbsListView view, int scrollState) {
 
             }
-
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 int topRowVerticalPosition =

@@ -49,7 +49,7 @@
         <item>@string/r15_p</item>
         <item>@string/r16_p</item>
     </string-array>
-    <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/build/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
 
     <attr name="actionBarDivider" format="reference" />
@@ -193,6 +193,32 @@
         <attr name="windowActionBar" format="boolean" />
         <attr name="windowActionBarOverlay" format="boolean" />
         <attr name="windowSplitActionBar" format="boolean" />
+
+        <!--
+             A fixed width for the window along the major axis of the screen,
+             that is, when in landscape. Can be either an absolute dimension
+             or a fraction of the screen size in that dimension.
+        -->
+        <attr name="windowFixedWidthMajor" format="dimension|fraction" />
+        <!--
+             A fixed height for the window along the minor axis of the screen,
+             that is, when in landscape. Can be either an absolute dimension
+             or a fraction of the screen size in that dimension.
+        -->
+        <attr name="windowFixedHeightMinor" format="dimension|fraction" />
+
+        <!--
+             A fixed width for the window along the minor axis of the screen,
+             that is, when in portrait. Can be either an absolute dimension
+             or a fraction of the screen size in that dimension.
+        -->
+        <attr name="windowFixedWidthMinor" format="dimension|fraction" />
+        <!--
+             A fixed height for the window along the major axis of the screen,
+             that is, when in portrait. Can be either an absolute dimension
+             or a fraction of the screen size in that dimension.
+        -->
+        <attr name="windowFixedHeightMajor" format="dimension|fraction" />
     </declare-styleable>
     <declare-styleable name="ActionMenuItemView">
         <attr name="android:minWidth" />
@@ -535,9 +561,13 @@
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/build/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
 
+    <item name="dialog_fixed_height_major" type="dimen">80%</item>
+    <item name="dialog_fixed_height_minor" type="dimen">100%</item>
+    <item name="dialog_fixed_width_major" type="dimen">320dp</item>
+    <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
@@ -565,7 +595,7 @@
 
     <string name="acerca_de">Quant a</string>
     <string name="action_settings">Configuració</string>
-    <string name="actualizar">Actualitzar</string>
+    <string name="actualizar">Actualitza</string>
     <string name="ahir">Ahir</string>
     <string name="app_name">Rodalies</string>
     <string name="autores1">Aplicació desenvolupada per:</string>
@@ -577,7 +607,7 @@
     <string name="fuente1">Font de les dades oficials:</string>
     <string name="fuente2">http://dadesobertes.gencat.cat</string>
     <string name="generalitat">Generalitat de Catalunya</string>
-    <string name="guardar">Guardar</string>
+    <string name="guardar">Guarda</string>
     <string name="hello_world">Hello world!</string>
     <string name="info_oficial">Informació oficial via GENCAT</string>
     <string name="info_twitter">Informació via Twitter</string>
@@ -585,38 +615,38 @@
     <string name="menu_page2">Page2</string>
     <string name="normalitat">Normalitat al servei</string>
     <string name="obtenint_dades">Obtenint dades...</string>
-    <string name="r1">Línea R1</string>
-    <string name="r10">Línea R10</string>
-    <string name="r11">Línea R11</string>
+    <string name="r1">Línia R1</string>
+    <string name="r10">Línia R10</string>
+    <string name="r11">Línia R11</string>
     <string name="r11_p">BCN Sants - Portbou - Girona</string>
-    <string name="r12">Línea R12</string>
+    <string name="r12">Línia R12</string>
     <string name="r12_p">Hospitalet de LL. - Lleida - Manresa</string>
-    <string name="r13">Línea R13</string>
+    <string name="r13">Línia R13</string>
     <string name="r13_p">BCN Est. França - Lleida - Valls</string>
-    <string name="r14">Línea R14</string>
+    <string name="r14">Línia R14</string>
     <string name="r14_p">BCN Est. França - Lleida - Tarragona y Reus</string>
-    <string name="r15">Línea R15</string>
+    <string name="r15">Línia R15</string>
     <string name="r15_p">BCN Est. França - Riba-roja Ebre - Tarragona y Reus</string>
-    <string name="r16">Línea R16</string>
+    <string name="r16">Línia R16</string>
     <string name="r16_p">BCN Est. França - Tortosa/Ulldecona - Tarragona</string>
     <string name="r1_p">Molins de rei - Maçanet - Mataró</string>
-    <string name="r2">Línea R2</string>
+    <string name="r2">Línia R2</string>
     <string name="r2_p">Castelldefels - Granollers Centre</string>
-    <string name="r2n">Línea R2 Nord</string>
+    <string name="r2n">Línia R2 Nord</string>
     <string name="r2n_p">Aeroport - Maçanet - Granollers centre</string>
-    <string name="r2s">Línea R2 Sud </string>
+    <string name="r2s">Línia R2 Sud </string>
     <string name="r2s_p">Sant Vicenç de C. - Vilanova - BCN Est. França </string>
-    <string name="r3">Línea R3</string>
+    <string name="r3">Línia R3</string>
     <string name="r3_p">Hospitalet de LL. - Puigcerdà - Vic</string>
-    <string name="r4">Línea R4</string>
+    <string name="r4">Línia R4</string>
     <string name="r4_p">Sant Vicentç de C. - Manresa - Vilafranca del P.</string>
-    <string name="r5">Línea R5</string>
-    <string name="r6">Línea R6</string>
-    <string name="r7">Línea R7</string>
+    <string name="r5">Línia R5</string>
+    <string name="r6">Línia R6</string>
+    <string name="r7">Línia R7</string>
     <string name="r7_p">BCN Sant Andreu Arenal - Cerdanyola Uni.</string>
-    <string name="r8">Línea R8</string>
+    <string name="r8">Línia R8</string>
     <string name="r8_p">Martorell - Granollers Centre - Cerdanyola Uni.</string>
-    <string name="r9">Línea R9</string>
+    <string name="r9">Línia R9</string>
     <string name="selecLinea1">Selecciona la línea principal:</string>
     <string name="selecLineaS">Selecciona les línies secundaries:</string>
     <string name="selecLineaS2">Seleccioni la línia o les línies que vol consultar:</string>
@@ -639,7 +669,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/build/exploded-aar/com.android.support/appcompat-v7/19.0.1/res/values/values.xml -->
+    <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/build/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml -->
     <eat-comment />
 
     <style name="TextAppearance.AppCompat.Base.CompactMenu.Dialog" parent="android:TextAppearance.Medium">
@@ -818,6 +848,8 @@
 
     <style name="Theme.AppCompat.CompactMenu.Dialog" parent="Theme.AppCompat.Base.CompactMenu.Dialog" />
 
+    <style name="Theme.AppCompat.DialogWhenLarge" parent="Theme.Base.AppCompat.DialogWhenLarge" />
+
     <style name="Theme.AppCompat.Light" parent="Theme.Base.AppCompat.Light">
         <item name="isLightTheme">true</item>
 
@@ -888,6 +920,8 @@
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
     </style>
 
+    <style name="Theme.AppCompat.Light.DialogWhenLarge" parent="Theme.Base.AppCompat.Light.DialogWhenLarge" />
+
     <style name="Theme.Base" parent="android:Theme" />
 
     <style name="Theme.Base.AppCompat" parent="Theme.Base">
@@ -937,6 +971,45 @@
         <item name="android:panelBackground">@drawable/abc_menu_hardkey_panel_holo_dark</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
     </style>
+
+    <style name="Theme.Base.AppCompat.Dialog.FixedSize" parent="android:Theme.Dialog">
+        <item name="windowFixedWidthMajor">@dimen/dialog_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/dialog_fixed_width_minor</item>
+        <item name="windowFixedHeightMajor">@dimen/dialog_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/dialog_fixed_height_minor</item>
+        <item name="windowActionBar">true</item>
+        <!-- Remove system title bars; we will add the action bar ourselves. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="buttonBarStyle">@android:style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@android:style/Widget.Button</item>
+        <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
+        <item name="dividerVertical">@drawable/abc_list_divider_holo_dark</item>
+        <item name="dividerHorizontal">@drawable/abc_list_divider_holo_dark</item>
+        <item name="listPreferredItemHeight">?android:attr/listPreferredItemHeight</item>
+        <item name="listPreferredItemHeightSmall">48dp</item>
+        <item name="listPreferredItemHeightLarge">80dp</item>
+        <item name="listPreferredItemPaddingLeft">8dip</item>
+        <item name="listPreferredItemPaddingRight">8dip</item>
+        <item name="textAppearanceListItem">?android:attr/textAppearanceMedium</item>
+        <item name="textAppearanceListItemSmall">?android:attr/textAppearanceMedium</item>
+
+        <!-- Action Mode -->
+        <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
+        <item name="actionModeBackground">@drawable/abc_cab_background_top_holo_dark</item>
+        <item name="actionModeSplitBackground">@drawable/abc_cab_background_bottom_holo_dark</item>
+        <item name="actionModeCloseDrawable">@drawable/abc_ic_cab_done_holo_dark</item>
+        <item name="actionModeCloseButtonStyle">@style/Widget.AppCompat.ActionButton.CloseMode</item>
+
+        <!-- Panel attributes -->
+        <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
+        <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
+        <item name="android:panelBackground">@drawable/abc_menu_hardkey_panel_holo_dark</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
+    </style>
+
+    <style name="Theme.Base.AppCompat.Dialog.Light.FixedSize" parent="Theme.Base.AppCompat.Dialog.FixedSize" />
+
+    <style name="Theme.Base.AppCompat.DialogWhenLarge" parent="Theme.Base.AppCompat" />
 
     <style name="Theme.Base.AppCompat.Light" parent="Theme.Base.Light">
         <item name="windowActionBar">true</item>
@@ -1014,6 +1087,8 @@
         <item name="android:panelBackground">@drawable/abc_menu_hardkey_panel_holo_dark</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
     </style>
+
+    <style name="Theme.Base.AppCompat.Light.DialogWhenLarge" parent="Theme.Base.AppCompat.Light" />
 
     <style name="Theme.Base.Light" parent="android:Theme.Light" />
 

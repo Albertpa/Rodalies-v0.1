@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rodalies"
+    package="com.rds.rodalies"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,9 +14,10 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+
         <activity
-            android:name="com.example.rodalies.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -26,17 +27,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.rodalies.Page1Activity"
+            android:name=".Page1Activity"
             android:label="@string/title_activity_page1"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.rodalies.GuardarPreferencias"
+            android:name=".GuardarPreferencias"
             android:label="@string/action_settings"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.rodalies.About"
+            android:name=".About"
             android:label="@string/acerca_de" >
         </activity>
     </application>

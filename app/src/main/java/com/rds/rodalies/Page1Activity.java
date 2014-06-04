@@ -36,32 +36,6 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
     public Linea linea;
     public String avuiString;
     public String ahirString;
-    /* Array con las URL de las lineas */
-    private String[] lineasURL = new String[]{
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r1_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r2_nord_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r2_sud_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r3_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r4_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r7_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r8_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r11_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r12_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r13_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r14_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r15_ca_ES.xml",
-            "http://www.gencat.cat/rodalies/incidencies_rodalies_rss_r16_ca_ES.xml"
-    };
-
-    /* Array con los nombres de las lineas */
-    private String[] nombreLineas = new String[]{
-            "R1", "R2 Nord", "R2 Sud", "R3", "R4", "R7", "R8", "R11", "R12", "R13", "R14", "R15", "R16"
-    };
-    /* Array cuentas twitter */
-    private String[] usuarioTwitterLineas = new String[]{
-            "rodalia1","rodalia2", "rodalia2", "rodalia3","rodalia4","rodalia7","rodalia8","#rod11","#rod12","#rod13",
-            "#rod14","#rod15","#rod16"
-    };
 
     private TuitsAdapter adapter;
     private ListView listaTuits;
@@ -121,7 +95,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
     * El estado inicialmente es un string vacio "", a continuación se hace una llamada
     * al AsyncTask que descargará el estado y se le asignará al objeto */
      public void crearObjetosLinea(int codeLinea) {
-        linea = new Linea(nombreLineas[codeLinea], "", lineasURL[codeLinea], usuarioTwitterLineas[codeLinea]);
+        linea = new Linea(Constants.nombreLineas[codeLinea], "", Constants.lineasURL[codeLinea], Constants.usuarioTwitterLineas[codeLinea]);
          if(!estaActualizandoEstado) {
              estaActualizandoEstado = true;
              new EstadoAsyncTask(linea).execute();
@@ -238,8 +212,8 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             if(isAdded()) {
                 if (response != null) {
                     this.linea.setEstado(response);
+                    Log.i("Rodalies", "Linea " + this.linea.getNombre() + ": " + response);
                 }
-                Log.i("Rodalies", "estat->>" + response);
 
                 Page1Activity.this.linea = this.linea;  // ??????????
                 estaActualizandoEstado = false;
@@ -270,7 +244,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             try {
                 QueryResult result = twitter.search(query);
                 for (twitter4j.Status status : result.getTweets()) {
-                    Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText() + " " + status.getCreatedAt());
+                    //Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText() + " " + status.getCreatedAt());
 
                     String fecha = obtenerFechaTuit(status.getCreatedAt());
 
@@ -279,6 +253,8 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
                     Tuit tuit = new Tuit("@" + status.getUser().getScreenName(), status.getText(), fecha);
                     lista_Tuits.add(tuit);
                 }
+                Log.i("Rodalies", "Tweets descargadis");
+
             } catch (TwitterException e) {
                 e.printStackTrace();
             }

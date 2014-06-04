@@ -1,12 +1,10 @@
 package com.rds.rodalies;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -19,9 +17,6 @@ import java.util.List;
 public class GuardarPreferencias extends Activity {
 	
 	private ListView myList;
-	//private Spinner principal;
-	private String lineaPrincipal;
-	private int lineaPrincipalInt;
 	private static Button guardar;
     List<Integer> itemChecked;
 
@@ -45,12 +40,7 @@ public class GuardarPreferencias extends Activity {
 		//spinner principal
 		myList = (ListView)findViewById(R.id.list);
 
-        //lista secundaria
-        String[] arrayLineas = getResources().getStringArray(R.array.lineas);
-
-        List<LineaPreferencias> lineaPref = new ArrayList<LineaPreferencias>();
         crearObjetosLinea();
-
         consultarPreferencias();
 
         adapter = new LineasPreferenciasAdapter(this, android.R.layout.simple_list_item_multiple_choice, lista_lineas);
@@ -60,208 +50,86 @@ public class GuardarPreferencias extends Activity {
 	}
 	
 	public void guardar(View v){
-		//guarda preferencias
-		 String secundarioSelected = "";
-
-        itemChecked =
-                new ArrayList<Integer>();
-        for(int i = 0; i < 13; i++){
-
+        itemChecked = new ArrayList<Integer>();
+        for(int i = 0; i < Constants.lineaSecundaria.length; i++)
+        {
             if (checksPrefencias[i] == true) {
                 itemChecked.add(i);
             }
         }
 
-         Editor editor = sharedRodalies.edit();
-         editor.clear();
-         editor.commit();
-         
-        // Log.e("Rodalies", "seleccionat Principal->"+principalSelectedInt);
-         //editor.putInt(Constants.LINEA_PRINCIPAL, principalSelectedInt);
-         
-         //SparseBooleanArray sparseBooleanArray = myList.getCheckedItemPositions();
-         int contador = 0;
+        Editor editor = sharedRodalies.edit();
+        editor.clear();
+        editor.commit();
+
+        int contadorLineasSeleccionados = 0;
+
         for (int i = 0; i < itemChecked.size(); i++) {
-                 int j = itemChecked.get(i);
-
-            	 //secundarioSelected += i + " \n";
-            	 switch(contador){
-            	 	case 0:
-            	 		editor.putInt(Constants.LINEA_SECUNDARIA1, j);
-            	 		break;
-            	 	
-             		case 1:
-             			editor.putInt(Constants.LINEA_SECUNDARIA2, j);
-             			break;
-			        case 2:
-			        	editor.putInt(Constants.LINEA_SECUNDARIA3, j);
-			        	break;
-			        case 3:
-			        	editor.putInt(Constants.LINEA_SECUNDARIA4, j);
-			        	break;
-            	 	
-             		case 4:
-             			editor.putInt(Constants.LINEA_SECUNDARIA5, j);
-             			break;
-        	 	
-			        case 5:
-			        	editor.putInt(Constants.LINEA_SECUNDARIA6, j);
-			        	break;
-			        case 6:
-			        	editor.putInt(Constants.LINEA_SECUNDARIA7, j);
-			        	break;
-            	 	
-             		case 7:
-             			editor.putInt(Constants.LINEA_SECUNDARIA8, j);
-             			break;
-        	 	
-			        case 8:
-			        	editor.putInt(Constants.LINEA_SECUNDARIA9, j);
-			        	break;
-			        case 9:
-			        	editor.putInt(Constants.LINEA_SECUNDARIA10, j);
-            	 		break;
-            	 	
-             		case 10:
-             			editor.putInt(Constants.LINEA_SECUNDARIA11, j);
-             			break;
-        	 	
-			        case 11:
-			    		 editor.putInt(Constants.LINEA_SECUNDARIA12, j);
-			    		 break;
-
-			        case 12:
-            	 		editor.putInt(Constants.LINEA_SECUNDARIA13, j);
-            	 		break;
-
-            	 }
-            	 
-            	 contador++;
-         }
-       //Log.e("Rodalies", "seleccionat Secundari->"+secundarioSelected);
-       editor.putInt(Constants.LINEAS_TOTAL, contador);
-       editor.commit();
+            int j = itemChecked.get(i);
+            editor.putInt(Constants.lineaSecundaria[i], j);
+            contadorLineasSeleccionados++;
+        }
+        editor.putInt(Constants.LINEAS_TOTAL, contadorLineasSeleccionados);
+        editor.commit();
 
         finish();
-
 	}
 	
 	private Boolean esUnDells(int i){
 		//tenim que mirar si existeix i a les sharedpreferences
 		sharedRodalies= getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
         Boolean trobat = false;
-        
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA1)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA1, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA2)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA2, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA3)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA3, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA4)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA4, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA5)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA5, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA6)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA6, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA7)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA7, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA8)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA8, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA9)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA9, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA10)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA10, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA11)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA11, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA12)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA12, -1) == i)
-				 trobat=true;
-		}
-        if (sharedRodalies.contains(Constants.LINEA_SECUNDARIA13)) {
-			 if(sharedRodalies.getInt(Constants.LINEA_SECUNDARIA13, -1) == i)
-				 trobat=true;
-		}
 
+        for (int s = 0; s < Constants.lineaSecundaria.length; s++){
+            if(sharedRodalies.contains(Constants.lineaSecundaria[s])){
+                if(sharedRodalies.getInt(Constants.lineaSecundaria[s], -1) == i){
+                    trobat = true;
+                }
+            }
+        }
 		return trobat;
 	}
 
-        //Esta funcion activa o desactiva el submit dependiendo de si hay algun elemento seleccionado
+    //Esta funcion activa o desactiva el submit dependiendo de si hay algun elemento seleccionado
 
     public static void activaSubmit() {
-
-        Log.e("Rodalies", "entra al activa submit");
-
-        boolean b = false;
+        boolean seHanSeleccionadoLineas = false;
 
         for (boolean value : checksPrefencias) {
             if (value == true) {
-                b= true;
+                seHanSeleccionadoLineas = true;
                 break;
             }
         }
-
-        if (b) {
-            guardar.setEnabled(true);
-        } else {
-            guardar.setEnabled(false);
-        }
-
+        guardar.setEnabled(seHanSeleccionadoLineas);
     }
 
     /* Esta funcion crea un objecto "Linea", le asigna el nombre y las paradas.
      */
     private void crearObjetosLinea() {
-
         String[] arrayLineas = getResources().getStringArray(R.array.lineas);
-
         String[] arrayParadas= getResources().getStringArray(R.array.paradas);
-
         String[] arrayIconos= getResources().getStringArray(R.array.iconos);
 
-        for(int i = 0; i < 13; i++){
+        for(int i = 0; i < Constants.lineaSecundaria.length; i++){
             LineaPreferencias lp = new LineaPreferencias(arrayLineas[i],  arrayParadas[i], arrayIconos[i]);
             lista_lineas.add(lp);
         }
     }
 
-    /* Esta funcion rellena el array de boleanos.
-    */
+    /* Esta funcion rellena el array de boleanos. */
     private void consultarPreferencias() {
 
         checksPrefencias = new boolean[lista_lineas.size()];
 
-        for (int i=0;i<13;i++) {
-
-            //per cada element de la llista hem de buscar si existeix a les shared preferences y marcarlo com yes
-            Boolean esun = esUnDells(i);
+        for (int i = 0; i < Constants.lineaSecundaria.length; i++) {
+            //per cada element de la llista hem de buscar si existeix a les shared preferences y marcarlo com ha marcat
+            Boolean marcado = esUnDells(i);
             //Log.e("Rodalies", "es un dells:"+i);
-            if (esun) {
+            if (marcado) {
                 guardar.setEnabled(true);
                 checksPrefencias[i] = true;
             }
-
         }
     }
 
@@ -274,15 +142,14 @@ public class GuardarPreferencias extends Activity {
                 if(seleccionado.isChecked())
                 {
                     seleccionado.setChecked(false);
-                    GuardarPreferencias.checksPrefencias[position] = false;
-                    GuardarPreferencias.activaSubmit();
+                    checksPrefencias[position] = false;
                 }
                 else
                 {
                     seleccionado.setChecked(true);
-                    GuardarPreferencias.checksPrefencias[position] = true;
-                    GuardarPreferencias.activaSubmit();
+                    checksPrefencias[position] = true;
                 }
+                activaSubmit();
             }
         });
     }

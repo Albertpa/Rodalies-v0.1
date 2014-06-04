@@ -1,15 +1,20 @@
 package com.rds.rodalies;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
@@ -24,6 +29,8 @@ import android.widget.TabWidget;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,6 +50,7 @@ public class MainActivity extends FragmentActivity {
     private boolean existPreferences = true;
 
     private Map<String, String> nombre_cuentaTwitter;
+    private ArrayList<Integer> codeRod;
 
     
 	@Override
@@ -57,18 +65,25 @@ public class MainActivity extends FragmentActivity {
     private void crearTabs(){
         sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
-        if (!(sharedSettings.contains(Constants.LINEA_SECUNDARIA1))) {
+        if (!(sharedSettings.contains(Constants.lineaSecundaria[0]))) {
             //no tiene preferencias, llamamos a la configuración de la linea principal
             existPreferences=false;
-            //startActivity(new Intent(MainActivity.this, GuardarPreferencias.class));
             startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
 
         }
         else{
-            ArrayList<Integer> codeRod = new ArrayList<Integer>(); //Codigo linea
+            codeRod = new ArrayList<Integer>(); //Codigo linea
             int codePrincipal = -1;
 
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA1) ){
+            for (int s = 0; s < Constants.lineaSecundaria.length; s++){
+                if(sharedSettings.contains(Constants.lineaSecundaria[s])){
+                    if(codePrincipal != sharedSettings.getInt(Constants.lineaSecundaria[s], -1)){
+                        codeRod.add(sharedSettings.getInt(Constants.lineaSecundaria[s], -1));
+                    }
+                }
+            }
+
+            /*if( sharedSettings.contains(Constants.LINEA_SECUNDARIA1) ){
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA1,-1))
                     codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA1,-1));
             }
@@ -131,7 +146,7 @@ public class MainActivity extends FragmentActivity {
             if( sharedSettings.contains(Constants.LINEA_SECUNDARIA13) ){
                 if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1))
                     codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1));
-            }
+            }*/
 
             //montamos el array para los nombres de los fragments y nombres de los tabs
 
@@ -158,10 +173,18 @@ public class MainActivity extends FragmentActivity {
             //pero necesita indicar la clase correspondiente
 
             //bucle for de la pagina
+            //Intent intent = new Intent(this, Notificaciones.class); //Itent para el servicio
+
+            Intent intent = new Intent(this, AlarmReciever.class);
+
+            ArrayList<Integer> codigoLineasServicio = new ArrayList<Integer>();
+
             for (int i = 0; i < size; i++)
             {
                 Bundle args = new Bundle();
                 args.putInt(Constants.LINEA_PARAMETRO, codeRod.get(i) );
+                codigoLineasServicio.add(codeRod.get(i));
+
                 mTabsAdapter.addTab(mTabHost.newTabSpec(fragmentTags[i]).setIndicator(items_menu[i]), Page1Activity.class, args);
             }
 
@@ -179,6 +202,21 @@ public class MainActivity extends FragmentActivity {
             nombre_cuentaTwitter.put("R14", "rod14");
             nombre_cuentaTwitter.put("R15", "rod15");
             nombre_cuentaTwitter.put("R16", "rod16");
+
+            intent.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);// PARAMETROS PARA EL SERVICIO
+
+            Calendar cal = Calendar.getInstance();
+            cal.set(Calendar.HOUR_OF_DAY, 18);
+            cal.set(Calendar.MINUTE, 20);
+            cal.set(Calendar.SECOND, 0);
+
+            // create the object
+            AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+            //set the alarm for particular time
+            alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+
+            //startService(intent); //Inicio del servicio
         }
     }
 
@@ -188,13 +226,11 @@ public class MainActivity extends FragmentActivity {
 
         //100 es el codigo que se usa para llamar a la activity settings
          if (requestCode == 100) {
-
              //montarVista(); // your "refresh" code
              finish();
              startActivity(getIntent());
          }
      }
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -211,7 +247,7 @@ public class MainActivity extends FragmentActivity {
 		    case R.id.action_settings:
 		    	Log.i("Rodalies", "entra a settings");
 				//no tiene preferencias, llamamos a la configuracion de la linea principal
-				existPreferences=false;
+				existPreferences = false;
                 startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
                 return true;
             case R.id.nuevo_tuit:
@@ -225,6 +261,9 @@ public class MainActivity extends FragmentActivity {
             case R.id.actualizar:
                 actualizar();
                 Log.i("Rodalies", "Actualizar");
+                return true;
+            case R.id.notificaciones:
+                startActivityForResult(new Intent(MainActivity.this, NuevaAlarmaNotificacion.class), 100);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -260,7 +299,28 @@ public class MainActivity extends FragmentActivity {
     */
 
     private void actualizar() {
-        TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(android.R.drawable.ic_dialog_info)
+                        .setLargeIcon((((BitmapDrawable)getResources()
+                                .getDrawable(R.drawable.logo)).getBitmap()))
+                        .setContentTitle("Mensaje de Alerta")
+                        .setContentText("Ejemplo de notificación.")
+                        .setContentInfo("4")
+                        .setTicker("Alerta!");
+
+        Intent notIntent =
+                new Intent(this, MainActivity.class);
+        PendingIntent contIntent = PendingIntent.getActivity(
+                this, 0, notIntent, 0);
+        mBuilder.setContentIntent(contIntent);
+
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(0, mBuilder.build());
+
+
+/*        TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
 
         if(tabI != null) {
             Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
@@ -278,7 +338,7 @@ public class MainActivity extends FragmentActivity {
                 }
             }
             act.actualizar(idLinea);
-        }
+        }*/
     }
 
     private void escribirTuit() {

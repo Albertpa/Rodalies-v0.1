@@ -64,6 +64,8 @@
     <string name="r14_p">BCN Est. França - Lleida - Tarragona y Reus</string>
     <string name="r15_p">BCN Est. França - Riba-roja Ebre - Tarragona y Reus</string>
     <string name="r16_p">BCN Est. França - Tortosa/Ulldecona - Tarragona</string>
+    <string name="configura_notificaciones">Configurar notificacions</string>
+    <string name="notificaciones">Notificaciones</string>
 
 
 </resources>

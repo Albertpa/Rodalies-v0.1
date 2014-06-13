@@ -14,10 +14,8 @@ public class AlarmReciever extends BroadcastReceiver
         ArrayList<Integer> listaLineas = intent.getIntegerArrayListExtra("lineasServicio");
 
         Intent intent2 = new Intent(context, ServicioNotificaciones.class); //Itent para el servicio
-        intent2.putIntegerArrayListExtra("lineasServicio", listaLineas);// PARAMETROS PARA EL SERVICIO
+        intent2.putIntegerArrayListExtra("lineasServicio", listaLineas);    // PARAMETROS PARA EL SERVICIO
 
         context.startService(intent2); //Inicio del servicio
-
     }
-
 }

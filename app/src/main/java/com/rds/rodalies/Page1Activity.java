@@ -27,6 +27,7 @@ import twitter4j.TwitterException;
 public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private View myFragmentView;
     private TextView textoPrincipal;
+    private final Integer NUMERODETUITS = 20;
 
     private int codigoLinea;
 
@@ -239,7 +240,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             final Twitter twitter = config.getTwitter();
 
             final Query query = new Query(linea.getUsuarioTwitter()); //Establecer nombre de usuario (sin @) o hashtag
-            query.count(15); //Numero maximo de tuits maximo
+            query.count(NUMERODETUITS); //Numero maximo de tuits maximo
 
             try {
                 QueryResult result = twitter.search(query);

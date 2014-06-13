@@ -1,5 +1,6 @@
 package com.rds.rodalies;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -9,17 +10,16 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
 import java.util.ArrayList;
 
-/**
- * Created by jesus on 02/06/14.
- */
 public class ServicioNotificaciones extends Service {
 
     Integer contadorLineas = 0;
     Integer lineasConsultadas = 0;
     Integer numeroDeLineasConProblemas = 0;
+
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -63,6 +63,8 @@ public class ServicioNotificaciones extends Service {
         * y se añade el objeto "Linea" a la lista de lineas */
         @Override
         protected String doInBackground(String... params) {
+/*            mBuilder = null;
+            mainActitivyIntent = null;*/
             RssHandler rh = new RssHandler();
             return rh.getLatestArticles(this.linea.getUrl());
         }
@@ -74,8 +76,9 @@ public class ServicioNotificaciones extends Service {
                 this.linea.setEstado(response);
                 numeroDeLineasConProblemas++;
             }
-
+            Log.i("RODALIES", "Numero de lineas con problemas: " + numeroDeLineasConProblemas);
             if((lineasConsultadas == contadorLineas) && numeroDeLineasConProblemas < 0){
+
                     NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(ServicioNotificaciones.this)
                                 .setSmallIcon(android.R.drawable.ic_dialog_info)
@@ -83,14 +86,21 @@ public class ServicioNotificaciones extends Service {
                                         .getDrawable(R.drawable.logo)).getBitmap()))
                                 .setContentTitle("Atención, problemas en las lineas!")
                                 .setContentText("Hay problemas en " + numeroDeLineasConProblemas + " de tus lineas.")
-                                .setTicker("Atención, problemas en las lineas!");
+                                .setTicker("Atención, problemas en las lineas!")
+                                .setAutoCancel(true)
+                                .setOnlyAlertOnce(true)
+                                .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND);
 
-                Intent notIntent = new Intent(ServicioNotificaciones.this, MainActivity.class);
-                PendingIntent contIntent = PendingIntent.getActivity(ServicioNotificaciones.this, 1, notIntent, 0);
+                Intent mainActitivyIntent = new Intent(ServicioNotificaciones.this, MainActivity.class);
+
+                PendingIntent contIntent = PendingIntent.getActivity(ServicioNotificaciones.this, 0, mainActitivyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 mBuilder.setContentIntent(contIntent);
 
                 NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                mNotificationManager.notify(0, mBuilder.build());
+                mNotificationManager.notify(1, mBuilder.build());
+
+                lineasConsultadas = 0;
+                numeroDeLineasConProblemas = 0;
             }
         }
     }

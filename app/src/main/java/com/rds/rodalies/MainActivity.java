@@ -2,6 +2,7 @@ package com.rds.rodalies;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -30,7 +31,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -83,71 +83,6 @@ public class MainActivity extends FragmentActivity {
                 }
             }
 
-            /*if( sharedSettings.contains(Constants.LINEA_SECUNDARIA1) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA1,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA1,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA2) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA2,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA2,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA3) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA3,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA3,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA4) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA4,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA4,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA5) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA5,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA5,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA6) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA6,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA6,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA7) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA7,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA7,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA8) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA8,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA8,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA9) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA9,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA9,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA10) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA10,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA10,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA11) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA11,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA11,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA12) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA12,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA12,-1));
-            }
-
-            if( sharedSettings.contains(Constants.LINEA_SECUNDARIA13) ){
-                if(codePrincipal !=sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1))
-                    codeRod.add(sharedSettings.getInt(Constants.LINEA_SECUNDARIA13,-1));
-            }*/
-
             //montamos el array para los nombres de los fragments y nombres de los tabs
 
             final int size = codeRod.size();
@@ -171,12 +106,6 @@ public class MainActivity extends FragmentActivity {
 
             //Se le indica la clase en cada posicion del array, es decir para cada posicion tiene un texto ya
             //pero necesita indicar la clase correspondiente
-
-            //bucle for de la pagina
-            //Intent intent = new Intent(this, Notificaciones.class); //Itent para el servicio
-
-            Intent intent = new Intent(this, AlarmReciever.class);
-
             ArrayList<Integer> codigoLineasServicio = new ArrayList<Integer>();
 
             for (int i = 0; i < size; i++)
@@ -203,18 +132,32 @@ public class MainActivity extends FragmentActivity {
             nombre_cuentaTwitter.put("R15", "rod15");
             nombre_cuentaTwitter.put("R16", "rod16");
 
+            Intent intent = new Intent(this, AlarmReciever.class);
             intent.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);// PARAMETROS PARA EL SERVICIO
 
+            Intent intent2 = new Intent(this, AlarmReciever.class);
+            intent2.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);// PARAMETROS PARA EL SERVICIO
+
             Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.HOUR_OF_DAY, 18);
-            cal.set(Calendar.MINUTE, 20);
-            cal.set(Calendar.SECOND, 0);
+            cal.set(Calendar.HOUR_OF_DAY, 07);
+            cal.set(Calendar.MINUTE, 45);
+            cal.set(Calendar.SECOND, 00);
+
+            Calendar cal2 = Calendar.getInstance();
+            cal2.set(Calendar.HOUR_OF_DAY, 18);
+            cal2.set(Calendar.MINUTE, 20);
+            cal2.set(Calendar.SECOND, 00);
 
             // create the object
             AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-
             //set the alarm for particular time
-            alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+            //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+            alarmManager.setRepeating(AlarmManager.RTC, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+
+
+            AlarmManager alarmManager2 = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            //set the alarm for particular time
+            alarmManager2.setRepeating(AlarmManager.RTC, cal2.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
 
             //startService(intent); //Inicio del servicio
         }
@@ -270,53 +213,25 @@ public class MainActivity extends FragmentActivity {
 		 }
 	}
 
-    /*
-    private void actualizar_bueno() {
-        TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
-
-
-        //Fragment f1 = (Fragment) getSupportFragmentManager().findFragmentByTag(tabI.tag);
-
-        if(tabI != null) {
-            Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
-
-            List<Fragment> listPage = getSupportFragmentManager().getFragments(); //Lista de fragments
-
-            Integer posicionActualTab = mTabHost.getCurrentTab();
-
-            Log.e("PosicionTab", "position "+posicionActualTab);
-
-            if (posicionActualTab < listPage.size()) {
-                Page1Activity act = (Page1Activity) listPage.get(mTabHost.getCurrentTab()); //Obtiene el fragment que se está visualizando
-                if(act != null){
-                    act.actualizar(idLinea); //Se llama al metodo actualizar del fragment que se está viendo.
-                }
-            } else {
-                Log.e("PosicionTab", "Error al actualizar el tab con positicion " + posicionActualTab.toString() + " donde el size es " + listPage.size());
-            }
-        }
-    }
-    */
 
     private void actualizar() {
         NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(android.R.drawable.ic_dialog_info)
-                        .setLargeIcon((((BitmapDrawable)getResources()
-                                .getDrawable(R.drawable.logo)).getBitmap()))
-                        .setContentTitle("Mensaje de Alerta")
-                        .setContentText("Ejemplo de notificación.")
-                        .setContentInfo("4")
-                        .setTicker("Alerta!");
+            new NotificationCompat.Builder(this)
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
+                .setLargeIcon((((BitmapDrawable) getResources()
+                    .getDrawable(R.drawable.logo)).getBitmap()))
+                .setContentTitle("Atención, problemas en las lineas!")
+                .setContentText("Ejemplo de notificación.")
+                .setTicker("Atención, problemas en las lineas!")
+                .setAutoCancel(true)
+                .setOnlyAlertOnce(true)
+                .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND);
 
-        Intent notIntent =
-                new Intent(this, MainActivity.class);
-        PendingIntent contIntent = PendingIntent.getActivity(
-                this, 0, notIntent, 0);
+        Intent notIntent = new Intent(this, MainActivity.class);
+        PendingIntent contIntent = PendingIntent.getActivity(this, 0, notIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentIntent(contIntent);
 
-        NotificationManager mNotificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(0, mBuilder.build());
 
 
@@ -601,8 +516,8 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public void onPageScrollStateChanged(int state) {
-        }
-               
-    }
 
+        }
+    }
 }
+

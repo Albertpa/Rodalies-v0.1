@@ -13,8 +13,10 @@
     <string name="autores2">Albert Pagès and Jesús Escribano</string>
     <string name="avui">Today</string>
     <string name="carregant">Getting data...</string>
+    <string name="configura_notificaciones">Notifications</string>
     <string name="contacto1">Contact us:</string>
     <string name="contacto2">Running Dogs Studio runningdogsstudio@gmail.com</string>
+    <string name="domingo">DOM</string>
     <string name="fuente1">Official data source:</string>
     <string name="fuente2">http://dadesobertes.gencat.cat</string>
     <string name="generalitat">Generalitat de Catalunya</string>
@@ -22,9 +24,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="info_oficial">Official information through GENCAT</string>
     <string name="info_twitter">Information through Twitter</string>
+    <string name="jueves">JUE</string>
+    <string name="lunes">LUN</string>
+    <string name="martes">MAR</string>
     <string name="menu_page1">Page1</string>
     <string name="menu_page2">Page2</string>
+    <string name="miercoles">MIÉ</string>
     <string name="normalitat">Normal service</string>
+    <string name="notificaciones">Notifications</string>
     <string name="obtenint_dades">Getting data...</string>
     <string name="r1">R1 line</string>
     <string name="r10">R10 line</string>
@@ -58,6 +65,7 @@
     <string name="r8">R8 line</string>
     <string name="r8_p">Martorell - Granollers Centre - Cerdanyola Uni.</string>
     <string name="r9">R9 line</string>
+    <string name="sabado">SÁB</string>
     <string name="selecLinea1">Select the main line:</string>
     <string name="selecLineaS">Select the secondary lines:</string>
     <string name="selecLineaS2">Select the line or lines you want to check:</string>
@@ -66,5 +74,6 @@
     <string name="title_activity_page1">Page1Activity</string>
     <string name="title_activity_page2">Page2Activity</string>
     <string name="twittear">New tweet</string>
+    <string name="viernes">VIE</string>
 
 </resources>

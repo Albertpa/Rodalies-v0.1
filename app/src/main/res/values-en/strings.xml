@@ -66,6 +66,13 @@
     <string name="r16_p">BCN Est. França - Tortosa/Ulldecona - Tarragona</string>
     <string name="configura_notificaciones">Notifications</string>
     <string name="notificaciones">Notifications</string>
+    <string name="lunes">LUN</string>
+    <string name="martes">MAR</string>
+    <string name="miercoles">MIÉ</string>
+    <string name="jueves">JUE</string>
+    <string name="viernes">VIE</string>
+    <string name="sabado">SÁB</string>
+    <string name="domingo">DOM</string>
 
 
 </resources>

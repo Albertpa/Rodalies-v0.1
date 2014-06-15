@@ -4,10 +4,12 @@
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application android:allowBackup="true" android:icon="@drawable/logo" android:label="@string/app_name" android:theme="@style/AppTheme">
-
-        <activity android:label="@string/app_name" android:name="com.rds.rodalies.MainActivity" android:screenOrientation="portrait">
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.rds.rodalies.MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,6 +21,13 @@
         <activity android:label="@string/action_settings" android:name="com.rds.rodalies.GuardarPreferencias" android:screenOrientation="portrait">
         </activity>
         <activity android:label="@string/acerca_de" android:name="com.rds.rodalies.About">
+        </activity>
+
+        <service android:enabled="true" android:name="com.rds.rodalies.ServicioNotificaciones"/>
+
+        <receiver android:name="com.rds.rodalies.AlarmReciever"/>
+
+        <activity android:label="@string/configura_notificaciones" android:name="com.rds.rodalies.NuevaAlarmaNotificacion">
         </activity>
     </application>
 

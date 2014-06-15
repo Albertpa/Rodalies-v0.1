@@ -597,13 +597,16 @@
     <string name="action_settings">Configuració</string>
     <string name="actualizar">Actualitza</string>
     <string name="ahir">Ahir</string>
+    <string name="alarma1">Primera alarma</string>
     <string name="app_name">Rodalies</string>
     <string name="autores1">Aplicació desenvolupada per:</string>
     <string name="autores2">Albert Pagès i Jesús Escribano</string>
     <string name="avui">Avui</string>
     <string name="carregant">Obtenint dades...</string>
+    <string name="configura_notificaciones">Configura notificacions</string>
     <string name="contacto1">Contacta amb nosaltres:</string>
     <string name="contacto2">Running Dogs Studio runningdogsstudio@gmail.com</string>
+    <string name="domingo">DOM</string>
     <string name="fuente1">Font de les dades oficials:</string>
     <string name="fuente2">http://dadesobertes.gencat.cat</string>
     <string name="generalitat">Generalitat de Catalunya</string>
@@ -611,9 +614,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="info_oficial">Informació oficial via GENCAT</string>
     <string name="info_twitter">Informació via Twitter</string>
+    <string name="jueves">JUE</string>
+    <string name="lunes">LUN</string>
+    <string name="martes">MAR</string>
     <string name="menu_page1">Page1</string>
     <string name="menu_page2">Page2</string>
+    <string name="miercoles">MIÉ</string>
     <string name="normalitat">Normalitat al servei</string>
+    <string name="notificaciones">Notificacions</string>
     <string name="obtenint_dades">Obtenint dades...</string>
     <string name="r1">Línia R1</string>
     <string name="r10">Línia R10</string>
@@ -647,14 +655,18 @@
     <string name="r8">Línia R8</string>
     <string name="r8_p">Martorell - Granollers Centre - Cerdanyola Uni.</string>
     <string name="r9">Línia R9</string>
+    <string name="sabado">SÁB</string>
     <string name="selecLinea1">Selecciona la línia principal:</string>
     <string name="selecLineaS">Selecciona les línies secundaries:</string>
     <string name="selecLineaS2">Seleccioni la línia o les línies que vol consultar:</string>
     <string name="title_activity_about">About</string>
+    <string name="title_activity_configurador_notificaciones">ConfiguradorNotificaciones</string>
     <string name="title_activity_guardar_preferencias">GuardarPreferencias</string>
+    <string name="title_activity_nueva_alarma_notificacion">NuevaAlarmaNotificacion</string>
     <string name="title_activity_page1">Page1Activity</string>
     <string name="title_activity_page2">Page2Activity</string>
     <string name="twittear">Piular</string>
+    <string name="viernes">VIE</string>
     <!-- From: file:/Users/albert/Documents/Rodalies-v0.1/app/src/main/res/values/styles.xml -->
     <eat-comment />
 

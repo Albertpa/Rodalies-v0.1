@@ -67,5 +67,13 @@
     <string name="configura_notificaciones">Configura notificacions</string>
     <string name="title_activity_nueva_alarma_notificacion">NuevaAlarmaNotificacion</string>
     <string name="notificaciones">Notificacions</string>
+    <string name="alarma1">Primera alarma</string>
+    <string name="lunes">LUN</string>
+    <string name="martes">MAR</string>
+    <string name="miercoles">MIÉ</string>
+    <string name="jueves">JUE</string>
+    <string name="viernes">VIE</string>
+    <string name="sabado">SÁB</string>
+    <string name="domingo">DOM</string>
 
 </resources>

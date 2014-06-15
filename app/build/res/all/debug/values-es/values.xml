@@ -29,8 +29,10 @@
     <string name="autores2">Albert Pagès y Jesús Escribano</string>
     <string name="avui">Hoy</string>
     <string name="carregant">Obteniendo datos...</string>
+    <string name="configura_notificaciones">Configurar notificacions</string>
     <string name="contacto1">Contacta con nosotros:</string>
     <string name="contacto2">Running Dogs Studio runningdogsstudio@gmail.com</string>
+    <string name="domingo">DOM</string>
     <string name="fuente1">Fuente de datos oficiales:</string>
     <string name="fuente2">http://dadesobertes.gencat.cat</string>
     <string name="generalitat">Generalitat de Catalunya</string>
@@ -38,9 +40,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="info_oficial">Información oficial vía GENCAT</string>
     <string name="info_twitter">Información vía Twitter</string>
+    <string name="jueves">JUE</string>
+    <string name="lunes">LUN</string>
+    <string name="martes">MAR</string>
     <string name="menu_page1">Page1</string>
     <string name="menu_page2">Page2</string>
+    <string name="miercoles">MIÉ</string>
     <string name="normalitat">Normalidad en el servicio</string>
+    <string name="notificaciones">Notificaciones</string>
     <string name="obtenint_dades">Obteniendo datos...</string>
     <string name="r1">Línea R1</string>
     <string name="r10">Línea R10</string>
@@ -74,6 +81,7 @@
     <string name="r8">Línea R8</string>
     <string name="r8_p">Martorell - Granollers Centre - Cerdanyola Uni.</string>
     <string name="r9">Línea R9</string>
+    <string name="sabado">SÁB</string>
     <string name="selecLinea1">Seleccione la línea principal:</string>
     <string name="selecLineaS">Selecciona las líneas secundarias:</string>
     <string name="selecLineaS2">Selecciona la línea o las líneas que deseas consultar:</string>
@@ -82,5 +90,6 @@
     <string name="title_activity_page1">Page1Activity</string>
     <string name="title_activity_page2">Page2Activity</string>
     <string name="twittear">Twittear</string>
+    <string name="viernes">VIE</string>
 
 </resources>

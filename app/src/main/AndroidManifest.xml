@@ -36,7 +36,7 @@
         </activity>
         <activity
             android:name="com.rds.rodalies.GuardarPreferencias"
-            android:label="@string/configura_notificaciones"
+            android:label="@string/action_settings"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -52,7 +52,7 @@
 
         <activity
             android:name="com.rds.rodalies.NuevaAlarmaNotificacion"
-            android:label="@string/title_activity_nueva_alarma_notificacion" >
+            android:label="@string/configura_notificaciones" >
         </activity>
     </application>
 

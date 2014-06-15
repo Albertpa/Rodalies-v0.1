@@ -15,6 +15,13 @@
         android:title="@string/actualizar"/>
 
     <item
+        android:id="@+id/notificaciones"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/notificaciones"/>
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"

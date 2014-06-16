@@ -46,7 +46,7 @@
 
         <service
             android:name="com.rds.rodalies.ServicioNotificaciones"
-            android:enabled="true" />
+            android:enabled="true"/>
 
         <receiver android:name="com.rds.rodalies.AlarmReciever" />
 

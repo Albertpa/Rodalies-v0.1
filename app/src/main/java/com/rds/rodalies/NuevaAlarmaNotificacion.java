@@ -1,12 +1,16 @@
 package com.rds.rodalies;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TimePicker;
+import android.widget.ToggleButton;
 
+import java.util.Arrays;
 import java.util.Calendar;
 
 
@@ -14,13 +18,15 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
     private TimePicker timePicker1;
 
-    private int hour;
-    private int minute;
+    private Integer hora;
+    private Integer minuto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nueva_alarma_notificacion);
+
+        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
     }
 
     public void showTimePickerDialog(View v) {
@@ -30,20 +36,69 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
     // display current time
     public void setCurrentTimeOnView() {
-        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
+
 
         final Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR_OF_DAY);
-        minute = c.get(Calendar.MINUTE);
+        hora = c.get(Calendar.HOUR_OF_DAY);
+        minuto = c.get(Calendar.MINUTE);
 
         //si no hay datos guardados asignamos la hora actual a los pickers
-        // set current time into timepicker
-        timePicker1.setCurrentHour(hour);
-        timePicker1.setCurrentMinute(minute);
+        //set current time into timepicker
+        timePicker1.setCurrentHour(hora);
+        timePicker1.setCurrentMinute(minuto);
     }
 
     public void guardar(View v){
         Log.e("Rodalies", "guarda elemento");
-        finish();
+
+        String[] diasSeleccionados = new String[7];
+
+        ToggleButton lunes = (ToggleButton)findViewById(R.id.toggleButtonLUN);
+        ToggleButton martes = (ToggleButton)findViewById(R.id.toggleButtonMAR);
+        ToggleButton miercoles = (ToggleButton)findViewById(R.id.toggleButtonMIE);
+        ToggleButton jueves = (ToggleButton)findViewById(R.id.toggleButtonJUE);
+        ToggleButton viernes = (ToggleButton)findViewById(R.id.toggleButtonVIE);
+        ToggleButton sabado = (ToggleButton)findViewById(R.id.toggleButtonSAB);
+        ToggleButton domingo = (ToggleButton)findViewById(R.id.toggleButtonDOM);
+
+        diasSeleccionados[0] = (lunes.isChecked() == true) ? "1" : "0"; // 1 = dia seleccionado, 0 = dia no seleccionado
+        diasSeleccionados[1] = (martes.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[2] = (miercoles.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[3] = (jueves.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[4] = (viernes.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[5] = (sabado.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[6] = (domingo.isChecked() == true) ? "1" : "0";
+
+        if(Arrays.asList(diasSeleccionados).contains("1") == false){ //Si no se ha seleccionado ningun dia
+            Alert alert = new Alert();
+            alert.alert(getString(R.string.seleccionar_un_dia), this);
+        }
+        else{
+            hora = timePicker1.getCurrentHour();
+            minuto = timePicker1.getCurrentMinute();
+            String dias = convertArrayToString(diasSeleccionados);
+
+            //TODO Guardar notificacion en base de datos
+
+            finish();
+        }
+    }
+
+    public static String convertArrayToString(String[] dias){
+        String separador = ",";
+        String str = "";
+        for (int i = 0; i < dias.length; i++) {
+            str = str + dias[i];
+            // No añadir coma al ultimo elemento
+            if(i < dias.length-1){
+                str = str + separador;
+            }
+        }
+        return str;
+    }
+    public static String[] convertStringToArray(String str){
+        String separador = ",";
+        String[] arr = str.split(separador);
+        return arr;
     }
 }

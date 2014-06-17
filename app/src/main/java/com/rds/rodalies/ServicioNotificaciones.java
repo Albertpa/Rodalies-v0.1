@@ -42,7 +42,7 @@ public class ServicioNotificaciones extends Service {
             new EstadoAsyncTask(linea).execute();
         }
 
-        return START_NOT_STICKY;
+        return START_STICKY;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class ServicioNotificaciones extends Service {
                 numeroDeLineasConProblemas++;
             }
             Log.i("RODALIES", "Numero de lineas con problemas: " + numeroDeLineasConProblemas);
-            if((lineasConsultadas == contadorLineas) && numeroDeLineasConProblemas < 0){
+            if((lineasConsultadas == contadorLineas) && numeroDeLineasConProblemas > 0){
 
                     NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(ServicioNotificaciones.this)

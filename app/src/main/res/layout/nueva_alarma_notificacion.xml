@@ -40,7 +40,7 @@
         android:layout_marginTop="10dp">
 
         <ToggleButton
-            android:id="@+id/datePickerLUN"
+            android:id="@+id/toggleButtonLUN"
             android:layout_width="45dp"
             android:layout_height="48dp"
             android:padding="0dp"
@@ -50,7 +50,7 @@
             android:layout_marginLeft="0dp"/>
 
         <ToggleButton
-            android:id="@+id/datePickerMAR"
+            android:id="@+id/toggleButtonMAR"
             android:layout_width="45dp"
             android:layout_height="48dp"
             android:padding="0dp"
@@ -60,7 +60,7 @@
             android:layout_marginLeft="0dp"/>
 
         <ToggleButton
-            android:id="@+id/datePickerMIE"
+            android:id="@+id/toggleButtonMIE"
             android:layout_width="45dp"
             android:layout_height="48dp"
             android:padding="0dp"
@@ -70,7 +70,7 @@
             android:layout_marginLeft="0dp"/>
 
         <ToggleButton
-            android:id="@+id/datePickerJUE"
+            android:id="@+id/toggleButtonJUE"
             android:layout_width="45dp"
             android:layout_height="48dp"
             android:padding="0dp"
@@ -80,7 +80,7 @@
             android:layout_marginLeft="0dp"/>
 
         <ToggleButton
-            android:id="@+id/datePickerVIE"
+            android:id="@+id/toggleButtonVIE"
             android:layout_width="45dp"
             android:layout_height="48dp"
             android:padding="0dp"
@@ -89,31 +89,39 @@
             android:textOn="@string/viernes"
             android:layout_marginLeft="0dp"/>
 
-        <ToggleButton
-            android:id="@+id/datePickerSAB"
-            android:layout_width="45dp"
-            android:layout_height="48dp"
-            android:padding="0dp"
-            android:clickable="true"
-            android:textOff="@string/sabado"
-            android:textOn="@string/sabado"/>
-
-        <ToggleButton
-            android:id="@+id/datePickerDOM"
-            android:layout_width="45dp"
-            android:layout_height="48dp"
-            android:padding="0dp"
-            android:clickable="true"
-            android:textOff="@string/domingo"
-            android:textOn="@string/domingo"
-            android:layout_marginLeft="0dp"/>
-
         </LinearLayout>
 
      <LinearLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:orientation="vertical"
+         android:orientation="horizontal"
+         android:gravity="center"
+         android:layout_marginTop="10dp">
+
+         <ToggleButton
+             android:id="@+id/toggleButtonSAB"
+             android:layout_width="45dp"
+             android:layout_height="48dp"
+             android:padding="0dp"
+             android:clickable="true"
+             android:textOff="@string/sabado"
+             android:textOn="@string/sabado"/>
+
+         <ToggleButton
+             android:id="@+id/toggleButtonDOM"
+             android:layout_width="45dp"
+             android:layout_height="48dp"
+             android:padding="0dp"
+             android:clickable="true"
+             android:textOff="@string/domingo"
+             android:textOn="@string/domingo"
+             android:layout_marginLeft="0dp"/>
+
+         </LinearLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
          android:layout_marginTop="10dp">
 
          <Button
@@ -121,9 +129,10 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:onClick="guardar"
-             android:text="@string/guardar" />
+             android:text="@string/guardar"
+             android:layout_alignParentBottom="true"/>
 
-     </LinearLayout>
+     </RelativeLayout>
 
 
 

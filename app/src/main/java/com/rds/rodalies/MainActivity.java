@@ -133,33 +133,33 @@ public class MainActivity extends FragmentActivity {
             nombre_cuentaTwitter.put("R16", "rod16");
 
             Intent intent = new Intent(this, AlarmReciever.class);
-            intent.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);// PARAMETROS PARA EL SERVICIO
+            intent.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);    //PARAMETROS PARA EL SERVICIO
 
             Intent intent2 = new Intent(this, AlarmReciever.class);
-            intent2.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);// PARAMETROS PARA EL SERVICIO
+            intent2.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);   //PARAMETROS PARA EL SERVICIO
 
             Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.HOUR_OF_DAY, 07);
-            cal.set(Calendar.MINUTE, 45);
-            cal.set(Calendar.SECOND, 00);
+            cal.set(Calendar.HOUR_OF_DAY, 17);
+            cal.set(Calendar.MINUTE, 10);
+            cal.set(Calendar.SECOND, 0);
 
             Calendar cal2 = Calendar.getInstance();
             cal2.set(Calendar.HOUR_OF_DAY, 18);
             cal2.set(Calendar.MINUTE, 20);
-            cal2.set(Calendar.SECOND, 00);
+            cal2.set(Calendar.SECOND, 0);
 
             // create the object
             AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             //set the alarm for particular time
             //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
-            alarmManager.setRepeating(AlarmManager.RTC, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
-
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
 
             AlarmManager alarmManager2 = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             //set the alarm for particular time
-            alarmManager2.setRepeating(AlarmManager.RTC, cal2.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+            alarmManager2.setRepeating(AlarmManager.RTC_WAKEUP, cal2.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
 
-            //startService(intent); //Inicio del servicio
+/*            startService(intent); //Inicio del servicio
+            startService(intent2);*/
         }
     }
 
@@ -206,7 +206,8 @@ public class MainActivity extends FragmentActivity {
                 Log.i("Rodalies", "Actualizar");
                 return true;
             case R.id.notificaciones:
-                startActivityForResult(new Intent(MainActivity.this, NuevaAlarmaNotificacion.class), 100);
+                //startActivityForResult(new Intent(MainActivity.this, NuevaAlarmaNotificacion.class), 100);
+                startActivityForResult(new Intent(MainActivity.this, ListaNotificaciones.class), 100);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -215,7 +216,7 @@ public class MainActivity extends FragmentActivity {
 
 
     private void actualizar() {
-        NotificationCompat.Builder mBuilder =
+/*        NotificationCompat.Builder mBuilder =
             new NotificationCompat.Builder(this)
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setLargeIcon((((BitmapDrawable) getResources()
@@ -232,10 +233,10 @@ public class MainActivity extends FragmentActivity {
         mBuilder.setContentIntent(contIntent);
 
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(0, mBuilder.build());
+        mNotificationManager.notify(0, mBuilder.build());*/
 
 
-/*        TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
+        TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
 
         if(tabI != null) {
             Integer idLinea = codigoLinea(tabI.tag); //Codigo de la linea actual
@@ -253,7 +254,7 @@ public class MainActivity extends FragmentActivity {
                 }
             }
             act.actualizar(idLinea);
-        }*/
+        }
     }
 
     private void escribirTuit() {

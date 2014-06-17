@@ -74,6 +74,8 @@
     <string name="viernes">VIE</string>
     <string name="sabado">SÁB</string>
     <string name="domingo">DOM</string>
+    <string name="aceptar">Accepta</string>
+    <string name="seleccionar_un_dia">Ha de seleccionar com a mínim un dia</string>
 
 
 </resources>

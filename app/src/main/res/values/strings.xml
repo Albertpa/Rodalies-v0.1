@@ -75,5 +75,8 @@
     <string name="viernes">DIV</string>
     <string name="sabado">DIS</string>
     <string name="domingo">DIU</string>
+    <string name="title_activity_lista_notificaciones">ListaNotificaciones</string>
+    <string name="aceptar">Accepta</string>
+    <string name="seleccionar_un_dia">Ha de seleccionar com a mínim un dia</string>
 
 </resources>

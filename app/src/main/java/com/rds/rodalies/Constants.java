@@ -5,6 +5,9 @@ public class Constants {
 	//Nombre del archivo, como se llamara
     public static final String RODA_PREFERENCES = "RodaPrefs";
 
+    //Nombre máximo de preferencias almacenadas
+    public static final Integer MAX_PREF = 3;
+
     //Se guarda desde Settings
     public static final String LINEA_PARAMETRO = "LINEA_PARAMETRO"; // String
 /*    public static final String LINEA_SECUNDARIA1 = "LINEA_SECUNDARIA1"; // String

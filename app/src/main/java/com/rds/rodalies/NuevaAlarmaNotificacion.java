@@ -1,10 +1,9 @@
 package com.rds.rodalies;
 
-import android.content.res.Resources;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TimePicker;
@@ -27,11 +26,6 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
         setContentView(R.layout.nueva_alarma_notificacion);
 
         timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
-    }
-
-    public void showTimePickerDialog(View v) {
-        DialogFragment newFragment = new ConfiguradorNotificaciones();
-        newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
     // display current time
@@ -78,9 +72,37 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
             minuto = timePicker1.getCurrentMinute();
             String dias = convertArrayToString(diasSeleccionados);
 
-            //TODO Guardar notificacion en base de datos
 
-            finish();
+
+            NotificacionesSQL handlerSQL = new NotificacionesSQL(this, "rodalies.db", null, 1);
+
+            SQLiteDatabase db = handlerSQL.getReadableDatabase();
+
+
+            if(db != null) {
+
+                //consulta de login
+                 Cursor cursor = db.rawQuery("SELECT * FROM Notificaciones", null);
+
+                 Log.e("Rodalies", ""+cursor.getCount());
+                if(cursor.getCount() < Constants.MAX_PREF) //Si el cursor tiene resultados...
+                {
+                    db.execSQL("INSERT or replace INTO Notificaciones (hora, minuto, dias) " + "VALUES('" + hora + "', '" + minuto + "', '" + dias + "')");
+                    db.close();
+                    finish();
+
+                }else{
+                    Alert alert = new Alert();
+                    alert.alert(getString(R.string.max_pref), this);
+                }
+
+            }
+
+            db.close();
+
+
+
+
         }
     }
 

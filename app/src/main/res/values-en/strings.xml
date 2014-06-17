@@ -76,6 +76,7 @@
     <string name="domingo">DOM</string>
     <string name="aceptar">Accepta</string>
     <string name="seleccionar_un_dia">Ha de seleccionar com a mínim un dia</string>
+    <string name="max_pref">No pots tenir més de 3 alarmes!</string>
 
 
 </resources>

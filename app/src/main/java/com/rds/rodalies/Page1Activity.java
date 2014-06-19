@@ -273,6 +273,4 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             }
         }
     }
-
-
 }

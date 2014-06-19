@@ -31,7 +31,6 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
     // display current time
     public void setCurrentTimeOnView() {
 
-
         final Calendar c = Calendar.getInstance();
         hora = c.get(Calendar.HOUR_OF_DAY);
         minuto = c.get(Calendar.MINUTE);
@@ -70,40 +69,30 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
         else{
             hora = timePicker1.getCurrentHour();
             minuto = timePicker1.getCurrentMinute();
+
             String dias = convertArrayToString(diasSeleccionados);
 
-
-
-            NotificacionesSQL handlerSQL = new NotificacionesSQL(this, "rodalies.db", null, 1);
-
+            NotificacionesSQL handlerSQL = new NotificacionesSQL(this, "Notificaciones", null, 1);
             SQLiteDatabase db = handlerSQL.getReadableDatabase();
 
-
             if(db != null) {
+                /* Si es una modificación hay q usar el mismo id */
+                //TODO if modificacion getId
 
-                //consulta de login
-                 Cursor cursor = db.rawQuery("SELECT * FROM Notificaciones", null);
+                /* Si no es una modificación  */
+                //TODO else
 
-                 Log.e("Rodalies", ""+cursor.getCount());
-                if(cursor.getCount() < Constants.MAX_PREF) //Si el cursor tiene resultados...
-                {
-                    db.execSQL("INSERT or replace INTO Notificaciones (hora, minuto, dias) " + "VALUES('" + hora + "', '" + minuto + "', '" + dias + "')");
-                    db.close();
-                    finish();
+                db.execSQL("INSERT or replace INTO Notificaciones (hora, minuto, dias) " + "VALUES('" + hora + "', '" + minuto + "', '" + dias + "')");
 
-                }else{
-                    Alert alert = new Alert();
-                    alert.alert(getString(R.string.max_pref), this);
-                }
+                db.close();
 
+                cerrarPantalla();
             }
-
-            db.close();
-
-
-
-
         }
+    }
+
+    private void cerrarPantalla() {
+        finish();
     }
 
     public static String convertArrayToString(String[] dias){

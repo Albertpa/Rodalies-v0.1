@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class NotificacionesSQL extends SQLiteOpenHelper {
 
     //Sentencia SQL para crear la tabla de notificaciones
-    String sqlCreate = "CREATE TABLE Notificaciones (id INTEGER, hora TEXT, minuto TEXT, dias TEXT)";
+    String sqlCreate = "CREATE TABLE Notificaciones (_id INTEGER PRIMARY KEY, hora TEXT, minuto TEXT, dias TEXT)";
 
     public NotificacionesSQL(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);

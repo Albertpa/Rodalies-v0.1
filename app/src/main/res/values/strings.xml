@@ -79,5 +79,8 @@
     <string name="aceptar">Accepta</string>
     <string name="seleccionar_un_dia">Ha de seleccionar com a mínim un dia</string>
     <string name="max_pref">No pots tenir més de 3 alarmes!</string>
+    <string name="eliminar_alerta">Eliminar alerta?</string>
+    <string name="no">No</string>
+    <string name="si">Sí</string>
 
 </resources>

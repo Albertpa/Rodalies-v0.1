@@ -79,8 +79,6 @@ public class LineasPreferenciasAdapter extends ArrayAdapter<LineaPreferencias>{
             }
         }
 
-        //holder.seleccionado.setChecked(lineas.get(position).isSelected());
-
         if (GuardarPreferencias.checksPrefencias[position])
             holder.seleccionado.setChecked(true);
         else
@@ -100,8 +98,6 @@ public class LineasPreferenciasAdapter extends ArrayAdapter<LineaPreferencias>{
                     GuardarPreferencias.checksPrefencias[position] = false;
                     GuardarPreferencias.activaSubmit();
                 }
-
-
             }
         });
         return view;

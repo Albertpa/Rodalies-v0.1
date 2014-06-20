@@ -16,4 +16,16 @@ public class Alerta {
     public Integer getId() {
         return Id;
     }
+
+    public String getHora() {
+        return Hora;
+    }
+
+    public String getMinutos() {
+        return Minutos;
+    }
+
+    public String getDiasSeleccionados() {
+        return DiasSeleccionados;
+    }
 }

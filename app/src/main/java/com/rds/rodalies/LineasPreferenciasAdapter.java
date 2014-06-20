@@ -13,9 +13,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by jesus on 08/02/14.
- */
 public class LineasPreferenciasAdapter extends ArrayAdapter<LineaPreferencias>{
     private List<LineaPreferencias> lineas;
     private Context ctx;

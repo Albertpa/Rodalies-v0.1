@@ -1,6 +1,6 @@
 package com.rds.rodalies;
 
-import android.database.Cursor;
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -16,9 +16,19 @@ import java.util.Calendar;
 public class NuevaAlarmaNotificacion extends FragmentActivity {
 
     private TimePicker timePicker1;
+    private ToggleButton lunes;
+    private ToggleButton martes;
+    private ToggleButton miercoles;
+    private ToggleButton jueves;
+    private ToggleButton viernes;
+    private ToggleButton sabado;
+    private ToggleButton domingo;
 
     private Integer hora;
     private Integer minuto;
+
+    private Boolean esActualizacion = false;
+    private Integer idActualizacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,61 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
         setContentView(R.layout.nueva_alarma_notificacion);
 
         timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
+
+        lunes = (ToggleButton)findViewById(R.id.toggleButtonLUN);
+        martes = (ToggleButton)findViewById(R.id.toggleButtonMAR);
+        miercoles = (ToggleButton)findViewById(R.id.toggleButtonMIE);
+        jueves = (ToggleButton)findViewById(R.id.toggleButtonJUE);
+        viernes = (ToggleButton)findViewById(R.id.toggleButtonVIE);
+        sabado = (ToggleButton)findViewById(R.id.toggleButtonSAB);
+        domingo = (ToggleButton)findViewById(R.id.toggleButtonDOM);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            Alerta alarma = new Alerta(extras.getInt("ID"), extras.getString("HORA"), extras.getString("MINUTOS"), extras.getString("DIAS"));
+            idActualizacion = alarma.getId();
+            esActualizacion = true;
+            completarDatos(alarma);
+        }
+    }
+
+    /*
+    * Asigna los valores de hora, minutos y dias seleccionados a la pantalla
+    * */
+    private void completarDatos(Alerta alarma) {
+
+        timePicker1.setCurrentHour(Integer.parseInt(alarma.getHora()));
+        timePicker1.setCurrentMinute(Integer.parseInt(alarma.getMinutos()));
+
+        String[] diasSeleccionados = convertStringToArray(alarma.getDiasSeleccionados());
+
+        for(int i = 0; i < diasSeleccionados.length; i++){
+            Boolean estaSeleccionado = (diasSeleccionados[i].compareTo("0") == 0) ? false : true;;
+
+            switch (i){
+                case 0:
+                    lunes.setChecked(estaSeleccionado);
+                    break;
+                case 1:
+                    martes.setChecked(estaSeleccionado);
+                    break;
+                case 2:
+                    miercoles.setChecked(estaSeleccionado);
+                    break;
+                case 3:
+                    jueves.setChecked(estaSeleccionado);
+                    break;
+                case 4:
+                    viernes.setChecked(estaSeleccionado);
+                    break;
+                case 5:
+                    sabado.setChecked(estaSeleccionado);
+                    break;
+                case 6:
+                    domingo.setChecked(estaSeleccionado);
+                    break;
+            }
+        }
     }
 
     // display current time
@@ -45,14 +110,6 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
         Log.e("Rodalies", "guarda elemento");
 
         String[] diasSeleccionados = new String[7];
-
-        ToggleButton lunes = (ToggleButton)findViewById(R.id.toggleButtonLUN);
-        ToggleButton martes = (ToggleButton)findViewById(R.id.toggleButtonMAR);
-        ToggleButton miercoles = (ToggleButton)findViewById(R.id.toggleButtonMIE);
-        ToggleButton jueves = (ToggleButton)findViewById(R.id.toggleButtonJUE);
-        ToggleButton viernes = (ToggleButton)findViewById(R.id.toggleButtonVIE);
-        ToggleButton sabado = (ToggleButton)findViewById(R.id.toggleButtonSAB);
-        ToggleButton domingo = (ToggleButton)findViewById(R.id.toggleButtonDOM);
 
         diasSeleccionados[0] = (lunes.isChecked() == true) ? "1" : "0"; // 1 = dia seleccionado, 0 = dia no seleccionado
         diasSeleccionados[1] = (martes.isChecked() == true) ? "1" : "0";
@@ -77,12 +134,17 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
             if(db != null) {
                 /* Si es una modificación hay q usar el mismo id */
-                //TODO if modificacion getId
-
-                /* Si no es una modificación  */
-                //TODO else
-
-                db.execSQL("INSERT or replace INTO Notificaciones (hora, minuto, dias) " + "VALUES('" + hora + "', '" + minuto + "', '" + dias + "')");
+                if(esActualizacion){
+                    ContentValues valores = new ContentValues();
+                    valores.put("hora",hora);
+                    valores.put("minuto",minuto);
+                    valores.put("dias",dias);
+                    db.update("Notificaciones", valores, "_id='" + idActualizacion + "'", null);
+                    esActualizacion = false;
+                }
+                else{
+                    db.execSQL("INSERT or replace INTO Notificaciones (hora, minuto, dias) " + "VALUES('" + hora + "', '" + minuto + "', '" + dias + "')");
+                }
 
                 db.close();
 

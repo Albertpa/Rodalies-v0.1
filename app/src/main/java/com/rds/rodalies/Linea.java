@@ -1,9 +1,5 @@
 package com.rds.rodalies;
 
-/**
- * Created by jesus on 29/01/14.
- * Clase Linea
- */
 public class Linea {
     private String nombre; //Nombre de la linea
     private String estado; //Estado de la linea

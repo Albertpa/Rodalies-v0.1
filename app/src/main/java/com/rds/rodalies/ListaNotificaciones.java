@@ -47,9 +47,8 @@ public class ListaNotificaciones extends ListActivity {
         this.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                //modificarAlerta(listaAlertas.get(position));
-
                 Log.i("lista", "Ver alerta");
+                modificarAlerta(listaAlertas.get(position));
             }
         });
 
@@ -63,6 +62,37 @@ public class ListaNotificaciones extends ListActivity {
 
         invalidateOptionsMenu();
         super.onResume();
+    }
+
+    private void modificarAlerta(final Integer id) {
+
+        Intent intent = null;
+
+        handlerSQL = new NotificacionesSQL(ListaNotificaciones.this, "Notificaciones", null, 1);
+        db = handlerSQL.getReadableDatabase();
+        if(db != null) {
+            Cursor cursor = db.rawQuery("SELECT * FROM Notificaciones WHERE _id='" + id + "'", null);
+
+            if (cursor.getCount() > 0) //Si el cursor tiene resultados...
+            {
+                numeroElementosLista = cursor.getCount();
+                if (cursor.moveToFirst()) {
+                    Alerta alerta = new Alerta(id, cursor.getString(1), cursor.getString(2), cursor.getString(3));
+
+                    intent = new Intent(getBaseContext(), NuevaAlarmaNotificacion.class);
+                    intent.putExtra("ID", alerta.getId());
+                    intent.putExtra("HORA",alerta.getHora());
+                    intent.putExtra("MINUTOS", alerta.getMinutos());
+                    intent.putExtra("DIAS", alerta.getDiasSeleccionados());
+                }
+            }
+        }
+
+        db.close();
+
+        startActivity(intent);
+        //startActivityForResult(new Intent(ListaNotificaciones.this, NuevaAlarmaNotificacion.class), 100);
+
     }
 
     private void borrarAlerta(final int p) {

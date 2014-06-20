@@ -1,8 +1,5 @@
 package com.rds.rodalies;
 
-/**
- * Created by albert on 08/04/14.
- */
 public class LineaPreferencias {
 
 
@@ -30,14 +27,6 @@ public class LineaPreferencias {
 
     public String getParadas() {
         return paradas;
-    }
-
-    public boolean isSelected() {
-        return selected;
-    }
-
-    public void setSelected(boolean selected) {
-        this.selected = selected;
     }
 
 }

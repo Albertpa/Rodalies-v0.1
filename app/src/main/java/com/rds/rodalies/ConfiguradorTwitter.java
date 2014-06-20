@@ -4,9 +4,6 @@ import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
-/**
- * Created by jesus on 08/02/14.
- */
 public class ConfiguradorTwitter {
     private static ConfiguradorTwitter   _instance;
     private Twitter twitter;

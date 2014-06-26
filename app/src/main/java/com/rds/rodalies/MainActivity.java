@@ -1,21 +1,15 @@
 package com.rds.rodalies;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
@@ -30,7 +24,6 @@ import android.widget.TabWidget;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,7 +45,6 @@ public class MainActivity extends FragmentActivity {
     private Map<String, String> nombre_cuentaTwitter;
     private ArrayList<Integer> codeRod;
 
-    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -132,13 +124,15 @@ public class MainActivity extends FragmentActivity {
             nombre_cuentaTwitter.put("R15", "rod15");
             nombre_cuentaTwitter.put("R16", "rod16");
 
-            Intent intent = new Intent(this, AlarmReciever.class);
+/*            Intent intent = new Intent(this, AlarmReciever.class);
             intent.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);    //PARAMETROS PARA EL SERVICIO
 
             Intent intent2 = new Intent(this, AlarmReciever.class);
-            intent2.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);   //PARAMETROS PARA EL SERVICIO
+            intent2.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);   //PARAMETROS PARA EL SERVICIO*/
 
-            Calendar cal = Calendar.getInstance();
+
+
+/*            Calendar cal = Calendar.getInstance();
             cal.set(Calendar.HOUR_OF_DAY, 17);
             cal.set(Calendar.MINUTE, 10);
             cal.set(Calendar.SECOND, 0);
@@ -156,10 +150,8 @@ public class MainActivity extends FragmentActivity {
 
             AlarmManager alarmManager2 = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             //set the alarm for particular time
-            alarmManager2.setRepeating(AlarmManager.RTC_WAKEUP, cal2.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+            alarmManager2.setRepeating(AlarmManager.RTC_WAKEUP, cal2.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));*/
 
-/*            startService(intent); //Inicio del servicio
-            startService(intent2);*/
         }
     }
 

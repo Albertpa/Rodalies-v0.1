@@ -154,6 +154,9 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
     }
 
     private void cerrarPantalla() {
+
+        AlarmReciever alarmReciever = new AlarmReciever();
+        alarmReciever.setAlarm(this);
         finish();
     }
 

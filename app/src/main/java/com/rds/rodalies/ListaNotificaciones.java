@@ -103,7 +103,6 @@ public class ListaNotificaciones extends ListActivity {
         {
             public void onClick(DialogInterface dialog, int whichButton)
             {
-                //TODO borrar alerta
                 /*
                 * La lista listaAlertas contiene los ids de las alerta en el mismo orden que la list.
                 * Se selecciona el id de la alerta por la posicion que se ha pulsado

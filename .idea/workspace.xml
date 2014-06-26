@@ -27,14 +27,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeab107c-721a-440f-b8a7-a9b69900005a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alert.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alerta.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alerta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ConfiguradorTwitter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ConfiguradorTwitter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Linea.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Linea.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/LineaPreferencias.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/LineaPreferencias.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/LineasPreferenciasAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/LineasPreferenciasAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/SampleBootReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ListaNotificaciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ListaNotificaciones.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PlantillaPager.iws" />
@@ -123,39 +122,70 @@
       <file leaf-file-name="ListaNotificaciones.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ListaNotificaciones.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="857" max-vertical-offset="3660">
-              <caret line="73" column="93" selection-start-line="73" selection-start-column="76" selection-end-line="73" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1468#1747#0" expanded="true" />
-                <element signature="e#1736#1737#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="2085" max-vertical-offset="3750">
+              <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Alerta.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alerta.java">
+      <file leaf-file-name="AlarmReciever.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1830">
               <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NuevaAlarmaNotificacion.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NuevaAlarmaNotificacion.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.7131631" vertical-offset="0" max-vertical-offset="2565">
-              <caret line="136" column="36" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2175" max-vertical-offset="2790">
+              <caret line="145" column="145" selection-start-line="145" selection-start-column="145" selection-end-line="145" selection-end-column="145" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServicioNotificaciones.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7519873" vertical-offset="1312" max-vertical-offset="2190">
+              <caret line="123" column="86" selection-start-line="123" selection-start-column="86" selection-end-line="123" selection-end-column="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1980" max-vertical-offset="7830">
+              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleBootReceiver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/SampleBootReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="465">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1140">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -912,15 +942,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Notificaciones.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/configurador_notificaciones.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ConfiguradorNotificaciones.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lineas_preferencias_adapter.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nueva_alarma_notificacion.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lista_notificaciones.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/lista_notificaciones.xml" />
@@ -928,7 +955,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Page1Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NotificacionesSQL.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Constants.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alert.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ConfiguradorTwitter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/GuardarPreferencias.java" />
@@ -937,6 +963,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/LineasPreferenciasAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alerta.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ListaNotificaciones.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/SampleBootReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java" />
       </list>
     </option>
@@ -945,7 +976,7 @@
     <option name="x" value="58" />
     <option name="y" value="22" />
     <option name="width" value="1862" />
-    <option name="height" value="1058" />
+    <option name="height" value="1002" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -992,13 +1023,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="PlantillaPager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1106,6 +1140,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1118,7 +1153,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="000958fb59f92f" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/DeskClock-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Scheduler" />
     <property name="project.structure.last.edited" value="Android SDK" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -1410,7 +1445,11 @@
       <created>1403192060517</created>
       <updated>1403192060517</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Added: Las alarmas se pueden modificar.&#10;">
+      <created>1403263135354</created>
+      <updated>1403263135354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1434,30 +1473,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="22" width="1862" height="1058" extended-state="6" />
-    <editor active="true" />
+    <frame x="58" y="22" width="1862" height="1002" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939634" sideWeight="0.2898135" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53149605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40233546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269639" sideWeight="0.18021978" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22883788" sideWeight="0.14677104" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13427562" sideWeight="0.22173913" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24409449" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42993632" sideWeight="0.81978023" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22573364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25846502" sideWeight="0.81978023" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19862069" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12692308" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12692308" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.14725275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14065935" sideWeight="0.7768116" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21549894" sideWeight="0.8106169" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392776" sideWeight="0.8106169" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="102" y="122" width="1236" height="662" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1490,53 +1529,41 @@
     <MESSAGE value="- Added: Se ha añadido un servicio para gestionar las notificaciones. Los archivos en cuestion son AlarmReciever: contiene la llamada al servicio y ServicioNotificaciones, el cual hace la descarga de datos de las lineas, la comprobación de incidencias y lanza la notificación de ser necesario.Actualmente el servicio se lanza en el onCreate del archivo MainActivity y la comprobación siempre se hace a una hora fija.&#10;&#10;- Added: FragmentActivity NuevaAlarmaNotificacion. Esta activity por implementar, gestionará la vista de las &quot;alarmas&quot; configuradas.&#10;- Added: ConfiguradorNotificaciones. Este dialog por ahora solo gestiona determinar una hora. Hay que implementar el poder seleccionar dias de la semana. &#10;- FIxed: Refactorización del archivo GuardarPreferencias y menor medida Constants y MainActivity.&#10;&#10;- TODO: Una vez terminada la pantalla de configuración de notificaciones, pasar los parametros de hora y dias para establecer el servicio.&#10;" />
     <MESSAGE value="- Added: Archivo de bases de datos NotificacionesSQL&#10;- Added: Se ha actualizado el gradle con las ultimas versiones del sdk (actualización Android Studio)&#10;- Added: Modificaciones en la pantalla de Nueva Alarma&#10;- Modified: Modificado el string notificaciones por alertas.&#10;" />
     <MESSAGE value="- Added: Clase Alerta&#10;- Added: Agregar alerta.&#10;- Added: Borrar alerta manteniendo pulsado sobre ella.&#10;- Added: Se ha añadido un id a la tabla de alarmas. Este id se genera y se controla automaticamente.&#10;- Added: Por defecto el botón para agregar una nueva alarma está deshabilitado.&#10;- Added: Se han añadido nuevas cadenas de texto en los archivos strings.&#10;- Fixed: Cuando una alerta tenia un minuto inferior a 10, el tiempo aparecia como (ej) 22:9, en vez de las 22:09.&#10;- Fixed: La comprobación para si se puede crear una nueva alerta se ha movido a la pantalla de la lista de alarmas.&#10;- TODO: Modificar alarma&#10;- TODO: Generar las alarmas creadas.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added: Clase Alerta&#10;- Added: Agregar alerta.&#10;- Added: Borrar alerta manteniendo pulsado sobre ella.&#10;- Added: Se ha añadido un id a la tabla de alarmas. Este id se genera y se controla automaticamente.&#10;- Added: Por defecto el botón para agregar una nueva alarma está deshabilitado.&#10;- Added: Se han añadido nuevas cadenas de texto en los archivos strings.&#10;- Fixed: Cuando una alerta tenia un minuto inferior a 10, el tiempo aparecia como (ej) 22:9, en vez de las 22:09.&#10;- Fixed: La comprobación para si se puede crear una nueva alerta se ha movido a la pantalla de la lista de alarmas.&#10;- TODO: Modificar alarma&#10;- TODO: Generar las alarmas creadas.&#10;" />
+    <MESSAGE value="- Added: Las alarmas se pueden modificar.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added: Las alarmas se pueden modificar.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java</url>
-          <line>266</line>
+          <line>259</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ListaNotificaciones.java</url>
-          <line>116</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java</url>
+          <line>42</line>
           <properties />
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java</url>
-          <line>150</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java</url>
-          <line>129</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java</url>
+          <line>31</line>
           <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="65" />
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="66" />
+      <option name="time" value="76" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4948" max-vertical-offset="12840">
-          <caret line="383" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1-sources.jar!/android/support/v4/app/FragmentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33147633" vertical-offset="3721" max-vertical-offset="29925">
@@ -1627,40 +1654,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guardar_preferencias.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7619048" vertical-offset="141" max-vertical-offset="645">
           <caret line="35" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tuit_adapter.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tuit_adapter.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/about.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/about.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4444447" vertical-offset="0" max-vertical-offset="1605">
           <caret line="8" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <caret line="7" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-en/strings.xml">
@@ -1680,43 +1700,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.15384616" vertical-offset="113" max-vertical-offset="750">
           <caret line="1" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lineas_preferencias_adapter.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lineas_preferencias_adapter.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04709576" vertical-offset="0" max-vertical-offset="1005">
           <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6248038" vertical-offset="0" max-vertical-offset="1215">
           <caret line="69" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6551205" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="29" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1264#1294#0" expanded="false" />
-          </folding>
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
@@ -1735,14 +1745,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nueva_alarma_notificacion.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7461708" vertical-offset="1675" max-vertical-offset="2190">
           <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -1787,39 +1797,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="7395">
-          <caret line="134" column="51" selection-start-line="134" selection-start-column="51" selection-end-line="134" selection-end-column="51" />
-          <folding>
-            <element signature="e#3852#3861#0" expanded="true" />
-            <element signature="e#14444#14453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lista_notificaciones.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14354067" vertical-offset="0" max-vertical-offset="627">
           <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5045872" vertical-offset="0" max-vertical-offset="1455">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NotificacionesSQL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16055046" vertical-offset="0" max-vertical-offset="654">
           <caret line="9" column="113" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1830,18 +1821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18348624" vertical-offset="0" max-vertical-offset="654">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ConfiguradorTwitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1865,7 +1848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1873,7 +1855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1545">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1889,9 +1870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2937337" vertical-offset="0" max-vertical-offset="766">
           <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1907,42 +1885,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.73077" vertical-offset="881" max-vertical-offset="2205">
           <caret line="124" column="16" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Alerta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+        <state vertical-scroll-proportion="0.4280397" vertical-offset="0" max-vertical-offset="806">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ListaNotificaciones.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="857" max-vertical-offset="3660">
-          <caret line="73" column="93" selection-start-line="73" selection-start-column="76" selection-end-line="73" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1468#1747#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="3345">
+          <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/AlarmReciever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1830">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/NuevaAlarmaNotificacion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7131631" vertical-offset="0" max-vertical-offset="2565">
-          <caret line="136" column="36" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1622" max-vertical-offset="2640">
+          <caret line="145" column="145" selection-start-line="145" selection-start-column="145" selection-end-line="145" selection-end-column="145" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="7770">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/SampleBootReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1140">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ServicioNotificaciones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7519873" vertical-offset="1312" max-vertical-offset="2190">
+          <caret line="123" column="86" selection-start-line="123" selection-start-column="86" selection-end-line="123" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

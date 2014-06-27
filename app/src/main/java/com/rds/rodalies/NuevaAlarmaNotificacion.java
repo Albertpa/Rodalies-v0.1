@@ -69,25 +69,25 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
             switch (i){
                 case 0:
-                    lunes.setChecked(estaSeleccionado);
+                    domingo.setChecked(estaSeleccionado);
                     break;
                 case 1:
-                    martes.setChecked(estaSeleccionado);
+                    lunes.setChecked(estaSeleccionado);
                     break;
                 case 2:
-                    miercoles.setChecked(estaSeleccionado);
+                    martes.setChecked(estaSeleccionado);
                     break;
                 case 3:
-                    jueves.setChecked(estaSeleccionado);
+                    miercoles.setChecked(estaSeleccionado);
                     break;
                 case 4:
-                    viernes.setChecked(estaSeleccionado);
+                    jueves.setChecked(estaSeleccionado);
                     break;
                 case 5:
-                    sabado.setChecked(estaSeleccionado);
+                    viernes.setChecked(estaSeleccionado);
                     break;
                 case 6:
-                    domingo.setChecked(estaSeleccionado);
+                    sabado.setChecked(estaSeleccionado);
                     break;
             }
         }
@@ -111,13 +111,13 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
         String[] diasSeleccionados = new String[7];
 
-        diasSeleccionados[0] = (lunes.isChecked() == true) ? "1" : "0"; // 1 = dia seleccionado, 0 = dia no seleccionado
-        diasSeleccionados[1] = (martes.isChecked() == true) ? "1" : "0";
-        diasSeleccionados[2] = (miercoles.isChecked() == true) ? "1" : "0";
-        diasSeleccionados[3] = (jueves.isChecked() == true) ? "1" : "0";
-        diasSeleccionados[4] = (viernes.isChecked() == true) ? "1" : "0";
-        diasSeleccionados[5] = (sabado.isChecked() == true) ? "1" : "0";
-        diasSeleccionados[6] = (domingo.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[0] = (domingo.isChecked() == true) ? "1" : "0"; // 1 = dia seleccionado, 0 = dia no seleccionado
+        diasSeleccionados[1] = (lunes.isChecked() == true) ? "1" : "0"; // 1 = dia seleccionado, 0 = dia no seleccionado
+        diasSeleccionados[2] = (martes.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[3] = (miercoles.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[4] = (jueves.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[5] = (viernes.isChecked() == true) ? "1" : "0";
+        diasSeleccionados[6] = (sabado.isChecked() == true) ? "1" : "0";
 
         if(Arrays.asList(diasSeleccionados).contains("1") == false){ //Si no se ha seleccionado ningun dia
             Alert alert = new Alert();

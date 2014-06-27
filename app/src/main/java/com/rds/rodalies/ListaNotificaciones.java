@@ -192,25 +192,25 @@ public class ListaNotificaciones extends ListActivity {
             if(split[i].equals("1")){
                 switch(i){
                     case 0:
-                        rt += getResources().getString(R.string.lunes) + " ";
+                        rt += getResources().getString( R.string.domingo) + " ";
                         break;
                     case 1:
-                        rt += getResources().getString(R.string.martes) + " ";
+                        rt += getResources().getString(R.string.lunes) + " ";
                         break;
                     case 2:
-                        rt += getResources().getString(R.string.miercoles) + " ";
+                        rt += getResources().getString(R.string.martes) + " ";
                         break;
                     case 3:
-                        rt += getResources().getString(R.string.jueves) + " ";
+                        rt += getResources().getString(R.string.miercoles) + " ";
                         break;
                     case 4:
-                        rt += getResources().getString(R.string.viernes) + " ";
+                        rt += getResources().getString(R.string.jueves) + " ";
                         break;
                     case 5:
-                        rt += getResources().getString(R.string.sabado) + " ";
+                        rt += getResources().getString(R.string.viernes) + " ";
                         break;
                     case 6:
-                        rt += getResources().getString( R.string.domingo) + " ";
+                        rt += getResources().getString(R.string.sabado) + " ";
                         break;
                 }
             }

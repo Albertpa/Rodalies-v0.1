@@ -55,18 +55,33 @@ public class AlarmReciever extends WakefulBroadcastReceiver
                         String minuto = cursor.getString(2);
                         String dias = cursor.getString(3);
 
-                        Calendar calendar = Calendar.getInstance();
-                        calendar.setTimeInMillis(System.currentTimeMillis());
+                        String diasSeleccionados[] = NuevaAlarmaNotificacion.convertStringToArray(dias);
 
-                        calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hora));
-                        calendar.set(Calendar.MINUTE, Integer.parseInt(minuto));
+                        for(int i = 0; i < diasSeleccionados.length; i++){
+                            Boolean estaSeleccionado = (diasSeleccionados[i].compareTo("0") == 0) ? false : true;
 
-                        Intent intent = new Intent(context, AlarmReciever.class);
-                        alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+                            if(estaSeleccionado)
+                            {
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.setTimeInMillis(System.currentTimeMillis());
 
-                        alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
+                                /*
+                                * Calendar.Sunday = 1
+                                * Calendar.Monday = 2
+                                * ...
+                                * Calendar.Saturday = 7
+                                * */
 
+                                calendar.set(Calendar.DAY_OF_WEEK, i+1);
+                                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hora));
+                                calendar.set(Calendar.MINUTE, Integer.parseInt(minuto));
 
+                                Intent intent = new Intent(context, AlarmReciever.class);
+                                alarmIntent = PendingIntent.getBroadcast(context, cursor.getPosition(), intent, 0);
+
+                                alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, alarmIntent);
+                            }
+                        }
                     } while (cursor.moveToNext());
                 }
             }

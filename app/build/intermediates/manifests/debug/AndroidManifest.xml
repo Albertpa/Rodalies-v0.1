@@ -11,7 +11,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
         android:allowBackup="true"
@@ -46,17 +48,37 @@
 
         <service
             android:name="com.rds.rodalies.ServicioNotificaciones"
-            android:enabled="true" />
+            android:enabled="true"
+            android:screenOrientation="portrait" />
 
         <receiver android:name="com.rds.rodalies.AlarmReciever" />
+        <receiver
+            android:name="com.rds.rodalies.SampleBootReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="com.rds.rodalies.NuevaAlarmaNotificacion"
-            android:label="@string/configura_notificaciones" >
+            android:label="@string/configura_notificaciones"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.rds.rodalies.ListaNotificaciones"
-            android:label="@string/title_activity_lista_notificaciones" >
+            android:label="@string/title_activity_lista_notificaciones"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.rds.rodalies.HorarisActivity"
+            android:label="@string/title_activity_horaris"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.rds.rodalies.ConsultaHorarisActivity"
+            android:label="@string/title_activity_consulta_horarios"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

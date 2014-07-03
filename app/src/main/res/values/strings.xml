@@ -82,5 +82,22 @@
     <string name="eliminar_alerta">Eliminar alerta?</string>
     <string name="no">No</string>
     <string name="si">Sí</string>
+    <string name="title_activity_horaris">Horaris</string>
+    <string name="origen">Estació origen:</string>
+    <string name="destino">Estació destí:</string>
+    <string name="dia">Día:</string>
+    <string name="mes">Mes:</string>
+    <string name="anyo">Año:</string>
+    <string name="consultaHorarios">Consultar horaris</string>
+    <string name="horarios">Horaris</string>
+    <string name="estacionesIguales">Las estaciones de origen y destino no pueden ser iguales</string>
+    <string name="title_activity_consulta_horarios">Horaris</string>
+    <string name="station1_salida">sortida</string>
+    <string name="station2_llegada">arrivada</string>
+    <string name="tiempo">temps</string>
+    <string name="linea_salida">linea</string>
+    <string name="origen_desti">Estación origen - Estación destino</string>
+    <string name="consultaTornada">Viaje de vuelta</string>
+    <string name="errorRenfe">La web de Renfe no responde</string>
 
 </resources>

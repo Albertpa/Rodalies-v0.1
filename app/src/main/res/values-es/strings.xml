@@ -80,6 +80,21 @@
     <string name="eliminar_alerta">Eliminar alerta?</string>
     <string name="no">No</string>
     <string name="si">Sí</string>
+    <string name="origen">Estación de origen:</string>
+    <string name="destino">Estación de destino:</string>
+    <string name="dia">Día:</string>
+    <string name="mes">Mes:</string>
+    <string name="anyo">Año:</string>
+    <string name="consultaHorarios">Consultar horarios</string>
+    <string name="horarios">Horarios</string>
+    <string name="estacionesIguales">Las estaciones de origen y destino no pueden ser iguales</string>
+    <string name="station1_salida">sortida</string>
+    <string name="station2_llegada">arrivada</string>
+    <string name="tiempo">temps</string>
+    <string name="linea_salida">linea</string>
+    <string name="origen_desti">Estación origen - Estación destino</string>
+    <string name="consultaTornada">Viaje de vuelta</string>
+    <string name="errorRenfe">La web de Renfe no responde</string>
 
 
 </resources>

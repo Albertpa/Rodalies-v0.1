@@ -6,6 +6,7 @@
         android:id="@+id/nuevaAlerta"
         android:showAsAction="always"
         android:icon="@drawable/ic_action_new"
+        android:enabled="false"
         android:title="@string/nueva_alerta"/>
 
 </menu>

@@ -201,6 +201,10 @@ public class MainActivity extends FragmentActivity {
                 //startActivityForResult(new Intent(MainActivity.this, NuevaAlarmaNotificacion.class), 100);
                 startActivityForResult(new Intent(MainActivity.this, ListaNotificaciones.class), 100);
                 return true;
+
+            case R.id.horarios:
+                startActivityForResult(new Intent(MainActivity.this, HorarisActivity.class), 100);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 		 }

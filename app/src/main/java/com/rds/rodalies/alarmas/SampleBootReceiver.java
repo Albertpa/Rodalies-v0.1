@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.alarmas;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

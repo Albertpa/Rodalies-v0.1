@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Twitter;
 
 /**
  * Created by jesus on 08/02/14.

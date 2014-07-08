@@ -1,5 +1,5 @@
 /*Basada en la app de * Jon Segador  */
-package com.rds.rodalies;
+package com.rds.rodalies.Horarios;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.rds.rodalies.Horarios.ConsultaHorarisActivity;
+import com.rds.rodalies.R;
 
 import java.util.Calendar;
 

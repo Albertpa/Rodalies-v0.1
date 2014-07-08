@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Horarios;
 
 /**
  * Created by RDS on 03/07/14.

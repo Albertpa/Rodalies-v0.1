@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.alarmas;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TimePicker;
 import android.widget.ToggleButton;
+
+import com.rds.rodalies.Alert;
+import com.rds.rodalies.R;
 
 import java.util.Arrays;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Linea;
 
 public class Linea {
     private String nombre; //Nombre de la linea

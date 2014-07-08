@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.alarmas;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -11,6 +11,12 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+
+import com.rds.rodalies.Constants;
+import com.rds.rodalies.Linea.Linea;
+import com.rds.rodalies.MainActivity;
+import com.rds.rodalies.R;
+import com.rds.rodalies.RssHandler;
 
 import java.util.ArrayList;
 

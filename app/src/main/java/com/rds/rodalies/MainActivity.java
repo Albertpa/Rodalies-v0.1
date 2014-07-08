@@ -21,6 +21,10 @@ import android.widget.HorizontalScrollView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
+import com.rds.rodalies.Horarios.HorarisActivity;
+import com.rds.rodalies.Preferencias.GuardarPreferencias;
+import com.rds.rodalies.alarmas.ListaNotificaciones;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;

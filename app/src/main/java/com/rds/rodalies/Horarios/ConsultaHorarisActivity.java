@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Horarios;
 
 /*Basada en la app de * Jon Segador  */
 
@@ -18,6 +18,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.rds.rodalies.R;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
@@ -195,7 +197,7 @@ public class ConsultaHorarisActivity extends Activity {
                         //concatenando todo
                         nuevoTexto=letra+resto + " (Línea " + v.getTransbordoLinea() + ")";
 
-                        info_transbordo.setVisibility(0);
+                        info_transbordo.setVisibility(View.VISIBLE); //0
                         info_transbordo.setText("Transbordo en:\n" + nuevoTexto);
                     }
                     else{

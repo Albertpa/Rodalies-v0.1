@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.alarmas;
 
 public class Alerta {
     private Integer Id;

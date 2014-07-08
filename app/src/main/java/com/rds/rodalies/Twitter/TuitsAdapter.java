@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Twitter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.rds.rodalies.R;
+import com.rds.rodalies.Twitter.Tuit;
 
 import java.net.MalformedURLException;
 import java.net.URL;

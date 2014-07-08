@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Twitter;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;

@@ -13,6 +13,11 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.rds.rodalies.Linea.Linea;
+import com.rds.rodalies.Twitter.ConfiguradorTwitter;
+import com.rds.rodalies.Twitter.Tuit;
+import com.rds.rodalies.Twitter.TuitsAdapter;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -239,7 +244,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             ConfiguradorTwitter config = ConfiguradorTwitter.getInstance();
             final Twitter twitter = config.getTwitter();
 
-            final Query query = new Query(linea.getUsuarioTwitter()); //Establecer nombre de usuario (sin @) o hashtag
+            final Query query = new Query(linea.getUsuarioTwitter() + " +exclude:retweets"); //Establecer nombre de usuario (sin @) o hashtag
             query.count(NUMERODETUITS); //Numero maximo de tuits maximo
 
             try {

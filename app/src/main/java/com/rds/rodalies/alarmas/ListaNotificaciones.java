@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.alarmas;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -13,6 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
+
+import com.rds.rodalies.Constants;
+import com.rds.rodalies.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.rds.rodalies;
+package com.rds.rodalies.Preferencias;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ListView;
+
+import com.rds.rodalies.Constants;
+import com.rds.rodalies.R;
 
 import java.util.ArrayList;
 import java.util.List;

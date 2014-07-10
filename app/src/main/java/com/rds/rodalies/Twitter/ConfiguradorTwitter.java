@@ -5,7 +5,7 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 public class ConfiguradorTwitter {
-    private static ConfiguradorTwitter   _instance;
+    private static ConfiguradorTwitter _instance;
     private Twitter twitter;
 
     private ConfiguradorTwitter()

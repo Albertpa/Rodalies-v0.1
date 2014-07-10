@@ -76,9 +76,9 @@ public class AlarmReciever extends WakefulBroadcastReceiver
                                 calendar.set(Calendar.SECOND, 0);
 
                                 Intent intent = new Intent(context, AlarmReciever.class);
-                                alarmIntent = PendingIntent.getBroadcast(context, cursor.getCount(), intent, 0);
+                                alarmIntent = PendingIntent.getBroadcast(context, cursor.getInt(0), intent, 0);
 
-                                alarmMgr.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
+                                alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 7, alarmIntent);
                             }
                         }
                     } while (cursor.moveToNext());

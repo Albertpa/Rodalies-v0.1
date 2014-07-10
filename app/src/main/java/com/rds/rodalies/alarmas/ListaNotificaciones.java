@@ -1,7 +1,10 @@
 package com.rds.rodalies.alarmas;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -125,6 +128,10 @@ public class ListaNotificaciones extends ListActivity {
 
                 db.close();
                 invalidateOptionsMenu();
+
+                Intent intent = new Intent(ListaNotificaciones.this, AlarmReciever.class);
+                PendingIntent.getBroadcast(ListaNotificaciones.this, idAlerta, intent, PendingIntent.FLAG_UPDATE_CURRENT).cancel();
+
             }
         });
         alertbox.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener()

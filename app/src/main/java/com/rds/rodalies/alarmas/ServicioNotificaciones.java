@@ -1,6 +1,6 @@
 package com.rds.rodalies.alarmas;
 
-import android.app.IntentService;
+import android.app.Service;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
+import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -20,7 +21,7 @@ import com.rds.rodalies.RssHandler;
 
 import java.util.ArrayList;
 
-public class ServicioNotificaciones extends IntentService {
+public class ServicioNotificaciones extends Service {
 
     public static final int NOTIFICATION_ID = 1;
     private NotificationManager mNotificationManager;
@@ -29,21 +30,16 @@ public class ServicioNotificaciones extends IntentService {
     Integer lineasConsultadas = 0;
     Integer numeroDeLineasConProblemas = 0;
 
-    /**
-     * Creates an IntentService.  Invoked by your subclass's constructor.
-     *
-     *   Used to name the worker thread, important only for debugging.
-     */
-    public ServicioNotificaciones() {
-        super("ServicioNotificaciones");
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
-
-        ArrayList<Integer> listaLineas;
+    public int onStartCommand(Intent intent, int flags, int startId) {
         SharedPreferences sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
+        ArrayList<Integer> listaLineas;
         listaLineas = new ArrayList<Integer>(); //Codigo linea
         int codePrincipal = -1;
 
@@ -55,28 +51,6 @@ public class ServicioNotificaciones extends IntentService {
             }
         }
 
-/*
-        ArrayList<Integer> listaLineas = intent.getIntegerArrayListExtra("lineasServicio");
-*/
-        contadorLineas = listaLineas.size();
-
-        for(int i = 0; i < listaLineas.size(); i++){
-            Linea linea = new Linea(Constants.nombreLineas[listaLineas.get(i)], "", Constants.lineasURL[listaLineas.get(i)], null);
-            new EstadoAsyncTask(linea).execute();
-        }
-
-        AlarmReciever.completeWakefulIntent(intent);
-    }
-
-/*    @Override
-    public void onCreate() {
-
-    }
-
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-
-        ArrayList<Integer> listaLineas = intent.getIntegerArrayListExtra("lineasServicio");
         contadorLineas = listaLineas.size();
 
         for(int i = 0; i < listaLineas.size(); i++){
@@ -87,10 +61,6 @@ public class ServicioNotificaciones extends IntentService {
         return START_STICKY;
     }
 
-    @Override
-    public void onDestroy() {
-
-    }*/
 
     private class EstadoAsyncTask extends AsyncTask<String, Void, String> {
         private Linea linea;

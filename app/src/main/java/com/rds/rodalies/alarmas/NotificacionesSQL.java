@@ -1,29 +1,124 @@
 package com.rds.rodalies.alarmas;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.rds.rodalies.alarmas.AlarmContract.Alarm;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class NotificacionesSQL extends SQLiteOpenHelper {
 
-    //Sentencia SQL para crear la tabla de notificaciones
-    String sqlCreate = "CREATE TABLE Notificaciones (_id INTEGER PRIMARY KEY, hora TEXT, minuto TEXT, dias TEXT)";
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "notificaciones.db";
 
-    public NotificacionesSQL(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    private static final String SQL_CREATE_ALARM = "CREATE TABLE " + Alarm.TABLE_NAME + " (" +
+            Alarm._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            Alarm.COLUMN_NAME_ALARM_TIME_HOUR + " INTEGER," +
+            Alarm.COLUMN_NAME_ALARM_TIME_MINUTE + " INTEGER," +
+            Alarm.COLUMN_NAME_ALARM_REPEAT_DAYS + " TEXT," +
+            Alarm.COLUMN_NAME_ALARM_REPEAT_WEEKLY + " BOOLEAN" +
+
+            " )";
+
+    private static final String SQL_DELETE_ALARM =
+            "DROP TABLE IF EXISTS " + Alarm.TABLE_NAME;
+
+    public NotificacionesSQL(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //Se ejecuta la sentencia SQL de creación de la tabla
-        db.execSQL(sqlCreate);
+        db.execSQL(SQL_CREATE_ALARM);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //Se elimina la versión anterior de la tabla
-        db.execSQL("DROP TABLE IF EXISTS Notificaciones");
-        //Se crea la nueva versión de la tabla
-        db.execSQL(sqlCreate);
+        db.execSQL(SQL_DELETE_ALARM);
+        onCreate(db);
+    }
+
+    private AlarmModel populateModel(Cursor c) {
+        AlarmModel model = new AlarmModel();
+        model.id = c.getLong(c.getColumnIndex(Alarm._ID));
+        model.timeHour = c.getInt(c.getColumnIndex(Alarm.COLUMN_NAME_ALARM_TIME_HOUR));
+        model.timeMinute = c.getInt(c.getColumnIndex(Alarm.COLUMN_NAME_ALARM_TIME_MINUTE));
+        model.repeatWeekly = true;
+
+        String[] repeatingDays = c.getString(c.getColumnIndex(Alarm.COLUMN_NAME_ALARM_REPEAT_DAYS)).split(",");
+        for (int i = 0; i < repeatingDays.length; ++i) {
+            model.setRepeatingDay(i, repeatingDays[i].equals("false") ? false : true);
+        }
+
+        return model;
+    }
+
+    private ContentValues populateContent(AlarmModel model) {
+        ContentValues values = new ContentValues();
+        values.put(Alarm.COLUMN_NAME_ALARM_TIME_HOUR, model.timeHour);
+        values.put(Alarm.COLUMN_NAME_ALARM_TIME_MINUTE, model.timeMinute);
+        values.put(Alarm.COLUMN_NAME_ALARM_REPEAT_WEEKLY, model.repeatWeekly);
+
+
+        String repeatingDays = "";
+        for (int i = 0; i < 7; ++i) {
+            repeatingDays += model.getRepeatingDay(i) + ",";
+        }
+        values.put(Alarm.COLUMN_NAME_ALARM_REPEAT_DAYS, repeatingDays);
+
+        return values;
+    }
+
+    public long createAlarm(AlarmModel model) {
+        ContentValues values = populateContent(model);
+        return getWritableDatabase().insert(Alarm.TABLE_NAME, null, values);
+    }
+
+    public long updateAlarm(AlarmModel model) {
+        ContentValues values = populateContent(model);
+        return getWritableDatabase().update(Alarm.TABLE_NAME, values, Alarm._ID + " = ?", new String[] { String.valueOf(model.id) });
+    }
+
+    public AlarmModel getAlarm(long id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String select = "SELECT * FROM " + Alarm.TABLE_NAME + " WHERE " + Alarm._ID + " = " + id;
+
+        Cursor c = db.rawQuery(select, null);
+
+        if (c.moveToNext()) {
+            return populateModel(c);
+        }
+
+        return null;
+    }
+
+    public List<AlarmModel> getAlarms() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String select = "SELECT * FROM " + Alarm.TABLE_NAME;
+
+        Cursor c = db.rawQuery(select, null);
+
+        List<AlarmModel> alarmList = new ArrayList<AlarmModel>();
+
+        while (c.moveToNext()) {
+            alarmList.add(populateModel(c));
+        }
+
+        if (!alarmList.isEmpty()) {
+            return alarmList;
+        }
+
+        return null;
+    }
+
+    public int deleteAlarm(long id) {
+        return getWritableDatabase().delete(Alarm.TABLE_NAME, Alarm._ID + " = ?", new String[] { String.valueOf(id) });
     }
 }

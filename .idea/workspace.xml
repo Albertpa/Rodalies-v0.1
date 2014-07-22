@@ -27,23 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeab107c-721a-440f-b8a7-a9b69900005a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/AlarmListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/AlarmListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/AlarmModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/AlarmModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/ConsultaHorarisActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/ConsultaHorarisActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Preferencias/GuardarPreferencias.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Preferencias/GuardarPreferencias.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/HorarisActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/HorarisActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Preferencias/LineasPreferenciasAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Preferencias/LineasPreferenciasAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/ListaNotificaciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/ListaNotificaciones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/NuevaAlarmaNotificacion.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/NuevaAlarmaNotificacion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/rds/rodalies/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/rds/rodalies/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/ServicioNotificaciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/ServicioNotificaciones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Twitter/TuitsAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Twitter/TuitsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_consulta_horarios.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_consulta_horarios.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_horaris.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_horaris.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PlantillaPager.iws" />
@@ -132,8 +116,8 @@
       <file leaf-file-name="HorarisActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/HorarisActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.269231" vertical-offset="4690" max-vertical-offset="8655">
-              <caret line="327" column="83" selection-start-line="327" selection-start-column="83" selection-end-line="327" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3494" max-vertical-offset="8655">
+              <caret line="254" column="71" selection-start-line="254" selection-start-column="71" selection-end-line="254" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10641#10655#0" expanded="true" />
@@ -146,11 +130,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsultaHorarisActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/ConsultaHorarisActivity.java">
+      <file leaf-file-name="Page1Activity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Page1Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74418604" vertical-offset="2610" max-vertical-offset="3255">
-              <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.3353204" vertical-offset="285" max-vertical-offset="3810">
+              <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+              <folding>
+                <element signature="e#1390#1396#0" expanded="true" />
+                <element signature="e#2196#2220#0" expanded="true" />
+                <element signature="e#2243#2267#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_page1.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.333334" vertical-offset="0" max-vertical-offset="1245">
+              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -1284,7 +1285,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/menu/page1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/page2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/rodalies/Page1Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/About.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Notificaciones.java" />
@@ -1311,7 +1311,6 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/ConfiguradorTwitter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Page1Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Constants.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/alarmas/SampleBootReceiver.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/lista_notificaciones.xml" />
@@ -1333,6 +1332,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/ConsultaHorarisActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Page1Activity.java" />
       </list>
     </option>
   </component>
@@ -2020,7 +2021,11 @@
       <created>1405527718798</created>
       <updated>1405527718798</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- Fixed: Arreglado bug de las alarmas que lanzaba alarmas de manera random.&#10;- Fixed: Arreglado bug que abria la pantalla de nueva alarma cuando se solitaba la lista.&#10;- Modified: Se han eliminado años anteriores y ahora la aplicación siempre cargará en el campo &quot;año&quot; el año actual y el siguiente.&#10;- Added: añadidas traducciones de la parte de horarios.&#10;- Modified: Modificadas las pantallas de horario para ajustar algunos elementos.&#10;&#10;&#10;">
+      <created>1406029812436</created>
+      <updated>1406029812436</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2105,7 +2110,8 @@
     <MESSAGE value="- Added: Terminado el acomplamiento de las notificaciones.&#10;" />
     <MESSAGE value="- Added: Cancelación de alarmas por ID&#10;" />
     <MESSAGE value="- Added: Nueva versión de alarmas.&#10;- Added: Se ha modificado la query de los tweets para que aparezcan los menos retweets posibles.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added: Nueva versión de alarmas.&#10;- Added: Se ha modificado la query de los tweets para que aparezcan los menos retweets posibles.&#10;" />
+    <MESSAGE value="- Fixed: Arreglado bug de las alarmas que lanzaba alarmas de manera random.&#10;- Fixed: Arreglado bug que abria la pantalla de nueva alarma cuando se solitaba la lista.&#10;- Modified: Se han eliminado años anteriores y ahora la aplicación siempre cargará en el campo &quot;año&quot; el año actual y el siguiente.&#10;- Added: añadidas traducciones de la parte de horarios.&#10;- Modified: Modificadas las pantallas de horario para ajustar algunos elementos.&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed: Arreglado bug de las alarmas que lanzaba alarmas de manera random.&#10;- Fixed: Arreglado bug que abria la pantalla de nueva alarma cuando se solitaba la lista.&#10;- Modified: Se han eliminado años anteriores y ahora la aplicación siempre cargará en el campo &quot;año&quot; el año actual y el siguiente.&#10;- Added: añadidas traducciones de la parte de horarios.&#10;- Modified: Modificadas las pantallas de horario para ajustar algunos elementos.&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2172,16 +2178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.15384616" vertical-offset="113" max-vertical-offset="750">
           <caret line="1" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6248038" vertical-offset="0" max-vertical-offset="1215">
-          <caret line="69" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2355,13 +2351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Page1Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.019031141" vertical-offset="3131" max-vertical-offset="3810">
-          <caret line="241" column="57" selection-start-line="241" selection-start-column="57" selection-end-line="241" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-19/android/app/AlarmManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6639" max-vertical-offset="7425">
@@ -2490,7 +2479,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2430">
           <caret line="37" column="94" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="94" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2511,21 +2500,6 @@
         <state vertical-scroll-proportion="1.0" vertical-offset="1831" max-vertical-offset="2760">
           <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/HorarisActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.269231" vertical-offset="4690" max-vertical-offset="8655">
-          <caret line="327" column="83" selection-start-line="327" selection-start-column="83" selection-end-line="327" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10641#10655#0" expanded="true" />
-            <element signature="e#11695#13739#0" expanded="true" />
-            <element signature="e#11875#11901#0" expanded="true" />
-            <element signature="e#13728#13729#0" expanded="true" />
-            <element signature="e#14418#14432#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2568,9 +2542,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/ConsultaHorarisActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74418604" vertical-offset="2610" max-vertical-offset="3255">
-          <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.44186047" vertical-offset="2610" max-vertical-offset="3255">
+          <caret line="226" column="6" selection-start-line="226" selection-start-column="6" selection-end-line="226" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Horarios/HorarisActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3494" max-vertical-offset="8655">
+          <caret line="254" column="71" selection-start-line="254" selection-start-column="71" selection-end-line="254" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10641#10655#0" expanded="true" />
+            <element signature="e#11695#13739#0" expanded="true" />
+            <element signature="e#11875#11901#0" expanded="true" />
+            <element signature="e#13728#13729#0" expanded="true" />
+            <element signature="e#14418#14432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_page1.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.333334" vertical-offset="0" max-vertical-offset="1245">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rds/rodalies/Page1Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3353204" vertical-offset="285" max-vertical-offset="3810">
+          <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+          <folding>
+            <element signature="e#1390#1396#0" expanded="true" />
+            <element signature="e#2196#2220#0" expanded="true" />
+            <element signature="e#2243#2267#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

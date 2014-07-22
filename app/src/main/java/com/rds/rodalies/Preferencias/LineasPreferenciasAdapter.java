@@ -11,8 +11,6 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.rds.rodalies.Preferencias.GuardarPreferencias;
-import com.rds.rodalies.Preferencias.LineaPreferencias;
 import com.rds.rodalies.R;
 
 import java.util.List;

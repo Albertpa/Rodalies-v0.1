@@ -231,7 +231,7 @@ public class ConsultaHorarisActivity extends Activity {
         switch (id) {
             case 0: {
                 dialog = new ProgressDialog(this);
-                dialog.setMessage("Loading...");
+                dialog.setMessage(getString(R.string.cargando));
                 dialog.setIndeterminate(true);
                 dialog.setCancelable(true);
                 return dialog;

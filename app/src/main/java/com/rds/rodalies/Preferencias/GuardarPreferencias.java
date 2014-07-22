@@ -35,7 +35,7 @@ public class GuardarPreferencias extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.guardar_preferencias);
 		
-		sharedRodalies= getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
+		sharedRodalies = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
         guardar = (Button)findViewById(R.id.guardar);
         guardar.setEnabled(false);

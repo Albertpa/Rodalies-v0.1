@@ -37,28 +37,35 @@ public class ServicioNotificaciones extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        SharedPreferences sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
-        ArrayList<Integer> listaLineas;
-        listaLineas = new ArrayList<Integer>(); //Codigo linea
-        int codePrincipal = -1;
 
-        for (int s = 0; s < Constants.lineaSecundaria.length; s++){
-            if(sharedSettings.contains(Constants.lineaSecundaria[s])){
-                if(codePrincipal != sharedSettings.getInt(Constants.lineaSecundaria[s], -1)){
-                    listaLineas.add(sharedSettings.getInt(Constants.lineaSecundaria[s], -1));
+        if(intent != null){
+            SharedPreferences sharedSettings = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
+
+            ArrayList<Integer> listaLineas;
+            listaLineas = new ArrayList<Integer>(); //Codigo linea
+            int codePrincipal = -1;
+
+            for (int s = 0; s < Constants.lineaSecundaria.length; s++){
+                if(sharedSettings.contains(Constants.lineaSecundaria[s])){
+                    if(codePrincipal != sharedSettings.getInt(Constants.lineaSecundaria[s], -1)){
+                        listaLineas.add(sharedSettings.getInt(Constants.lineaSecundaria[s], -1));
+                    }
                 }
             }
-        }
 
-        contadorLineas = listaLineas.size();
+            contadorLineas = listaLineas.size();
 
-        for(int i = 0; i < listaLineas.size(); i++){
-            Linea linea = new Linea(Constants.nombreLineas[listaLineas.get(i)], "", Constants.lineasURL[listaLineas.get(i)], null);
-            new EstadoAsyncTask(linea).execute();
+            for(int i = 0; i < listaLineas.size(); i++){
+                Linea linea = new Linea(Constants.nombreLineas[listaLineas.get(i)], "", Constants.lineasURL[listaLineas.get(i)], null);
+                new EstadoAsyncTask(linea).execute();
+            }
+
+            return super.onStartCommand (intent, flags, startId);
         }
 
         return START_STICKY;
+
     }
 
 

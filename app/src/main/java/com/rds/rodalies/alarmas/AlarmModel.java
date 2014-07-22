@@ -1,7 +1,5 @@
 package com.rds.rodalies.alarmas;
 
-import android.net.Uri;
-
 public class AlarmModel {
 
 	public static final int SUNDAY = 0;

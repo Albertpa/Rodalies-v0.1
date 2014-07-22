@@ -127,35 +127,6 @@ public class MainActivity extends FragmentActivity {
             nombre_cuentaTwitter.put("R14", "rod14");
             nombre_cuentaTwitter.put("R15", "rod15");
             nombre_cuentaTwitter.put("R16", "rod16");
-
-/*            Intent intent = new Intent(this, AlarmReciever.class);
-            intent.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);    //PARAMETROS PARA EL SERVICIO
-
-            Intent intent2 = new Intent(this, AlarmReciever.class);
-            intent2.putIntegerArrayListExtra("lineasServicio", codigoLineasServicio);   //PARAMETROS PARA EL SERVICIO*/
-
-
-
-/*            Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.HOUR_OF_DAY, 17);
-            cal.set(Calendar.MINUTE, 10);
-            cal.set(Calendar.SECOND, 0);
-
-            Calendar cal2 = Calendar.getInstance();
-            cal2.set(Calendar.HOUR_OF_DAY, 18);
-            cal2.set(Calendar.MINUTE, 20);
-            cal2.set(Calendar.SECOND, 0);
-
-            // create the object
-            AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-            //set the alarm for particular time
-            //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
-            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
-
-            AlarmManager alarmManager2 = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-            //set the alarm for particular time
-            alarmManager2.setRepeating(AlarmManager.RTC_WAKEUP, cal2.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));*/
-
         }
     }
 
@@ -216,25 +187,6 @@ public class MainActivity extends FragmentActivity {
 
 
     private void actualizar() {
-/*        NotificationCompat.Builder mBuilder =
-            new NotificationCompat.Builder(this)
-                .setSmallIcon(android.R.drawable.ic_dialog_info)
-                .setLargeIcon((((BitmapDrawable) getResources()
-                    .getDrawable(R.drawable.logo)).getBitmap()))
-                .setContentTitle("Atención, problemas en las lineas!")
-                .setContentText("Ejemplo de notificación.")
-                .setTicker("Atención, problemas en las lineas!")
-                .setAutoCancel(true)
-                .setOnlyAlertOnce(true)
-                .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND);
-
-        Intent notIntent = new Intent(this, MainActivity.class);
-        PendingIntent contIntent = PendingIntent.getActivity(this, 0, notIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        mBuilder.setContentIntent(contIntent);
-
-        NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(0, mBuilder.build());*/
-
 
         TabsAdapter.TabInfo tabI = mTabsAdapter.mTabs.get(mTabHost.getCurrentTab()); // Obtiene la tab en la cual se encuentra el codigo de la linea.
 

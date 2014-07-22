@@ -88,8 +88,6 @@ public class ListaNotificaciones extends ListActivity {
             startAlarmDetailsActivity(-1);
         }*/
 
-        startAlarmDetailsActivity(-1);
-
         return true;
     }
 

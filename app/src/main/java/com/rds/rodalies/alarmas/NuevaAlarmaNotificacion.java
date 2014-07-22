@@ -74,6 +74,7 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
             alarmDetails.timeMinute = timePicker1.getCurrentMinute().intValue();
             alarmDetails.timeHour = timePicker1.getCurrentHour().intValue();
+
             alarmDetails.setRepeatingDay(AlarmModel.SUNDAY, domingo.isChecked());
             alarmDetails.setRepeatingDay(AlarmModel.MONDAY, lunes.isChecked());
             alarmDetails.setRepeatingDay(AlarmModel.TUESDAY, martes.isChecked());
@@ -87,7 +88,8 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
 
             if (alarmDetails.id < 0) {
                 dbHelper.createAlarm(alarmDetails);
-            } else {
+            }
+            else{
                 dbHelper.updateAlarm(alarmDetails);
             }
 

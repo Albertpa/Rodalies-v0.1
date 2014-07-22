@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.rds.rodalies.R;
-import com.rds.rodalies.Twitter.Tuit;
 
 import java.net.MalformedURLException;
 import java.net.URL;

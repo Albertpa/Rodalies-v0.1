@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -16,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.HorizontalScrollView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
@@ -34,9 +32,6 @@ import java.util.Map;
 
 public class MainActivity extends FragmentActivity {
 
-	//private static final String[] fragmentTags = { "Page1", "Page2" };	
-	private ArrayAdapter<String> adapt;
-
     TabHost mTabHost;
     ViewPager  mViewPager;
 
@@ -44,7 +39,6 @@ public class MainActivity extends FragmentActivity {
     TabsAdapter mTabsAdapter;
     
     private SharedPreferences sharedSettings;
-    private boolean existPreferences = true;
 
     private Map<String, String> nombre_cuentaTwitter;
     private ArrayList<Integer> codeRod;
@@ -63,7 +57,6 @@ public class MainActivity extends FragmentActivity {
 
         if (!(sharedSettings.contains(Constants.lineaSecundaria[0]))) {
             //no tiene preferencias, llamamos a la configuración de la linea principal
-            existPreferences=false;
             startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
 
         }
@@ -87,11 +80,8 @@ public class MainActivity extends FragmentActivity {
             for (int i = 0; i < size; i++)
             {
                 fragmentTags[i] = this.nombreLinea(codeRod.get(i));
-                //Log.e("Rodalies", this.nombreLinea(codeRod.get(i)));
                 items_menu[i] = this.nombreLinea(codeRod.get(i));
             }
-            //Log.e("Rodalies", "te sharedpreferences");
-            existPreferences=true;
 
             mTabHost = (TabHost)findViewById(android.R.id.tabhost);
 
@@ -136,7 +126,6 @@ public class MainActivity extends FragmentActivity {
 
         //100 es el codigo que se usa para llamar a la activity settings
          if (requestCode == 100) {
-             //montarVista(); // your "refresh" code
              finish();
              startActivity(getIntent());
          }
@@ -157,7 +146,6 @@ public class MainActivity extends FragmentActivity {
 		    case R.id.action_settings:
 		    	Log.i("Rodalies", "entra a settings");
 				//no tiene preferencias, llamamos a la configuracion de la linea principal
-				existPreferences = false;
                 startActivityForResult(new Intent(MainActivity.this, GuardarPreferencias.class), 100);
                 return true;
             case R.id.nuevo_tuit:
@@ -173,7 +161,6 @@ public class MainActivity extends FragmentActivity {
                 Log.i("Rodalies", "Actualizar");
                 return true;
             case R.id.notificaciones:
-                //startActivityForResult(new Intent(MainActivity.this, NuevaAlarmaNotificacion.class), 100);
                 startActivityForResult(new Intent(MainActivity.this, ListaNotificaciones.class), 100);
                 return true;
 
@@ -195,7 +182,6 @@ public class MainActivity extends FragmentActivity {
 
             List<Fragment> listPage = getSupportFragmentManager().getFragments(); //Lista de fragments
 
-            Fragment aux = null;
             Page1Activity act = null;
 
             for( Fragment f : listPage ){
@@ -225,9 +211,6 @@ public class MainActivity extends FragmentActivity {
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(originalMessageEscaped));
             startActivity(i);
-        }
-        else {
-            // Some Error
         }
     }
 
@@ -354,9 +337,8 @@ public class MainActivity extends FragmentActivity {
         private final TabHost mTabHost;
         private final ViewPager mViewPager;
         private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
-        private int positionActual = 0;
 
-        static final class TabInfo { //esta pequenya clase guarda info de cada tab
+         static final class TabInfo { //esta pequenya clase guarda info de cada tab
             private final String tag;
             private final Class<?> clss;
             private final Bundle args;
@@ -415,34 +397,17 @@ public class MainActivity extends FragmentActivity {
             TabInfo info = mTabs.get(position);
             return Fragment.instantiate(mContext, info.clss.getName(), info.args);
         }
-        
-        public Fragment findFragment(int position) {
-            String name = "android:switcher:" + mViewPager.getId() + ":" + position; // curiosos tags
-            Log.e("ERRORRRRR", "ERRORRR"+name);
-            FragmentManager fm = ((FragmentActivity) mContext).getSupportFragmentManager();
-            Fragment fragment = fm.findFragmentByTag(name);
-            if (fragment == null) {
-                fragment = getItem(position);
-            }
-            return fragment;
-        }        
 
-        @Override
+         @Override
         public void onTabChanged(String tabId) {
 
             int position = mTabHost.getCurrentTab();
             mViewPager.setCurrentItem(position);
 
-            //position es la nueva position
-
-            //Log.e("Rodalies", "tab1:"+positionActual);
-            //Log.e("Rodalies", "tab2:"+position);
 
             final HorizontalScrollView strip;
             final int positionTab = position * 110;
             View rootView = ((Activity)mContext).getWindow().getDecorView().findViewById(android.R.id.tabhost);
-
-            //View v = rootView.findViewById(R.id.scrollTabs);
 
             strip = (HorizontalScrollView) rootView.findViewById(R.id.scrollTabs);
 

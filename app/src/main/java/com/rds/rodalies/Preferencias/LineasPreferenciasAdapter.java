@@ -16,7 +16,6 @@ import com.rds.rodalies.R;
 import java.util.List;
 
 public class LineasPreferenciasAdapter extends ArrayAdapter<LineaPreferencias>{
-    private List<LineaPreferencias> lineas;
     private Context ctx;
     private final boolean[] mCheckedState;
 
@@ -25,7 +24,6 @@ public class LineasPreferenciasAdapter extends ArrayAdapter<LineaPreferencias>{
     public LineasPreferenciasAdapter(Context context, int resource, List<LineaPreferencias> objects) {
         super(context, resource, objects);
         this.ctx = context;
-        this.lineas = objects;
         mCheckedState = new boolean[objects.size()];
 
     }

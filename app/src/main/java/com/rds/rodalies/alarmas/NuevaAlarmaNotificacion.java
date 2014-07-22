@@ -72,8 +72,8 @@ public class NuevaAlarmaNotificacion extends FragmentActivity {
         if(domingo.isChecked() || lunes.isChecked() || martes.isChecked() || miercoles.isChecked() || jueves.isChecked() ||
                 viernes.isChecked() || sabado.isChecked()){
 
-            alarmDetails.timeMinute = timePicker1.getCurrentMinute().intValue();
-            alarmDetails.timeHour = timePicker1.getCurrentHour().intValue();
+            alarmDetails.timeMinute = timePicker1.getCurrentMinute();
+            alarmDetails.timeHour = timePicker1.getCurrentHour();
 
             alarmDetails.setRepeatingDay(AlarmModel.SUNDAY, domingo.isChecked());
             alarmDetails.setRepeatingDay(AlarmModel.MONDAY, lunes.isChecked());

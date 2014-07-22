@@ -1,9 +1,9 @@
 package com.rds.rodalies.alarmas;
 
-import android.app.Service;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,7 +24,6 @@ import java.util.ArrayList;
 public class ServicioNotificaciones extends Service {
 
     public static final int NOTIFICATION_ID = 1;
-    private NotificationManager mNotificationManager;
 
     Integer contadorLineas = 0;
     Integer lineasConsultadas = 0;
@@ -96,8 +95,8 @@ public class ServicioNotificaciones extends Service {
                 numeroDeLineasConProblemas++;
             }
             Log.i("RODALIES", "Numero de lineas con problemas: " + numeroDeLineasConProblemas);
-            //if((lineasConsultadas == contadorLineas) && numeroDeLineasConProblemas > 0){
-            if(lineasConsultadas == contadorLineas){
+            if((lineasConsultadas.equals(contadorLineas)) && numeroDeLineasConProblemas > 0){
+            //if(lineasConsultadas.equals(contadorLineas)){
 
                     NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(ServicioNotificaciones.this)
@@ -116,7 +115,7 @@ public class ServicioNotificaciones extends Service {
                 PendingIntent contIntent = PendingIntent.getActivity(ServicioNotificaciones.this, 0, mainActitivyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
                 mBuilder.setContentIntent(contIntent);
 
-                mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
 
                 lineasConsultadas = 0;

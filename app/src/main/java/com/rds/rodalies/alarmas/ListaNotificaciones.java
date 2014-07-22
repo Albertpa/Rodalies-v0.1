@@ -13,7 +13,6 @@ import com.rds.rodalies.R;
 
 public class ListaNotificaciones extends ListActivity {
 
-    private Integer numeroElementosLista = 0;
     private AlarmListAdapter mAdapter;
 
     private NotificacionesSQL dbHelper = new NotificacionesSQL(this);

@@ -20,7 +20,6 @@ public class HorarisActivity extends Activity {
 
 
     private Button create_btn;
-    private Spinner nucleo;
     private Spinner station1;
     private Spinner station2;
 
@@ -255,7 +254,7 @@ public class HorarisActivity extends Activity {
         String current_month = Integer.toString(c.get(Calendar.MONTH));
         String current_year2 = Integer.toString(c.get(Calendar.YEAR));
 
-        String current_year = "0";
+        String current_year;
 
         if(current_year2.equals(String.valueOf(now.get(Calendar.YEAR)))){
             current_year = "0";

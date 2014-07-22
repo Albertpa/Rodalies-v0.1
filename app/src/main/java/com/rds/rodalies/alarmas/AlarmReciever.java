@@ -36,7 +36,7 @@ public class AlarmReciever extends BroadcastReceiver
             Calendar calendar = Calendar.getInstance();
             calendar.set(Calendar.HOUR_OF_DAY, alarm.timeHour);
             calendar.set(Calendar.MINUTE, alarm.timeMinute);
-            calendar.set(Calendar.SECOND, 00);
+            calendar.set(Calendar.SECOND, 0);
 
             //Find next time to set
             final int nowDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
@@ -65,7 +65,6 @@ public class AlarmReciever extends BroadcastReceiver
                         calendar.add(Calendar.WEEK_OF_YEAR, 1);
 
                         setAlarm(context, calendar, pIntent);
-                        alarmSet = true;
                         break;
                     }
                 }

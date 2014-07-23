@@ -108,5 +108,6 @@
     <string name="noviembre">November</string>
     <string name="diciembre">December</string>
     <string name="cargando">Loading...</string>
+    <string name="crear_alarma">Add alerts to be notified in case of problems in any of your lines. Press + button to add an alarm. </string>
 
 </resources>

@@ -59,47 +59,75 @@ public class AlarmListAdapter extends BaseAdapter {
 			LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			view = inflater.inflate(R.layout.alarm_list_item, parent, false);
 		}
-		
+
+        TextView sunday = (TextView) view.findViewById(R.id.alarm_item_sunday);
+        TextView monday = (TextView) view.findViewById(R.id.alarm_item_monday);
+        TextView tuesday = (TextView) view.findViewById(R.id.alarm_item_tuesday);
+        TextView wednesday = (TextView) view.findViewById(R.id.alarm_item_wednesday);
+        TextView thursday = (TextView) view.findViewById(R.id.alarm_item_thursday);
+        TextView friday = (TextView) view.findViewById(R.id.alarm_item_friday);
+        TextView saturday = (TextView) view.findViewById(R.id.alarm_item_saturday);
+
 		AlarmModel model = (AlarmModel) getItem(position);
 		
 		TextView txtTime = (TextView) view.findViewById(R.id.alarm_item_time);
-		txtTime.setText(String.format("%02d:%02d", model.timeHour, model.timeMinute));
 
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_sunday), model.getRepeatingDay(AlarmModel.SUNDAY));
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_monday), model.getRepeatingDay(AlarmModel.MONDAY));
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_tuesday), model.getRepeatingDay(AlarmModel.TUESDAY));
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_wednesday), model.getRepeatingDay(AlarmModel.WEDNESDAY));
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_thursday), model.getRepeatingDay(AlarmModel.THURSDAY));
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_friday), model.getRepeatingDay(AlarmModel.FRIDAY));
-		updateTextColor((TextView) view.findViewById(R.id.alarm_item_saturday), model.getRepeatingDay(AlarmModel.SATURDAY));
+        if(model.timeHour == -1 && model.timeMinute == -1){
+            txtTime.setText(mContext.getString(R.string.crear_alarma));
+            sunday.setText("");
+            monday.setText("");
+            tuesday.setText("");
+            wednesday.setText("");
+            thursday.setText("");
+            friday.setText("");
+            saturday.setText("");
+        }
+        else{
+            txtTime.setText(String.format("%02d:%02d", model.timeHour, model.timeMinute));
 
-		
-		view.setTag(Long.valueOf(model.id));
-		view.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View view) {
-				((ListaNotificaciones) mContext).startAlarmDetailsActivity(((Long) view.getTag()).longValue());
-			}
-		});
-		
-		view.setOnLongClickListener(new OnLongClickListener() {
-			
-			@Override
-			public boolean onLongClick(View view) {
-				((ListaNotificaciones) mContext).borrarAlerta(((Long) view.getTag()).longValue());
-				return true;
-			}
-		});
+            sunday.setText(R.string.domingo);
+            monday.setText(R.string.lunes);
+            tuesday.setText(R.string.martes);
+            wednesday.setText(R.string.miercoles);
+            thursday.setText(R.string.jueves);
+            friday.setText(R.string.viernes);
+            saturday.setText(R.string.sabado);
+
+            updateTextColor(sunday, model.getRepeatingDay(AlarmModel.SUNDAY));
+            updateTextColor(monday, model.getRepeatingDay(AlarmModel.MONDAY));
+            updateTextColor(tuesday, model.getRepeatingDay(AlarmModel.TUESDAY));
+            updateTextColor(wednesday, model.getRepeatingDay(AlarmModel.WEDNESDAY));
+            updateTextColor(thursday, model.getRepeatingDay(AlarmModel.THURSDAY));
+            updateTextColor(friday, model.getRepeatingDay(AlarmModel.FRIDAY));
+            updateTextColor(saturday, model.getRepeatingDay(AlarmModel.SATURDAY));
+
+            view.setTag(Long.valueOf(model.id));
+            view.setOnClickListener(new OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    ((ListaNotificaciones) mContext).startAlarmDetailsActivity(((Long) view.getTag()).longValue());
+                }
+            });
+
+            view.setOnLongClickListener(new OnLongClickListener() {
+
+                @Override
+                public boolean onLongClick(View view) {
+                    ((ListaNotificaciones) mContext).borrarAlerta(((Long) view.getTag()).longValue());
+                    return true;
+                }
+            });
+        }
 		
 		return view;
 	}
 	
 	private void updateTextColor(TextView view, boolean isOn) {
 		if (isOn) {
-			view.setTextColor(Color.GREEN);
+			view.setTextColor(Color.parseColor("#008000"));
 		} else {
-			view.setTextColor(Color.BLACK);
+			view.setTextColor(Color.GRAY);
 		}
 	}
 

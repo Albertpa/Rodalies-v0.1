@@ -112,5 +112,6 @@
     <string name="noviembre">Novembre</string>
     <string name="diciembre">Desembre</string>
     <string name="cargando">Carregant...</string>
+    <string name="crear_alarma">Afegeix alertes per a ser notificat en cas de problemes en qualsevol de les teves líneas. Prem el botó + per afegir una alarma.</string>
 
 </resources>

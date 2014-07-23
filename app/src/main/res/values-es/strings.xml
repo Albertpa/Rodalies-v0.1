@@ -108,5 +108,6 @@
     <string name="noviembre">Noviembre</string>
     <string name="diciembre">Diciembre</string>
     <string name="cargando">Cargando...</string>
+    <string name="crear_alarma">Agrega alertas para ser notificado en caso de problemas en alguna de tus lineas. Pulsa el boton + para agregar una alarma.</string>
 
 </resources>

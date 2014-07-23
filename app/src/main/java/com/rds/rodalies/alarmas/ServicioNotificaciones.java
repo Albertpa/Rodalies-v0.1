@@ -95,8 +95,8 @@ public class ServicioNotificaciones extends Service {
                 numeroDeLineasConProblemas++;
             }
             Log.i("RODALIES", "Numero de lineas con problemas: " + numeroDeLineasConProblemas);
-            if((lineasConsultadas.equals(contadorLineas)) && numeroDeLineasConProblemas > 0){
-            //if(lineasConsultadas.equals(contadorLineas)){
+            //if((lineasConsultadas.equals(contadorLineas)) && numeroDeLineasConProblemas > 0){
+            if(lineasConsultadas.equals(contadorLineas)){
 
                     NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(ServicioNotificaciones.this)

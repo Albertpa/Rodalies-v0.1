@@ -58,12 +58,21 @@ public class NotificacionesSQL extends SQLiteOpenHelper {
         return model;
     }
 
+    private AlarmModel defaultModel() {
+        AlarmModel model = new AlarmModel();
+        model.id = -1;
+        model.timeHour = -1;
+        model.timeMinute = -1;
+        model.repeatWeekly = false;
+
+        return model;
+    }
+
     private ContentValues populateContent(AlarmModel model) {
         ContentValues values = new ContentValues();
         values.put(Alarm.COLUMN_NAME_ALARM_TIME_HOUR, model.timeHour);
         values.put(Alarm.COLUMN_NAME_ALARM_TIME_MINUTE, model.timeMinute);
         values.put(Alarm.COLUMN_NAME_ALARM_REPEAT_WEEKLY, model.repeatWeekly);
-
 
         String repeatingDays = "";
         for (int i = 0; i < 7; ++i) {
@@ -114,8 +123,12 @@ public class NotificacionesSQL extends SQLiteOpenHelper {
         if (!alarmList.isEmpty()) {
             return alarmList;
         }
+        else{
+            alarmList.add(defaultModel());
+            return alarmList;
+        }
 
-        return null;
+        //return null;
     }
 
     public int deleteAlarm(long id) {

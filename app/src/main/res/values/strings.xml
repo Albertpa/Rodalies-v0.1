@@ -63,9 +63,9 @@
     <string name="r14_p">BCN Est. França - Lleida - Tarragona y Reus</string>
     <string name="r15_p">BCN Est. França - Riba-roja Ebre - Tarragona y Reus</string>
     <string name="r16_p">BCN Est. França - Tortosa/Ulldecona - Tarragona</string>
-    <string name="title_activity_configurador_notificaciones">ConfiguradorNotificaciones</string>
+    <string name="title_activity_configurador_notificaciones" translatable="false">ConfiguradorNotificaciones</string>
     <string name="configura_notificaciones">Configura alertes</string>
-    <string name="title_activity_nueva_alarma_notificacion">NuevaAlarmaNotificacion</string>
+    <string name="title_activity_nueva_alarma_notificacion" translatable="false">NuevaAlarmaNotificacion</string>
     <string name="alertas">Alertes</string>
     <string name="nueva_alerta">Nova alerta</string>
     <string name="lunes">DLL</string>
@@ -75,7 +75,7 @@
     <string name="viernes">DIV</string>
     <string name="sabado">DIS</string>
     <string name="domingo">DIU</string>
-    <string name="title_activity_lista_notificaciones">ListaNotificaciones</string>
+    <string name="title_activity_lista_notificaciones" translatable="false">ListaNotificaciones</string>
     <string name="aceptar">Accepta</string>
     <string name="seleccionar_un_dia">Ha de seleccionar com a mínim un dia</string>
     <string name="max_pref">No pots tenir més de 3 alarmes!</string>

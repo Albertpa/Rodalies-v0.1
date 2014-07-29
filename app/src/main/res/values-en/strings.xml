@@ -80,6 +80,8 @@
     <string name="eliminar_alerta">Delete alert?</string>
     <string name="no">No</string>
     <string name="si">Yes</string>
+    <string name="title_activity_horaris">Timetables</string>
+    <string name="title_activity_consulta_horarios">Timetables</string>
     <string name="estacion_origen">Departure station:</string>
     <string name="estacion_destino">Arrival station:</string>
     <string name="dia">Day:</string>

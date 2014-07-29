@@ -38,7 +38,7 @@
     <string name="avui">Hoy</string>
     <string name="ahir">Ayer</string>
     <string name="twittear">Twittear</string>
-    <string name="actualizar">Actualitzar</string>
+    <string name="actualizar">Actualizar</string>
     <string name="acerca_de">En cuanto a</string>
     <string name="autores1">Aplicación desarrollada por:</string>
     <string name="autores2">Albert Pagès y Jesús Escribano</string>
@@ -80,6 +80,8 @@
     <string name="eliminar_alerta">¿Eliminar alerta?</string>
     <string name="no">No</string>
     <string name="si">Sí</string>
+    <string name="title_activity_consulta_horarios">Horarios</string>
+    <string name="title_activity_horaris">Horarios</string>
     <string name="estacion_origen">Estación de origen:</string>
     <string name="estacion_destino">Estación de destino:</string>
     <string name="dia">Día:</string>

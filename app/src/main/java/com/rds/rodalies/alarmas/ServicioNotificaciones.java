@@ -119,8 +119,8 @@ public class ServicioNotificaciones extends IntentService {
                 numeroDeLineasConProblemas++;
             }
             Log.i("RODALIES", "Numero de lineas con problemas: " + numeroDeLineasConProblemas);
-            //if((lineasConsultadas == contadorLineas) && numeroDeLineasConProblemas > 0){
-            if(lineasConsultadas == contadorLineas){
+            if((lineasConsultadas == contadorLineas) && numeroDeLineasConProblemas > 0){
+            //if(lineasConsultadas == contadorLineas){
 
                     NotificationCompat.Builder mBuilder =
                         new NotificationCompat.Builder(ServicioNotificaciones.this)

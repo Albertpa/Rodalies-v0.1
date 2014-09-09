@@ -70,7 +70,7 @@ public class AlarmReciever extends WakefulBroadcastReceiver
                                 * Calendar.Saturday = 7
                                 * */
 
-                                calendar.set(Calendar.DAY_OF_WEEK, i+1);
+                                //calendar.set(Calendar.DAY_OF_WEEK, i+1);
                                 calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hora));
                                 calendar.set(Calendar.MINUTE, Integer.parseInt(minuto));
                                 calendar.set(Calendar.SECOND, 0);
@@ -78,7 +78,8 @@ public class AlarmReciever extends WakefulBroadcastReceiver
                                 Intent intent = new Intent(context, AlarmReciever.class);
                                 alarmIntent = PendingIntent.getBroadcast(context, cursor.getCount(), intent, 0);
 
-                                alarmMgr.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmIntent);
+                                alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP,
+                                        calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
                             }
                         }
                     } while (cursor.moveToNext());

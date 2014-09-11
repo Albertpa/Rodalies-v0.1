@@ -33,7 +33,7 @@
 
     <TextView
         android:id="@+id/spinner2_text"
-        android:text="@string/origen"
+        android:text="@string/estacion_origen"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor = "#ff000000"
@@ -53,7 +53,7 @@
 
     <TextView
         android:id="@+id/spinner3_text"
-        android:text="@string/destino"
+        android:text="@string/estacion_destino"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor = "#ff000000"

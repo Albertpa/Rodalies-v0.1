@@ -1,131 +1,108 @@
 package com.rds.rodalies.alarmas;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.content.ComponentName;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.v4.content.WakefulBroadcastReceiver;
 
-import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
-public class AlarmReciever extends WakefulBroadcastReceiver
+public class AlarmReciever extends BroadcastReceiver
 {
-    // The app's AlarmManager, which provides access to the system alarm services.
-    private AlarmManager alarmMgr;
-    // The pending intent that is triggered when the alarm fires.
-    private PendingIntent alarmIntent;
+    public static final String ID = "id";
+    public static final String TIME_HOUR = "timeHour";
+    public static final String TIME_MINUTE = "timeMinute";
+
     @Override
     public void onReceive(Context context, Intent intent)
     {
-/*        ComponentName comp = new ComponentName("lineasServicio", ServicioNotificaciones.class.getName());
-        startWakefulService(context, (intent.setComponent(comp)));*/
-        ArrayList<Integer> listaLineas = intent.getIntegerArrayListExtra("lineasServicio");
-
-        Intent intent2 = new Intent(context, ServicioNotificaciones.class); //Intent para el servicio
-        /*intent2.putIntegerArrayListExtra("lineasServicio", listaLineas);    // PARAMETROS PARA EL SERVICIO*/
-
-        startWakefulService(context, intent2); //Inicio del servicio
+        setAlarms(context);
     }
 
-    /**
-     * Sets a repeating alarm that runs once a day at approximately 8:30 a.m. When the
-     * alarm fires, the app broadcasts an Intent to this WakefulBroadcastReceiver.
-     * @param context
-     */
-    public void setAlarm(Context context) {
-        alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+    public static void setAlarms(Context context) {
+        cancelAlarms(context);
 
-        NotificacionesSQL handlerSQL = new NotificacionesSQL(context, "Notificaciones", null, 1);
+        NotificacionesSQL dbHelper = new NotificacionesSQL(context);
 
-        SQLiteDatabase db = handlerSQL.getReadableDatabase();
-        if(db != null) {
-            Cursor cursor = db.rawQuery("SELECT * FROM Notificaciones", null);
+        List<AlarmModel> alarms =  dbHelper.getAlarms();
 
-            if (cursor.getCount() > 0) //Si el cursor tiene resultados...
-            {
-                if (cursor.moveToFirst()) {
+        for (AlarmModel alarm : alarms) {
 
-                    do {
-                        String hora = cursor.getString(1);
-                        String minuto = cursor.getString(2);
-                        String dias = cursor.getString(3);
+            PendingIntent pIntent = createPendingIntent(context, alarm);
 
-                        String diasSeleccionados[] = NuevaAlarmaNotificacion.convertStringToArray(dias);
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(Calendar.HOUR_OF_DAY, alarm.timeHour);
+            calendar.set(Calendar.MINUTE, alarm.timeMinute);
+            calendar.set(Calendar.SECOND, 0);
 
-                        for(int i = 0; i < diasSeleccionados.length; i++){
-                            Boolean estaSeleccionado = (diasSeleccionados[i].compareTo("0") == 0) ? false : true;
+            //Find next time to set
+            final int nowDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+            final int nowHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+            final int nowMinute = Calendar.getInstance().get(Calendar.MINUTE);
+            boolean alarmSet = false;
 
-                            if(estaSeleccionado)
-                            {
-                                Calendar calendar = Calendar.getInstance();
-                                /*
-                                * Calendar.Sunday = 1
-                                * Calendar.Monday = 2
-                                * ...
-                                * Calendar.Saturday = 7
-                                * */
+            //First check if it's later in the week
+            for (int dayOfWeek = Calendar.SUNDAY; dayOfWeek <= Calendar.SATURDAY; ++dayOfWeek) {
+                if (alarm.getRepeatingDay(dayOfWeek - 1) && dayOfWeek >= nowDay &&
+                        !(dayOfWeek == nowDay && alarm.timeHour < nowHour) &&
+                        !(dayOfWeek == nowDay && alarm.timeHour == nowHour && alarm.timeMinute <= nowMinute)) {
+                    calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
 
-                                //calendar.set(Calendar.DAY_OF_WEEK, i+1);
-                                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hora));
-                                calendar.set(Calendar.MINUTE, Integer.parseInt(minuto));
-                                calendar.set(Calendar.SECOND, 0);
+                    setAlarm(context, calendar, pIntent);
+                    alarmSet = true;
+                    break;
+                }
+            }
 
-                                Intent intent = new Intent(context, AlarmReciever.class);
-                                alarmIntent = PendingIntent.getBroadcast(context, cursor.getCount(), intent, 0);
+            //Else check if it's earlier in the week
+            if (!alarmSet) {
+                for (int dayOfWeek = Calendar.SUNDAY; dayOfWeek <= Calendar.SATURDAY; ++dayOfWeek) {
+                    if (alarm.getRepeatingDay(dayOfWeek - 1) && dayOfWeek <= nowDay) {
+                        calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
+                        calendar.add(Calendar.WEEK_OF_YEAR, 1);
 
-                                alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP,
-                                        calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
-                            }
-                        }
-                    } while (cursor.moveToNext());
+                        setAlarm(context, calendar, pIntent);
+                        break;
+                    }
                 }
             }
         }
-
-/*
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        // Set the alarm's trigger time to 8:30 a.m.
-        calendar.set(Calendar.HOUR_OF_DAY, 14);
-        calendar.set(Calendar.MINUTE, 01);
-
-        alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24 * 60 * 60 * 1000, PendingIntent.getBroadcast(context, 0, intent, 0));
-*/
-
-
-
-        // Enable {@code SampleBootReceiver} to automatically restart the alarm when the
-        // device is rebooted.
-        ComponentName receiver = new ComponentName(context, SampleBootReceiver.class);
-        PackageManager pm = context.getPackageManager();
-
-        pm.setComponentEnabledSetting(receiver, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
     }
-    // END_INCLUDE(set_alarm)
 
-    /**
-     * Cancels the alarm.
-     * @param context
-     */
-    // BEGIN_INCLUDE(cancel_alarm)
-    public void cancelAlarm(Context context) {
-        // If the alarm has been set, cancel it.
-        if (alarmMgr!= null) {
-            alarmMgr.cancel(alarmIntent);
+    @SuppressLint("NewApi")
+    private static void setAlarm(Context context, Calendar calendar, PendingIntent pIntent) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pIntent);
+        } else {
+            alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pIntent);
         }
+    }
 
-        // Disable {@code SampleBootReceiver} so that it doesn't automatically restart the
-        // alarm when the device is rebooted.
-        ComponentName receiver = new ComponentName(context, SampleBootReceiver.class);
-        PackageManager pm = context.getPackageManager();
+    public static void cancelAlarms(Context context) {
+        NotificacionesSQL dbHelper = new NotificacionesSQL(context);
 
-        pm.setComponentEnabledSetting(receiver,
-                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                PackageManager.DONT_KILL_APP);
+        List<AlarmModel> alarms =  dbHelper.getAlarms();
+
+        if (alarms != null) {
+            for (AlarmModel alarm : alarms) {
+                PendingIntent pIntent = createPendingIntent(context, alarm);
+
+                AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                alarmManager.cancel(pIntent);
+            }
+        }
+    }
+
+    private static PendingIntent createPendingIntent(Context context, AlarmModel model) {
+        Intent intent = new Intent(context, ServicioNotificaciones.class);
+        intent.putExtra(ID, model.id);
+        intent.putExtra(TIME_HOUR, model.timeHour);
+        intent.putExtra(TIME_MINUTE, model.timeMinute);
+
+        return PendingIntent.getService(context, (int) model.id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 }

@@ -131,7 +131,6 @@ public class ConsultaHorarisActivity extends Activity {
             handler.sendMessage(myMessage);
 
         } catch (Exception e) {
-            //Log.e("Renfe", "Error", e);
         }
 
     }
@@ -185,13 +184,13 @@ public class ConsultaHorarisActivity extends Activity {
                     if(!v.getTransbordo().equals("")){
 
                         char letra;
-                        String texto="",nuevoTexto="", resto="";
+                        String texto, nuevoTexto, resto;
                         //Borrando los espacios en blanco
-                        texto=v.getTransbordo().toLowerCase();
+                        texto = v.getTransbordo().toLowerCase();
                         //cogiendo un string a partir de la segunda letra
-                        resto=texto.substring(1);
+                        resto = texto.substring(1);
                         //cogiendo la primera letra en un char
-                        letra=texto.charAt(0);
+                        letra = texto.charAt(0);
                         //poniendo dicha letra en mayusculas
                         letra = Character.toUpperCase(letra);
                         //concatenando todo
@@ -231,7 +230,7 @@ public class ConsultaHorarisActivity extends Activity {
         switch (id) {
             case 0: {
                 dialog = new ProgressDialog(this);
-                dialog.setMessage("Loading...");
+                dialog.setMessage(getString(R.string.cargando));
                 dialog.setIndeterminate(true);
                 dialog.setCancelable(true);
                 return dialog;

@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.rds.rodalies.Horarios.ConsultaHorarisActivity;
 import com.rds.rodalies.R;
 
 import java.util.Calendar;
@@ -21,7 +20,6 @@ public class HorarisActivity extends Activity {
 
 
     private Button create_btn;
-    private Spinner nucleo;
     private Spinner station1;
     private Spinner station2;
 
@@ -205,34 +203,42 @@ public class HorarisActivity extends Activity {
             { "31", "31" }
     };
 
-    private String[][] months = {
-            { "01", "Enero" },
-            { "02", "Febrero" },
-            { "03", "Marzo" },
-            { "04", "Abril" },
-            { "05", "Mayo" },
-            { "06", "Junio" },
-            { "07", "Julio" },
-            { "08", "Agosto" },
-            { "09", "Septiembre" },
-            { "10", "Octubre" },
-            { "11", "Noviembre" },
-            { "12", "Diciembre" }
-    };
+    private String[][] months;
 
-    private String[][] years = {
-            { "2012", "2012" },
-            { "2013", "2013" },
+/*    private String[][] years = {
             { "2014", "2014" },
             { "2015", "2015" }
-    };
+    };*/
+
+    private String[][] years;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horaris);
 
-        //mPreferences = getSharedPreferences("Renfe", MODE_PRIVATE);
+        Calendar now = Calendar.getInstance();   // Gets the current date and time.
+        now.get(Calendar.YEAR);
+
+        months = new String[][]{
+                { "01", getString(R.string.enero) },
+                { "02", getString(R.string.febrero) },
+                { "03", getString(R.string.marzo) },
+                { "04", getString(R.string.abril) },
+                { "05", getString(R.string.mayo) },
+                { "06", getString(R.string.junio) },
+                { "07", getString(R.string.julio) },
+                { "08", getString(R.string.agosto) },
+                { "09", getString(R.string.septiembre) },
+                { "10", getString(R.string.octubre) },
+                { "11", getString(R.string.noviembre) },
+                { "12", getString(R.string.diciembre) }};
+
+        years = new String[][] {{String.valueOf(now.get(Calendar.YEAR)), String.valueOf(now.get(Calendar.YEAR))},
+                                {String.valueOf(now.get(Calendar.YEAR) + 1), String.valueOf(now.get(Calendar.YEAR) + 1)}};
+
+
+        //mPreferences = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
         // nucleo = (Spinner) this.findViewById(R.id.spinner1);
         station1 = (Spinner) this.findViewById(R.id.spinner2);
@@ -242,27 +248,19 @@ public class HorarisActivity extends Activity {
         month = (Spinner) this.findViewById(R.id.spinner_month);
         year = (Spinner) this.findViewById(R.id.spinner_year);
 
-
-
         Calendar c = Calendar.getInstance();
 
         String current_day = Integer.toString(c.get(Calendar.DATE));
         String current_month = Integer.toString(c.get(Calendar.MONTH));
         String current_year2 = Integer.toString(c.get(Calendar.YEAR));
 
-        String current_year = "0";
+        String current_year;
 
-        if(current_year2.equals("2012")){
+        if(current_year2.equals(String.valueOf(now.get(Calendar.YEAR)))){
             current_year = "0";
         }
-        else if(current_year2.equals("2013")){
+        else if(current_year2.equals(String.valueOf(now.get(Calendar.YEAR) + 1))){
             current_year = "1";
-        }
-        else if(current_year2.equals("2014")){
-            current_year = "2";
-        }
-        else if(current_year2.equals("2015")){
-            current_year = "2";
         }
         else{
             current_year = "0";
@@ -356,11 +354,11 @@ public class HorarisActivity extends Activity {
 
                     //ATENCIÓN, SE USAN SHARED PREFERENCES??
 
-                    //SharedPreferences.Editor editor=mPreferences.edit();
-                    //editor.putInt("nucleo", nucleo_id_to_set);
-                    //editor.putInt("station1", station1_id_to_set);
-                    //editor.putInt("station2", station2_id_to_set);
-                    //editor.commit();
+/*                    SharedPreferences.Editor editor = mPreferences.edit();
+                    editor.putInt("nucleo", nucleo_id_to_set);
+                    editor.putInt("station1", station1_id_to_set);
+                    editor.putInt("station2", station2_id_to_set);
+                    editor.commit();*/
 
                     startActivity(intent);
 
@@ -406,19 +404,17 @@ public class HorarisActivity extends Activity {
         station2.setOnItemSelectedListener(selectListener3);
 
         //ATENCIÓN, SE USAN SHARED PREFERENCES??
-        /*
+/*        mPreferences = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
+
         boolean nucleo_set = mPreferences.contains("nucleo");
         boolean station1_set = mPreferences.contains("station1");
         boolean station2_set = mPreferences.contains("station2");
 
         if(nucleo_set && station1_set && station2_set){
             can_change = true;
-            nucleo.setSelection(mPreferences.getInt("nucleo", 0));
-        }
-        */
-
+            //nucleo.setSelection(mPreferences.getInt("nucleo", 0));
+        }*/
     }
-
 
     /*
     No necesitamos menú

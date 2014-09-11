@@ -33,7 +33,7 @@
         <item >@string/r16_p</item>
     </string-array>
 
-    <string-array name="iconos">
+    <string-array name="iconos" translatable="false">
         <item >r1_</item>
         <item >r2n</item>
         <item >r2s</item>

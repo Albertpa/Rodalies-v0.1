@@ -5,9 +5,6 @@ public class Constants {
 	//Nombre del archivo, como se llamara
     public static final String RODA_PREFERENCES = "RodaPrefs";
 
-    //Nombre máximo de alarmas almacenadas
-    public static final Integer MAX_ALARMAS = 5;
-
     //Se guarda desde Settings
     public static final String LINEA_PARAMETRO = "LINEA_PARAMETRO"; // String
 
@@ -54,8 +51,10 @@ public class Constants {
 
     /* Array cuentas twitter */
     public static final String[] usuarioTwitterLineas = new String[]{
-            "rodalia1","rodalia2", "#rod2", "rodalia3","rodalia4","rodalia7","rodalia8","#rod11","#rod12","#rod13",
+            "rodalia1","rodalia2", "rodalia2", "rodalia3","rodalia4","rodalia7","rodalia8","#rod11","#rod12","#rod13",
             "#rod14","#rod15","#rod16"
     };
+
+    public static final Integer NUMERODETUITS = 20;
 
 }

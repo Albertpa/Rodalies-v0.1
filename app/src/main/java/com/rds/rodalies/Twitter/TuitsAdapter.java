@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.rds.rodalies.R;
-import com.rds.rodalies.Twitter.Tuit;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -21,7 +20,6 @@ import java.util.List;
  * Created by jesus on 08/02/14.
  */
 public class TuitsAdapter extends ArrayAdapter<Tuit>{
-    private List<Tuit> tuits;
     private Context ctx;
 
     ViewHolder holder = null;
@@ -29,7 +27,6 @@ public class TuitsAdapter extends ArrayAdapter<Tuit>{
     public TuitsAdapter(Context context, int resource, List<Tuit> objects) {
         super(context, resource, objects);
         this.ctx = context;
-        this.tuits = objects;
     }
 
     static class ViewHolder {

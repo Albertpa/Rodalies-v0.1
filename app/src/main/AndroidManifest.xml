@@ -53,13 +53,6 @@
 
         <receiver android:name=".alarmas.AlarmReciever"
             />
-        <receiver
-            android:name=".alarmas.SampleBootReceiver"
-            android:enabled="false" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
 
         <activity
             android:name=".alarmas.NuevaAlarmaNotificacion"

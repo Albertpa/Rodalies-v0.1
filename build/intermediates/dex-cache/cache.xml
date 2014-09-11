@@ -2,22 +2,34 @@
 <pre-dex-items>
 
     <item
-        dex="/Users/albert/Documents/Rodalies-v0.1/app/build/intermediates/pre-dexed/debug/twitter4j-core-3.0.5-ed866c9edc23d300ee86516a23edbc70622d28b0.jar"
-        jar="/Users/albert/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/3.0.5/c38ad47bc8ba5991886ce2c0e0acd76d0fdd6e6d/twitter4j-core-3.0.5.jar"
+        dex="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/pre-dexed/release/support-annotations-20.0.0-bca9cd8c8082330ef7549e0398af852faae531fd.jar"
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
-        revision="19.1.0"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/pre-dexed/release/classes-ac916195059279cc9a51b628df3acd5f8f62b5aa.jar"
+        jar="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+    <item
+        dex="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/pre-dexed/release/internal_impl-20.0.0-6d0945a057e205157f1d643c47b10f64e5c68bbd.jar"
+        jar="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/pre-dexed/release/twitter4j-core-3.0.5-16ae5de6ca25821c42b9bd104e361e90d9a4387e.jar"
+        jar="/Users/kudo44/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/3.0.5/c38ad47bc8ba5991886ce2c0e0acd76d0fdd6e6d/twitter4j-core-3.0.5.jar"
+        jumboMode="false"
+        revision="20.0.0"
         sha1="c38ad47bc8ba5991886ce2c0e0acd76d0fdd6e6d"/>
     <item
-        dex="/Users/albert/Documents/Rodalies-v0.1/app/build/intermediates/pre-dexed/debug/classes-f7c338895cb7fdb1b177bec7b3b32b5affef3316.jar"
-        jar="/Users/albert/Documents/Rodalies-v0.1/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        dex="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/pre-dexed/release/classes-460b8b5ea31c8187771519881781bab358d74bd7.jar"
+        jar="/Users/kudo44/Documents/workspace/Rodalies/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
-    <item
-        dex="/Users/albert/Documents/Rodalies-v0.1/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar"
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
 
 </pre-dex-items>

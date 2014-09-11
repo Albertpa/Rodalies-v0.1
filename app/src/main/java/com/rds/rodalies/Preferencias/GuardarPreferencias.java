@@ -25,7 +25,6 @@ public class GuardarPreferencias extends Activity {
 
     public static boolean[] checksPrefencias;
 
-    private LineasPreferenciasAdapter adapter;
     List<LineaPreferencias> lista_lineas = new ArrayList<LineaPreferencias>();
 
 	private SharedPreferences sharedRodalies;
@@ -35,7 +34,7 @@ public class GuardarPreferencias extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.guardar_preferencias);
 		
-		sharedRodalies= getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
+		sharedRodalies = getSharedPreferences(Constants.RODA_PREFERENCES, Context.MODE_PRIVATE);
 
         guardar = (Button)findViewById(R.id.guardar);
         guardar.setEnabled(false);
@@ -46,7 +45,7 @@ public class GuardarPreferencias extends Activity {
         crearObjetosLinea();
         consultarPreferencias();
 
-        adapter = new LineasPreferenciasAdapter(this, android.R.layout.simple_list_item_multiple_choice, lista_lineas);
+        LineasPreferenciasAdapter adapter = new LineasPreferenciasAdapter(this, android.R.layout.simple_list_item_multiple_choice, lista_lineas);
         myList.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         myList.setAdapter(adapter);
         clickFila();
@@ -56,7 +55,7 @@ public class GuardarPreferencias extends Activity {
         itemChecked = new ArrayList<Integer>();
         for(int i = 0; i < Constants.lineaSecundaria.length; i++)
         {
-            if (checksPrefencias[i] == true) {
+            if (checksPrefencias[i]) {
                 itemChecked.add(i);
             }
         }
@@ -99,7 +98,7 @@ public class GuardarPreferencias extends Activity {
         boolean seHanSeleccionadoLineas = false;
 
         for (boolean value : checksPrefencias) {
-            if (value == true) {
+            if(value) {
                 seHanSeleccionadoLineas = true;
                 break;
             }
@@ -128,7 +127,6 @@ public class GuardarPreferencias extends Activity {
         for (int i = 0; i < Constants.lineaSecundaria.length; i++) {
             //per cada element de la llista hem de buscar si existeix a les shared preferences y marcarlo com ha marcat
             Boolean marcado = esUnDells(i);
-            //Log.e("Rodalies", "es un dells:"+i);
             if (marcado) {
                 guardar.setEnabled(true);
                 checksPrefencias[i] = true;

@@ -32,7 +32,6 @@ import twitter4j.TwitterException;
 public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private View myFragmentView;
     private TextView textoPrincipal;
-    private final Integer NUMERODETUITS = 20;
 
     private int codigoLinea;
 
@@ -69,7 +68,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
         /* Configuración swipe para pull to refresh*/
         refreshLayout = (SwipeRefreshLayout) myFragmentView.findViewById(R.id.swipe_container);
         refreshLayout.setOnRefreshListener(this);
-        refreshLayout.setColorScheme(android.R.color.holo_blue_bright,
+        refreshLayout. setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
@@ -122,11 +121,6 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
     }
 
     public void actualizar(Integer idLinea){
-        Log.i("ACTUALIZAR", "ACTUALIZAR");
-
-/*        listaTuits = (ListView) myFragmentView.findViewById(R.id.lista_tuits);
-        adapter = new TuitsAdapter(getActivity(), android.R.layout.simple_list_item_1, lista_Tuits);
-        listaTuits.setAdapter(adapter);*/
         adapter.notifyDataSetChanged();
 
         textoPrincipal = (TextView) myFragmentView.findViewById(R.id.textP);
@@ -141,7 +135,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             * y se colorea de color verde.
             * Si se existe una incidencia para una linea, se añade a la caja de texto y se
             * colorea de color rojo */
-            if(l.getEstado() == "")
+            if(l.getEstado().equals(""))
             {
                 textoPrincipal.setText(getString(R.string.normalitat));
                 textoPrincipal.setTextColor(Color.parseColor("#538900"));
@@ -160,9 +154,8 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
         SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm");
 
         String dateAsString = dateFormatter.format(fecha); //convierte la fecha del tuit en una fecha de formato dd/MM/yyyy
-        String timeAsString = timeFormatter.format(fecha); //extrae la hora del tuit
 
-        String fechaTuit = timeAsString;
+        String fechaTuit = timeFormatter.format(fecha); //extrae la hora del tuit
 
         Date hoy = new Date(); //fecha de hoy
         Calendar calHoy = Calendar.getInstance();
@@ -223,7 +216,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
 
                 Page1Activity.this.linea = this.linea;  // ??????????
                 estaActualizandoEstado = false;
-                if(estaActualizandoTuis == false){
+                if(!estaActualizandoTuis){
                     refreshLayout.setRefreshing(false); //Detener animación de refresco.
                 }
                 asignarEstado(Page1Activity.this.linea);
@@ -245,16 +238,12 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
             final Twitter twitter = config.getTwitter();
 
             final Query query = new Query(linea.getUsuarioTwitter() + " +exclude:retweets"); //Establecer nombre de usuario (sin @) o hashtag
-            query.count(NUMERODETUITS); //Numero maximo de tuits maximo
+            query.count(Constants.NUMERODETUITS); //Numero maximo de tuits maximo
 
             try {
                 QueryResult result = twitter.search(query);
                 for (twitter4j.Status status : result.getTweets()) {
-                    //Log.i("TWEETS", "@" + status.getUser().getScreenName() + ": " + status.getText() + " " + status.getCreatedAt());
-
                     String fecha = obtenerFechaTuit(status.getCreatedAt());
-
-
 
                     Tuit tuit = new Tuit("@" + status.getUser().getScreenName(), status.getText(), fecha);
                     lista_Tuits.add(tuit);
@@ -271,7 +260,7 @@ public class Page1Activity extends Fragment implements SwipeRefreshLayout.OnRefr
         {
             if(isAdded()) {
                 estaActualizandoTuis = false;
-                if(estaActualizandoEstado == false){
+                if(!estaActualizandoEstado){
                     refreshLayout.setRefreshing(false); //Detener animación de refresco.
                 }
                 adapter.notifyDataSetChanged();
